@@ -1,0 +1,66 @@
+[
+  {
+    "id": "code_lover",
+    "name": "代号：恋人",
+    "icon_char": "代",
+    "last_updated": "2025-12-18 09:00",
+    "fetch_status": {
+      "taptap": "success",
+      "bilibili": "stale",
+      "weibo": "not_configured",
+      "xiaohongshu": "stale"
+    },
+    "basic_info": {
+      "status": "未知",
+      "rating": 0.0,
+      "reservations": "-",
+      "followers": "-",
+      "review_count": "-",
+      "tags": [],
+      "diffs": {}
+    },
+    "trend_history": {},
+    "official_posts": {
+      "taptap": [],
+      "bilibili": [],
+      "weibo": [],
+      "xiaohongshu": []
+    },
+    "hot_reviews": []
+  },
+  {
+    "id": "game_genshin",
+    "name": "原神",
+    "icon_char": "原",
+    "last_updated": "2025-12-18 09:00",
+    "fetch_status": {
+      "taptap": "success",
+      "bilibili": "stale",
+      "weibo": "not_configured",
+      "xiaohongshu": "not_configured"
+    },
+    "basic_info": {
+      "status": "未知",
+      "rating": 0.0,
+      "reservations": "-",
+      "followers": "-",
+      "review_count": "-",
+      "tags": [],
+      "diffs": {}
+    },
+    "trend_history": {},
+    "official_posts": {
+      "taptap": [],
+      "bilibili": [],
+      "weibo": [],
+      "xiaohongshu": []
+    },
+    "hot_reviews": []
+  }
+]
+
+
+
+
+
+

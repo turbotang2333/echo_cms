@@ -1,0 +1,45 @@
+# 每日数据抓取 workflow
+name: Daily Crawl
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # UTC 每天 00:00
+  workflow_dispatch:  # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install requests
+          # pip install playwright  # 如需要
+
+      - name: Run crawler
+        run: python crawler/main.py
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add public/data.json
+          git diff --staged --quiet || git commit -m "chore: update data $(date +%Y-%m-%d)"
+          git push
+
+
+
+
+
+
+
