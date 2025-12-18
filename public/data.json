@@ -3,7 +3,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2025-12-18 18:55",
+    "last_updated": "2025-12-18 19:30",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -79,7 +79,7 @@
         "user": "林宁卟",
         "content": "可不可以在刚开始下载时出个初始自定义脸（类似换装吧，那种换发型，颜色瞳孔颜色等等）毕竟感觉都长得一样有些没有独一无二感₍˄·͈༝·͈˄*₎◞ ̑̑不过总体还是很期待的，没有时间差吧应该，还有这个聊天是",
         "score": 5,
-        "likes": "76",
+        "likes": "77",
         "replies": "3",
         "is_new": false,
         "time": "12/5"
@@ -117,7 +117,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-18 18:56",
+    "last_updated": "2025-12-18 19:30",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -126,10 +126,10 @@
     },
     "basic_info": {
       "status": "预约中",
-      "rating": "7.2",
+      "rating": "7.3",
       "reservations": "6.8万",
       "followers": "6.8万",
-      "review_count": "229",
+      "review_count": "230",
       "tags": [
         "恋爱",
         "女性向",
@@ -170,7 +170,7 @@
         "6.8万"
       ],
       "rating": [
-        7.2
+        7.3
       ]
     },
     "official_posts": {
@@ -183,31 +183,31 @@
           "is_new": false
         },
         {
-          "title": "本次测试为不付费删档测试，测试结束后，游戏将无法登录，所有游戏数据将被清除。但，心动不息，冒险不止。制作组将会认真整理",
-          "date": "2025/11/27",
-          "comments": "2",
-          "likes": "29",
-          "is_new": false
-        },
-        {
           "title": "心动测试丨11月27日《代号：恋人》首测今日开启",
           "date": "2025/11/27",
-          "comments": "2",
-          "likes": "1297",
+          "comments": "29",
+          "likes": "46",
           "is_new": false
         },
         {
-          "title": "《代号恋人》首测当日预约有奖互动",
+          "title": "心动测试丨11月27日《代号：恋人》首测即将开启",
           "date": "2025/11/21",
           "comments": "1297",
           "likes": "667",
           "is_new": false
         },
         {
-          "title": "心动测试丨11月27日《代号：恋人》首测即将开启",
-          "date": "2025/11/21",
-          "comments": "2",
-          "likes": "1875",
+          "title": "《代号：恋人》首曝PV丨爱恋同谋之时",
+          "date": "2025/11/26",
+          "comments": "1875",
+          "likes": "686",
+          "is_new": false
+        },
+        {
+          "title": "心动测试丨《代号：恋人》首测意见及BUG反馈贴",
+          "date": "2025/11/27",
+          "comments": "833",
+          "likes": "422",
           "is_new": false
         }
       ],
@@ -230,7 +230,7 @@
         "content": "先给设计立绘的人送个大鸡腿，每个都帅在我的心巴上，再个文案一个大鸡腿，剧情各种反转很有看点，希望后续立绘和文案再接再厉",
         "score": 5,
         "likes": "16",
-        "replies": "1",
+        "replies": "36",
         "is_new": false,
         "time": "12/18"
       },
@@ -238,7 +238,7 @@
         "user": "手机用户46284780",
         "content": "来支持一下，测试体验感真心不错，画面精致，玩法也挺多的，要是能把一些小问题给优化好就更好了，几个男主的剧情线写得确实用心，人物塑造鲜明，故事有吸引力，能让人有追下去的欲望",
         "score": 5,
-        "likes": "2",
+        "likes": "3",
         "replies": "46284780",
         "is_new": false,
         "time": "12/18"
@@ -253,13 +253,13 @@
         "time": "12/18"
       },
       {
-        "user": "少女心贩卖机",
-        "content": "预约了，只求别删档测，最好直接正式上线，删档测好舍不得自己刷不出来的好卡！！",
+        "user": "绾绾",
+        "content": "不管怎么说，这美术风格和人设在我这儿已经过关了，先约为敬了各位!!!看得出角色设计有花心思，不是那种流水线网红脸，有自己的味道就好",
         "score": 5,
-        "likes": "0",
-        "replies": "0",
+        "likes": "3",
+        "replies": "2",
         "is_new": false,
-        "time": "12/17"
+        "time": "12/16"
       }
     ]
   },
@@ -267,7 +267,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2025-12-18 18:56",
+    "last_updated": "2025-12-18 19:31",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -279,13 +279,13 @@
       "rating": "6.8",
       "reservations": "4.2万",
       "followers": "4.2万",
-      "review_count": "250",
+      "review_count": "251",
       "tags": [
         "角色扮演",
         "剧情",
         "模拟经营",
-        "收集",
-        "模拟"
+        "乙女",
+        "文字"
       ],
       "diffs": {
         "reservations": {
@@ -324,7 +324,15 @@
       ]
     },
     "official_posts": {
-      "taptap": [],
+      "taptap": [
+        {
+          "title": "「EVE」 全新AI角色—以理性为尺，唯心动可越",
+          "date": "2025/11/21",
+          "comments": "52",
+          "likes": "202",
+          "is_new": false
+        }
+      ],
       "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
@@ -334,7 +342,7 @@
         "user": "浔",
         "content": "作为EVE最早期的一测与二测用户简单说说最早期呢，参加一测的时候已经是用过很多个AI的老AI用户了像是市面上的比较基础的gpt，grok，Claude，Gemini，ds等等，包括像是AI聊天软件什么",
         "score": 5,
-        "likes": "29",
+        "likes": "30",
         "replies": "4",
         "is_new": false,
         "time": "12/4"
@@ -343,7 +351,7 @@
         "user": "...aar",
         "content": "我真不行了，不管是gal还是乙女最重要的是新人设你不知道吗？你都不如直接攒一个姿势清奇的人设然后各种虚假宣传把人骗进去。",
         "score": 2,
-        "likes": "135",
+        "likes": "136",
         "replies": "110",
         "is_new": false,
         "time": "11/30"
@@ -352,7 +360,7 @@
         "user": "花生汤真的难喝",
         "content": "不知道为什么目前热度很低。但我本人真的很期待这样的游戏，或者说应用出现在市场。无法从商业角度给建议，只能从情感角度上讲一些看法了。今天看了相关回应短片，发现主创很多女性，我悬着的心稍微放下了些，希望大",
         "score": 5,
-        "likes": "124",
+        "likes": "125",
         "replies": "9",
         "is_new": false,
         "time": "11/25"
@@ -361,7 +369,7 @@
         "user": "丰盛的羚羊",
         "content": "首先说重点：这个游戏应该去尝试主打META概念开辟独特赛道区分其他本质是角色扮演的乙游。希望厂家能认真考虑一下拓展和定义一下META恋爱游戏这个赛道。而这么搞好了无疑会是对现有市场的降维打击。现在乙游",
         "score": 5,
-        "likes": "257",
+        "likes": "258",
         "replies": "32",
         "is_new": false,
         "time": "11/21"
@@ -370,7 +378,7 @@
         "user": "玖啊––再",
         "content": "真的真的超级需要，\"有温度\"\"有参与感\"，陪伴，就是那种我知道他和我不在一个世界，但是依然不妨碍他旁边我，他成为我的情感寄托，不需要游戏里出现女主，而是可以直接让他知道，\"我\"是屏幕外的人，但是\"我\"",
         "score": 5,
-        "likes": "8",
+        "likes": "9",
         "replies": "17",
         "is_new": false,
         "time": "12/2"
@@ -381,7 +389,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2025-12-18 18:56",
+    "last_updated": "2025-12-18 19:31",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -441,7 +449,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2025-12-18 18:56",
+    "last_updated": "2025-12-18 19:31",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
