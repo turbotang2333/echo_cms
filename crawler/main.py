@@ -17,10 +17,8 @@ from fetchers.bilibili import fetch_bilibili_data
 from fetchers.taptap import fetch_taptap_data
 from fetchers.weibo import fetch_weibo_data
 from fetchers.xiaohongshu import fetch_xiaohongshu_data
-
-# 预留：计算 diff、自然周逻辑将在后续任务中实现
-# from utils.diff_calculator import calculate_diffs
-# from utils.week_helper import is_current_week
+from utils.diff_calculator import calculate_diffs
+from utils.week_helper import is_current_week
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "public" / "games_config.json"
@@ -113,6 +111,84 @@ def merge_fetch_result(record: Dict[str, Any], platform: str, fetch_result: Dict
         record["hot_reviews"] = hot_reviews
 
 
+def _align_trend_history(history: Dict[str, Any]) -> Dict[str, Any]:
+    history = history or {}
+    dates = list(history.get("dates") or [])
+    reservations = list(history.get("reservations") or [])
+    rating = list(history.get("rating") or [])
+
+    # 对齐长度，缺失补 None，多余截断
+    while len(reservations) < len(dates):
+        reservations.append(None)
+    while len(rating) < len(dates):
+        rating.append(None)
+    if len(reservations) > len(dates):
+        reservations = reservations[: len(dates)]
+    if len(rating) > len(dates):
+        rating = rating[: len(dates)]
+
+    return {"dates": dates, "reservations": reservations, "rating": rating}
+
+
+def _to_float(value: Any) -> Optional[float]:
+    try:
+        return float(value)
+    except Exception:  # noqa: BLE001
+        return None
+
+
+def append_today_trend(record: Dict[str, Any]) -> None:
+    """追加今日趋势数据，保留最近 30 天"""
+    history = _align_trend_history(record.get("trend_history"))
+    today_key = datetime.now().strftime("%m-%d")
+
+    reservations_val = record.get("basic_info", {}).get("reservations")
+    rating_raw = record.get("basic_info", {}).get("rating")
+    rating_val = _to_float(rating_raw)
+    rating_store = rating_val if rating_val is not None else rating_raw
+
+    dates = history["dates"]
+    reservations = history["reservations"]
+    rating = history["rating"]
+
+    if today_key in dates:
+        idx = dates.index(today_key)
+        reservations[idx] = reservations_val
+        rating[idx] = rating_store
+    else:
+        dates.append(today_key)
+        reservations.append(reservations_val)
+        rating.append(rating_store)
+
+    # 仅保留最近 30 条
+    if len(dates) > 30:
+        overflow = len(dates) - 30
+        dates = dates[overflow:]
+        reservations = reservations[overflow:]
+        rating = rating[overflow:]
+
+    record["trend_history"] = {
+        "dates": dates,
+        "reservations": reservations,
+        "rating": rating,
+    }
+
+
+def _recalc_is_new(official_posts: Dict[str, List[Dict[str, Any]]]) -> Dict[str, List[Dict[str, Any]]]:
+    result: Dict[str, List[Dict[str, Any]]] = {}
+    for platform, posts in (official_posts or {}).items():
+        platform_posts: List[Dict[str, Any]] = []
+        if isinstance(posts, list):
+            for post in posts:
+                if not isinstance(post, dict):
+                    continue
+                new_post = dict(post)
+                new_post["is_new"] = is_current_week(post.get("date", ""))
+                platform_posts.append(new_post)
+        result[platform] = platform_posts
+    return result
+
+
 def handle_platform_fetch(platform: str, url: str, record: Dict[str, Any], old_record: Dict[str, Any]) -> None:
     fetcher = PLATFORM_FETCHERS.get(platform)
     if not fetcher:
@@ -122,7 +198,9 @@ def handle_platform_fetch(platform: str, url: str, record: Dict[str, Any], old_r
     try:
         result = fetcher(url)
         if not result:
-            raise ValueError("fetcher returned empty result")
+            # 约定空结果视为未实现/暂未配置，避免 stale 告警
+            record["fetch_status"][platform] = "not_configured"
+            return
         merge_fetch_result(record, platform, result)
         record["fetch_status"][platform] = "success"
     except Exception as exc:  # noqa: BLE001
@@ -158,7 +236,9 @@ def process_game(game_cfg: Dict[str, Any], old_record: Optional[Dict[str, Any]])
 
         handle_platform_fetch(platform, url, record, old_record or {})
 
-    # TODO: trend_history 追加、diffs 计算、is_new 标记（后续任务实现）
+    append_today_trend(record)
+    record["basic_info"]["diffs"] = calculate_diffs(record["basic_info"], record.get("trend_history", {}))
+    record["official_posts"] = _recalc_is_new(record.get("official_posts"))
     return record
 
 

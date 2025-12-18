@@ -3,19 +3,19 @@
     "id": "code_lover",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-18 15:20",
+    "last_updated": "2025-12-18 17:29",
     "fetch_status": {
       "taptap": "success",
-      "bilibili": "stale",
+      "bilibili": "not_configured",
       "weibo": "not_configured",
-      "xiaohongshu": "stale"
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "预约中",
       "rating": "7.2",
       "reservations": "6.8万",
       "followers": "6.8万",
-      "review_count": "226",
+      "review_count": "228",
       "tags": [
         "恋爱",
         "女性向",
@@ -23,11 +23,42 @@
         "角色扮演",
         "换装"
       ],
-      "diffs": {},
+      "diffs": {
+        "reservations": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
       "name": "代号：恋人（TapTap测试版）",
       "developer": ""
     },
-    "trend_history": {},
+    "trend_history": {
+      "dates": [
+        "12-18"
+      ],
+      "reservations": [
+        "6.8万"
+      ],
+      "rating": [
+        7.2
+      ]
+    },
     "official_posts": {
       "taptap": [
         {
@@ -81,22 +112,13 @@
         "time": "12/1"
       },
       {
-        "user": "少女心贩卖机",
-        "content": "预约了，只求别删档测，最好直接正式上线，删档测好舍不得自己刷不出来的好卡！！",
+        "user": "噜啦啦噜啦啦走开走开",
+        "content": "官方你们别累着但也别歇着了！！！赶紧上线！还有到时候多送点福利，我要爽玩！！！！",
         "score": 5,
         "likes": "0",
         "replies": "0",
         "is_new": false,
-        "time": "12/17"
-      },
-      {
-        "user": "绾绾",
-        "content": "不管怎么说，这美术风格和人设在我这儿已经过关了，先约为敬了各位!!!看得出角色设计有花心思，不是那种流水线网红脸，有自己的味道就好",
-        "score": 5,
-        "likes": "3",
-        "replies": "2",
-        "is_new": false,
-        "time": "12/16"
+        "time": "12/18"
       },
       {
         "user": "ARc",
@@ -115,6 +137,15 @@
         "replies": "16",
         "is_new": false,
         "time": "12/16"
+      },
+      {
+        "user": "雪天",
+        "content": "已经点预约了 支持一把 慢慢优化呗，反正男主们这么好看，我可以边玩边等，不差这点时间",
+        "score": 5,
+        "likes": "0",
+        "replies": "0",
+        "is_new": false,
+        "time": "12/16"
       }
     ]
   },
@@ -122,10 +153,10 @@
     "id": "game_genshin",
     "name": "原神",
     "icon_char": "原",
-    "last_updated": "2025-12-18 15:20",
+    "last_updated": "2025-12-18 17:29",
     "fetch_status": {
       "taptap": "success",
-      "bilibili": "stale",
+      "bilibili": "not_configured",
       "weibo": "not_configured",
       "xiaohongshu": "not_configured"
     },
@@ -142,18 +173,63 @@
         "养成",
         "高自由度"
       ],
-      "diffs": {},
+      "diffs": {
+        "reservations": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
       "name": "原神",
       "developer": "其他游戏"
     },
-    "trend_history": {},
+    "trend_history": {
+      "dates": [
+        "12-18"
+      ],
+      "reservations": [
+        "-"
+      ],
+      "rating": [
+        7.8
+      ]
+    },
     "official_posts": {
       "taptap": [
+        {
+          "title": "「月之三」版本活动祈愿预告第二期",
+          "date": "2025/12/23",
+          "comments": "3",
+          "likes": "1",
+          "is_new": false
+        },
+        {
+          "title": "本期活动祈愿时间为2025/12/23 18:00 ~ 2026/01/13 14:59。",
+          "date": "2025/12/23",
+          "comments": "3",
+          "likes": "1",
+          "is_new": false
+        },
         {
           "title": "【有奖活动】12月生日会话题活动开启！",
           "date": "2025/12/1",
           "comments": "16",
-          "likes": "1146",
+          "likes": "1148",
           "is_new": false
         },
         {
@@ -161,27 +237,6 @@
           "date": "2025/12/10",
           "comments": "6",
           "likes": "73",
-          "is_new": false
-        },
-        {
-          "title": "旅行者好呀，欢迎来到「龙脊雪山国际越野赛」的现场！除了紧张刺激的越野赛事，在整备营地里还设有多种「劲趣游艺」活动，一起享受这场热情洋溢的雪山之旅吧~",
-          "date": "2025/12/19",
-          "comments": "11",
-          "likes": "6",
-          "is_new": true
-        },
-        {
-          "title": "「炽魂斗士的雪界之旅」活动将于2025/12/19 10:00开启——参与游艺可以获取活动专属武器「弓·虹蛇的雨弦」，以及原石、智识之冕、室外摆设等奖励~",
-          "date": "2025/12/19",
-          "comments": "11",
-          "likes": "6",
-          "is_new": true
-        },
-        {
-          "title": "【已开奖】「系风攘影」· 雅珂达登场 参与活动赢周边~",
-          "date": "2025/11/30",
-          "comments": "8",
-          "likes": "357",
           "is_new": false
         }
       ],

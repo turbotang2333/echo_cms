@@ -4,8 +4,8 @@
 """
 
 def fetch_weibo_data(url: str) -> dict:
-    # TODO: 实现微博抓取逻辑
-    pass
+    # 占位实现：后续补充真实抓取逻辑
+    return {}
 
 
 
