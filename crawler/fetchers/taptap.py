@@ -1,263 +1,445 @@
 # -*- coding: utf-8 -*-
 """
 TapTap 数据抓取模块
-策略（简化版）：
-1) 仅使用 HTML 文本正则，不依赖 JSON-LD
-2) 兼容“预约/关注”与“安装/下载”字段差异
-3) Rating 直接匹配纯数字（如 7.2）
+使用 Playwright 浏览器自动化提取数据
+需要访问 3 个页面：基础数据页、官方帖子页、热门评论页
 """
+from __future__ import annotations
+
 import logging
-import os
-import random
 import re
 import time
-from datetime import datetime
-from typing import Dict, List, Optional
-
-import requests
-
-USER_AGENTS = [
-    # 模拟常见安卓/桌面浏览器，提升返回完整页概率
-    "Mozilla/5.0 (Linux; Android 13; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
-    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-    "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_5_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
-]
+from datetime import datetime, timedelta
+from typing import Any, Dict, List, Optional
+from urllib.parse import urlparse
 
 
-def _headers() -> Dict[str, str]:
-    headers = {
-        "User-Agent": random.choice(USER_AGENTS),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "zh-CN,zh;q=0.9",
-        "Accept-Encoding": "gzip, deflate, br",
-        "Referer": "https://www.taptap.cn/",
-        "Origin": "https://www.taptap.cn",
+def convert_relative_time(relative_time: str, fetch_time: datetime = None) -> str:
+    """
+    把相对时间转换为绝对日期
+    
+    Args:
+        relative_time: 如 "2天前"、"19小时前"、"修改于 2025/12/1"
+        fetch_time: 爬取时间，默认为当前时间
+        
+    Returns:
+        格式化的日期字符串，如 "12/16" 或 "12/1"
+    """
+    if not relative_time:
+        return ""
+    
+    fetch_time = fetch_time or datetime.now()
+    
+    # 已经是绝对日期格式
+    if "修改于" in relative_time:
+        match = re.search(r'(\d{4})/(\d+)/(\d+)', relative_time)
+        if match:
+            return f"{match.group(2)}/{match.group(3)}"
+        return relative_time.replace("修改于 ", "")
+    
+    # 绝对日期格式
+    match = re.match(r'(\d{4})/(\d+)/(\d+)', relative_time)
+    if match:
+        return f"{match.group(2)}/{match.group(3)}"
+    
+    # 相对时间转换
+    if "分钟前" in relative_time:
+        minutes = int(re.search(r'(\d+)', relative_time).group(1))
+        result_date = fetch_time - timedelta(minutes=minutes)
+    elif "小时前" in relative_time:
+        hours = int(re.search(r'(\d+)', relative_time).group(1))
+        result_date = fetch_time - timedelta(hours=hours)
+    elif "天前" in relative_time:
+        days = int(re.search(r'(\d+)', relative_time).group(1))
+        result_date = fetch_time - timedelta(days=days)
+    else:
+        return relative_time
+    
+    return f"{result_date.month}/{result_date.day}"
+
+try:
+    from playwright.sync_api import sync_playwright, Page, TimeoutError as PlaywrightTimeout
+    PLAYWRIGHT_AVAILABLE = True
+except ImportError:
+    PLAYWRIGHT_AVAILABLE = False
+    logging.warning("Playwright 未安装，TapTap 抓取功能不可用。请运行: pip install playwright && playwright install chromium")
+
+
+def extract_app_id(url: str) -> Optional[str]:
+    """从 TapTap URL 提取 app_id"""
+    match = re.search(r'/app/(\d+)', url)
+    return match.group(1) if match else None
+
+
+def extract_basic_info(page: Page) -> Dict[str, Any]:
+    """从基础数据页提取信息"""
+    js_code = """
+    () => {
+        const data = {};
+        
+        // 游戏名称
+        data.name = document.querySelector('h1')?.textContent?.trim() || '';
+        
+        const text = document.body.innerText;
+        
+        // 评分 - 匹配如 "9.3" 在 "官方入驻" 或 "安卓" 之前
+        const ratingMatch = text.match(/(\\d\\.\\d)\\s*(?:官方入驻|安卓)/);
+        data.rating = ratingMatch ? ratingMatch[1] : '';
+        
+        // 预约数 - 优先匹配 "104 万" 格式，然后是 "6.7万人预约"
+        const reserveMatch1 = text.match(/预约\\s*(\\d+(?:\\.\\d+)?)\\s*万/);
+        const reserveMatch2 = text.match(/(\\d+(?:\\.\\d+)?)\\s*万?人?预约/);
+        if (reserveMatch1) {
+            data.reservations = reserveMatch1[1] + '万';
+        } else if (reserveMatch2) {
+            data.reservations = reserveMatch2[1] + '万';
+        } else {
+            data.reservations = '-';
+        }
+        
+        // 关注数 - 匹配 "关注 109 万" 格式
+        const followMatch1 = text.match(/关注\\s*(\\d+(?:\\.\\d+)?)\\s*万/);
+        const followMatch2 = text.match(/(\\d+(?:\\.\\d+)?)\\s*万?人?关注/);
+        if (followMatch1) {
+            data.followers = followMatch1[1] + '万';
+        } else if (followMatch2) {
+            data.followers = followMatch2[1] + '万';
+        } else {
+            data.followers = '-';
+        }
+        
+        // 评价数
+        const reviewMatch = text.match(/评价\\s*(\\d+(?:\\.\\d+)?\\s*万?)\\s*条/) || 
+                           text.match(/(\\d+(?:\\.\\d+)?\\s*万?)\\s*(?:个)?评价/);
+        data.review_count = reviewMatch ? reviewMatch[1] : '0';
+        
+        // 标签
+        const tagLinks = document.querySelectorAll('a[href*="/tag/"]');
+        data.tags = [...new Set([...tagLinks].map(a => a.textContent.trim()).filter(t => t && t.length < 10))].slice(0, 5);
+        
+        // 开发商 - 查找页面上的开发商名称
+        // 通常在详情页有 "开发xxx" 或开发商单独一行
+        data.developer = '';
+        const devPatterns = [
+            /开发([\\u4e00-\\u9fa5]+(?:工作室|游戏|科技|网络|娱乐|互动))/,
+            /厂商([\\u4e00-\\u9fa5]+)/,
+        ];
+        for (const pattern of devPatterns) {
+            const match = text.match(pattern);
+            if (match && match[1] && !match[1].includes('者中心')) {
+                data.developer = match[1];
+                break;
+            }
+        }
+        
+        // 评价数去除空格
+        data.review_count = data.review_count.trim();
+        
+        // 状态判断
+        if (text.includes('预约')) {
+            data.status = '预约中';
+        } else if (text.includes('测试')) {
+            data.status = '测试中';
+        } else {
+            data.status = '已上线';
+        }
+        
+        return data;
     }
-    cookie = os.getenv("TAPTAP_COOKIE")
-    if cookie:
-        headers["Cookie"] = cookie
-    return headers
-
-
-def _proxy() -> Optional[Dict[str, str]]:
-    proxy = os.getenv("PROXY_URL")
-    if proxy:
-        return {"http": proxy, "https": proxy}
-    return None
-
-
-def _rand_delay():
-    time.sleep(random.uniform(0.3, 0.9))
-
-
-def _number(text: str) -> str:
-    if not text:
-        return "-"
-    m = re.search(r"([\d\.]+\s*[万亿kK]?)", text)
-    return m.group(1).replace(" ", "") if m else text.strip()
-
-
-def _match_first(patterns, html: str) -> Optional[re.Match]:
-    for pat in patterns:
-        m = re.search(pat, html, re.IGNORECASE)
-        if m:
-            return m
-    return None
-
-
-def _clean_text(text: str) -> str:
-    return re.sub(r"<.*?>", "", text or "").strip()
-
-
-def _today_str() -> str:
-    return datetime.now().strftime("%Y-%m-%d")
-
-
-def _parse_date(context: str) -> str:
-    m = re.search(r"(\d{4}-\d{2}-\d{2})", context)
-    if m:
-        return m.group(1)
-    # “小时前/分钟前/天前”均视为当天
-    if re.search(r"(分钟前|小时前|天前)", context):
-        return _today_str()
-    return _today_str()
-
-
-def _to_float(text: str) -> Optional[float]:
+    """
     try:
-        return float(text)
-    except Exception:
-        return None
-
-
-def _extract_posts(html: str) -> List[Dict[str, object]]:
-    posts: List[Dict[str, object]] = []
-    for match in re.finditer(r'href="(https://www\.taptap\.cn/post/\d+)"[^>]*>(.*?)</a>', html):
-        url = match.group(1)
-        title = _clean_text(match.group(2))
-        if not title:
-            continue
-        start = max(match.start() - 400, 0)
-        end = min(match.end() + 400, len(html))
-        ctx = html[start:end]
-
-        date = _parse_date(ctx)
-        comments_match = re.search(r"(评论|回复)[^\d]{0,5}(\d+)", ctx)
-        likes_match = re.search(r"(点赞|喜欢|热度)[^\d]{0,5}(\d+)", ctx)
-
-        posts.append(
-            {
-                "id": url.rsplit("/", 1)[-1],
-                "title": title,
-                "url": url,
-                "date": date,
-                "is_new": False,  # 后续自然周计算
-                "comments": int(comments_match.group(2)) if comments_match else 0,
-                "likes": int(likes_match.group(2)) if likes_match else 0,
-            }
-        )
-        if len(posts) >= 10:
-            break
-    return posts
-
-
-def _extract_reviews(html: str) -> List[Dict[str, object]]:
-    reviews: List[Dict[str, object]] = []
-    for match in re.finditer(r'href="(https://www\.taptap\.cn/review/\d+)"[^>]*>(.*?)</a>', html):
-        url = match.group(1)
-        content = _clean_text(match.group(2))
-        if not content:
-            continue
-        start = max(match.start() - 400, 0)
-        end = min(match.end() + 400, len(html))
-        ctx = html[start:end]
-
-        user_match = re.search(r'class="[^"]*(user|name)[^"]*">\s*([^<]{1,40})<', ctx)
-        score_match = re.search(r"评分[^\d]{0,4}([0-5](?:\.\d)?)", ctx)
-        likes_match = re.search(r"(点赞|喜欢)[^\d]{0,5}(\d+)", ctx)
-        replies_match = re.search(r"(回复|评论)[^\d]{0,5}(\d+)", ctx)
-        date = _parse_date(ctx)
-
-        reviews.append(
-            {
-                "id": url.rsplit("/", 1)[-1],
-                "platform": "taptap",
-                "user": (user_match.group(2).strip() if user_match else ""),
-                "content": content,
-                "score": _to_float(score_match.group(1)) if score_match else None,
-                "date": date,
-                "likes": int(likes_match.group(2)) if likes_match else 0,
-                "replies": int(replies_match.group(2)) if replies_match else 0,
-                "is_new": False,
-            }
-        )
-        if len(reviews) >= 5:
-            break
-    return reviews
-
-
-def fetch_taptap_data(url: str) -> Dict[str, object]:
-    if not url or "taptap.cn" not in url:
+        result = page.evaluate(js_code)
+        return result if isinstance(result, dict) else {}
+    except Exception as e:
+        logging.error("提取基础数据失败: %s", e)
         return {}
 
-    _rand_delay()
 
-    def _fetch_with_retry() -> Optional[str]:
-        delay = 0.6
-        for attempt in range(3):
-            try:
-                resp = requests.get(
-                    url,
-                    headers=_headers(),
-                    timeout=15,
-                    proxies=_proxy(),
-                    allow_redirects=True,
-                )
-                resp.raise_for_status()
-                body = resp.text
-                # 简单反爬探测：若正文包含下载 App / 请登录 等提示，视为失败
-                lowered = body.lower()
-                if any(key in lowered for key in ["下载 app", "login", "请登录", "captcha"]):
-                    raise ValueError("suspect anti-bot page")
-                return body
-            except Exception as exc:
-                logging.warning("TapTap 请求失败/疑似反爬 attempt=%s: %s", attempt + 1, exc)
-                time.sleep(delay)
-                delay *= 1.8
-        return None
+def extract_official_posts(page: Page) -> List[Dict[str, Any]]:
+    """从官方帖子页提取信息"""
+    js_code = """
+    () => {
+        const posts = [];
+        const text = document.body.innerText;
+        const lines = text.split('\\n').filter(l => l.trim());
+        const seen = new Set();
+        
+        for (let i = 0; i < lines.length && posts.length < 5; i++) {
+            const line = lines[i].trim();
+            
+            // 匹配帖子标题特征
+            if (line.length > 10 && line.length < 80 && 
+                (line.includes('测试') || line.includes('公告') || line.includes('维护') || 
+                 line.includes('更新') || line.includes('活动') || line.includes('补偿') || 
+                 line.includes('预约') || line.includes('上线') || line.includes('开启') ||
+                 line.includes('首曝') || line.includes('PV'))) {
+                
+                // 去重
+                const titleKey = line.substring(0, 30);
+                if (seen.has(titleKey)) continue;
+                seen.add(titleKey);
+                
+                const post = { title: line, date: '', comments: '0', likes: '0', is_new: false };
+                
+                // 查找日期
+                for (let j = i - 2; j < Math.min(i + 10, lines.length); j++) {
+                    if (j < 0) continue;
+                    const dateMatch = lines[j].match(/(2025|2024)\\/\\d+\\/\\d+/);
+                    if (dateMatch) {
+                        post.date = dateMatch[0];
+                        break;
+                    }
+                }
+                
+                // 查找统计数据 (评论数、点赞数)
+                let foundStats = 0;
+                for (let j = i; j < Math.min(i + 20, lines.length) && foundStats < 2; j++) {
+                    const statsMatch = lines[j].match(/^(\\d+)$/);
+                    if (statsMatch) {
+                        if (foundStats === 0) post.comments = statsMatch[1];
+                        else post.likes = statsMatch[1];
+                        foundStats++;
+                    }
+                }
+                
+                // 判断是否本周新帖
+                if (post.date) {
+                    const postDate = new Date(post.date.replace(/\\//g, '-'));
+                    const now = new Date();
+                    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+                    post.is_new = postDate >= weekAgo;
+                }
+                
+                if (post.date) posts.push(post);
+            }
+        }
+        
+        return posts;
+    }
+    """
+    try:
+        result = page.evaluate(js_code)
+        return result if isinstance(result, list) else []
+    except Exception as e:
+        logging.error("提取官方帖子失败: %s", e)
+        return []
 
-    html = _fetch_with_retry()
-    if not html:
+
+def extract_hot_reviews(page: Page, fetch_time: datetime = None) -> List[Dict[str, Any]]:
+    """从评论页提取信息（按页面显示顺序）"""
+    fetch_time = fetch_time or datetime.now()
+    
+    js_code = """
+    () => {
+        const reviews = [];
+        const seenHrefs = new Set();
+        
+        // 按 DOM 顺序遍历评论链接
+        document.querySelectorAll('a[href^="/review/"]').forEach(link => {
+            const href = link.getAttribute('href');
+            if (!href || !href.match(/^\\/review\\/\\d+$/) || seenHrefs.has(href)) return;
+            
+            const content = link.textContent.trim();
+            if (content.length < 15) return;
+            
+            seenHrefs.add(href);
+            
+            // 向上查找最小的包含用户信息的父容器（避免范围过大）
+            let card = link.parentElement;
+            let found = false;
+            
+            for (let i = 0; i < 5; i++) {
+                if (!card) break;
+                
+                const userLinks = card.querySelectorAll('a[href^="/user/"]');
+                if (userLinks.length >= 1) {
+                    // 找第一个有文本的用户链接作为评论者
+                    let userName = '';
+                    for (const u of userLinks) {
+                        const t = u.textContent.trim();
+                        if (t && t.length > 0 && t.length < 30) {
+                            userName = t;
+                            break;
+                        }
+                    }
+                    
+                    if (userName) {
+                        // 提取时间
+                        const timeMatch = card.innerText.match(/(\\d+\\s*(?:小时|天|分钟)前|修改于\\s*\\d+\\/\\d+\\/\\d+|\\d{4}\\/\\d+\\/\\d+)/);
+                        const rawTime = timeMatch ? timeMatch[0] : '';
+                        
+                        // 提取回复数和点赞数
+                        let replies = '0', likes = '0';
+                        const replyLink = card.querySelector('a[href$="#to-reply"]');
+                        if (replyLink) {
+                            const replyText = replyLink.textContent.trim();
+                            if (replyText && /^\\d+$/.test(replyText)) {
+                                replies = replyText;
+                            }
+                        }
+                        // 点赞数通常在回复数后面
+                        const allNums = card.innerText.match(/\\d+/g) || [];
+                        if (allNums.length >= 2) {
+                            const lastTwo = allNums.slice(-2);
+                            if (!replies || replies === '0') replies = lastTwo[0];
+                            likes = lastTwo[1];
+                        }
+                        
+                        // 评分：通过前景层宽度比例计算
+                        let score = 5;
+                        let bgWidth = 0, fgWidth = 0;
+                        card.querySelectorAll('div').forEach(div => {
+                            const stars = div.querySelectorAll(':scope > .review-rate__star');
+                            if (stars.length === 5) {
+                                const style = getComputedStyle(div);
+                                const rect = div.getBoundingClientRect();
+                                if (style.position === 'absolute' && style.overflow === 'hidden') {
+                                    fgWidth = rect.width;
+                                } else if (rect.width > 0) {
+                                    bgWidth = rect.width;
+                                }
+                            }
+                        });
+                        if (bgWidth > 0 && fgWidth > 0) {
+                            score = Math.round((fgWidth / bgWidth) * 5);
+                            if (score < 1) score = 1;
+                            if (score > 5) score = 5;
+                        }
+                        
+                        reviews.push({
+                            user: userName,
+                            content: content.substring(0, 100),
+                            score: score,
+                            rawTime: rawTime,
+                            likes: likes,
+                            replies: replies,
+                            is_new: false
+                        });
+                        found = true;
+                        break;
+                    }
+                }
+                card = card.parentElement;
+            }
+        });
+        
+        return reviews.slice(0, 5);
+    }
+    """
+    try:
+        result = page.evaluate(js_code)
+        if not isinstance(result, list):
+            return []
+        
+        # 转换时间格式
+        for review in result:
+            raw_time = review.pop('rawTime', '')
+            review['time'] = convert_relative_time(raw_time, fetch_time)
+        
+        return result
+    except Exception as e:
+        logging.error("提取热门评论失败: %s", e)
+        return []
+
+
+def fetch_taptap_data(url: str) -> Dict[str, Any]:
+    """
+    抓取 TapTap 游戏数据
+    
+    Args:
+        url: TapTap 游戏主页 URL，如 https://www.taptap.cn/app/786394?os=android
+        
+    Returns:
+        包含 basic_info, official_posts, hot_reviews 的字典
+    """
+    if not PLAYWRIGHT_AVAILABLE:
+        logging.error("Playwright 未安装，无法抓取 TapTap 数据")
         return {}
-
-    # Rating：匹配形如 >7.2< 或 data-rating="7.2"，兼容整数
-    rating_match = _match_first(
-        [
-            r">([0-9]\.\d)<",
-            r">([0-9])<",
-            r'data-rating="([0-9]\.\d)"',
-            r'"score"\s*:\s*([0-9]\.\d)',
-        ],
-        html,
-    )
-    rating = rating_match.group(1) if rating_match else "0.0"
-
-    # 预约/安装/关注/评价
-    reservations_match = _match_first(
-        [
-            r">([\d\.,万亿kK\s]+)\s*人?</span>[^<]{0,30}<span[^>]*>预约",
-            r">([\d\.,万亿kK\s]+)\s*人?</span>[^<]{0,30}<span[^>]*>安装",
-            r">([\d\.,万亿kK\s]+)\s*人?</span>[^<]{0,30}<span[^>]*>下载",
-        ],
-        html,
-    )
-    followers_match = _match_first(
-        [
-            r">([\d\.,万亿kK\s]+)\s*人?</span>[^<]{0,30}<span[^>]*>关注",
-            r">([\d\.,万亿kK\s]+)\s*人?</span>[^<]{0,30}<span[^>]*>粉丝",
-        ],
-        html,
-    )
-    reviews_match = _match_first(
-        [
-            r">([\d\.,万亿kK\s]+)\s*条?</span>[^<]{0,30}<span[^>]*>评价",
-            r'"reviewsCount"\s*:\s*([0-9\.eE\+]+)',
-        ],
-        html,
-    )
-
-    # 状态：已上线/预约中/敬请期待
-    status = "未知"
-    if re.search(r"(下载|安装)", html):
-        status = "已上线"
-    elif re.search(r"预约", html):
-        status = "预约中"
-    elif re.search(r"(敬请期待|即将上线)", html):
-        status = "敬请期待"
-
-    # 标签
-    tags = re.findall(r'<a[^>]*class="[^"]*tag[^"]*"[^>]*>(.*?)</a>', html)
-    tags = [re.sub(r"<.*?>", "", t).strip() for t in tags if t.strip()]
-    if not tags:
-        meta_kw = re.search(r'<meta name="keywords" content="(.*?)">', html)
-        if meta_kw:
-            tags = [x.strip() for x in meta_kw.group(1).split(",") if x.strip()]
-
-    basic_info = {
-        "status": status,
-        "rating": _to_float(rating) if rating else None,
-        "reservations": _number(reservations_match.group(1)) if reservations_match else "-",
-        "followers": _number(followers_match.group(1)) if followers_match else "-",
-        "review_count": _number(reviews_match.group(1)) if reviews_match else "-",
-        "tags": tags[:5],
-        "diffs": {},
+    
+    app_id = extract_app_id(url)
+    if not app_id:
+        logging.error("无法从 URL 提取 app_id: %s", url)
+        return {}
+    
+    # 构建三个页面的 URL
+    base_url = f"https://www.taptap.cn/app/{app_id}?os=android"
+    posts_url = f"https://www.taptap.cn/app/{app_id}/topic?type=official"
+    reviews_url = f"https://www.taptap.cn/app/{app_id}/review?os=android"
+    
+    result: Dict[str, Any] = {
+        "basic_info": {},
+        "official_posts": [],
+        "hot_reviews": [],
     }
+    
+    try:
+        with sync_playwright() as p:
+            # 启动浏览器
+            browser = p.chromium.launch(
+                headless=True,
+                args=[
+                    '--disable-blink-features=AutomationControlled',
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage',
+                ]
+            )
+            
+            context = browser.new_context(
+                viewport={'width': 1920, 'height': 1080},
+                user_agent='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            )
+            
+            page = context.new_page()
+            page.set_default_timeout(30000)
+            
+            # 1. 抓取基础数据页
+            logging.info("正在抓取基础数据页: %s", base_url)
+            page.goto(base_url, wait_until='networkidle')
+            time.sleep(1)  # 等待动态内容加载
+            basic_info = extract_basic_info(page)
+            result["basic_info"] = basic_info
+            logging.info("基础数据: %s", basic_info.get('name', ''))
+            
+            # 2. 抓取官方帖子页
+            logging.info("正在抓取官方帖子页: %s", posts_url)
+            page.goto(posts_url, wait_until='networkidle')
+            time.sleep(1)
+            official_posts = extract_official_posts(page)
+            result["official_posts"] = official_posts
+            logging.info("获取到 %d 条官方帖子", len(official_posts))
+            
+            # 3. 抓取热门评论页
+            logging.info("正在抓取热门评论页: %s", reviews_url)
+            page.goto(reviews_url, wait_until='networkidle')
+            time.sleep(2)  # 等待评论列表完全渲染
+            fetch_time = datetime.now()  # 记录爬取时间
+            hot_reviews = extract_hot_reviews(page, fetch_time)
+            result["hot_reviews"] = hot_reviews
+            logging.info("获取到 %d 条热门评论", len(hot_reviews))
+            
+            browser.close()
+            
+    except PlaywrightTimeout as e:
+        logging.error("页面加载超时: %s", e)
+    except Exception as e:
+        logging.exception("TapTap 抓取失败: %s", e)
+    
+    return result
 
-    return {
-        "basic_info": basic_info,
-        "official_posts": _extract_posts(html),
-        "hot_reviews": _extract_reviews(html),
-        "trend_history": {},
-    }
 
-
+# 用于独立测试
+if __name__ == "__main__":
+    import json
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    
+    test_urls = [
+        "https://www.taptap.cn/app/786394?os=android",  # 代号：恋人
+        "https://www.taptap.cn/app/746164?os=android",  # 夜幕之下
+    ]
+    
+    for url in test_urls:
+        print(f"\n{'='*60}")
+        print(f"测试 URL: {url}")
+        print('='*60)
+        result = fetch_taptap_data(url)
+        print(json.dumps(result, ensure_ascii=False, indent=2))

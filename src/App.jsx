@@ -171,11 +171,11 @@ const CompactReviewItem = ({ review }) => (
     <div className="flex justify-between items-center mb-1.5">
       <div className="flex items-center gap-2">
         <span className={`text-xs font-bold truncate max-w-[100px] ${review.is_new ? 'text-amber-900' : 'text-slate-600'}`}>
-          {review.user}
+          {review.user || '匿名用户'}
         </span>
-        {review.is_new && (
-          <span className="text-[9px] bg-amber-100 text-amber-700 px-1 rounded border border-amber-200">
-            新热评
+        {review.time && (
+          <span className="text-[9px] text-slate-400">
+            {review.time}
           </span>
         )}
       </div>
@@ -423,8 +423,8 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
              iconColor="text-rose-600"
              iconBg="bg-rose-50"
              rightElement={
-                <span className="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-100">
-                 Tap本周热评
+                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
+                 TapTap评论
                </span>
              }
           />

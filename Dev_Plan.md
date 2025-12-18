@@ -1,6 +1,6 @@
-# GitHub Serverless 竞品监控系统 - 技术蓝图 v2.0
+# GitHub Serverless 竞品监控系统 - 技术蓝图 v2.2
 
-> 核心目标：基于 GitHub Actions + Pages 实现零成本、全自动、可维护的游戏竞品数据监控。
+> 核心目标：基于本地定时任务 + GitHub Pages 实现低成本、全自动、可维护的游戏竞品数据监控。
 
 ---
 
@@ -8,7 +8,7 @@
 
 ### 1.1 逻辑架构
 
-采用 **无后端 (Serverless)** 设计，利用 GitHub 作为存储和计算节点。
+采用 **本地爬虫 + GitHub 存储** 设计，利用 Mac 定时任务执行爬虫，GitHub 作为存储和部署节点。
 
 ```mermaid
 graph TD
@@ -22,11 +22,11 @@ graph TD
         ARCHIVE[archive/<br/>历史归档]
     end
 
-    subgraph "GitHub Actions"
-        A1[daily_crawl.yml] -->|读取| CFG
-        A1 -->|执行| CRAWLER[Python 爬虫]
+    subgraph "本地 Mac"
+        CRON[crontab 定时任务<br/>每天 9:00] -->|执行| CRAWLER[Playwright 爬虫]
+        CRAWLER -->|读取| CFG
         CRAWLER -->|更新| DATA
-        CRAWLER -->|月末归档| ARCHIVE
+        CRAWLER -->|Git Push| GITHUB[GitHub 远程仓库]
     end
 
     subgraph "前端展示"
@@ -34,6 +34,7 @@ graph TD
     end
 
     UI_Config -->|导出JSON<br/>手动上传| CFG
+    GITHUB -->|触发| DEPLOY[GitHub Pages 部署]
 ```
 
 ### 1.2 技术栈选择
@@ -41,10 +42,25 @@ graph TD
 | 层级 | 技术选型 |
 |------|----------|
 | 前端 | React 18 + Tailwind CSS (Vite 构建) |
-| 爬虫 | Python 3.9 (Requests + Playwright 可选) |
+| 爬虫 | Python 3.9 + **Playwright**（浏览器渲染，应对 CSR 页面） |
+| 定时任务 | Mac crontab（每天 9:00 自动执行） |
 | 存储 | JSON 文件 (Git 版本控制) |
-| CI/CD | GitHub Actions |
 | 部署 | GitHub Pages |
+
+### 1.3 技术方案选型说明
+
+**为什么使用 Playwright 而非 Requests？**
+
+TapTap 等平台采用了多重反爬机制：
+- **CSR 动态渲染**：页面数据由 JavaScript 动态加载，纯 HTTP 请求无法获取
+- **签名验证**：API 请求需要 `X-Tap-Sign`（HMAC-SHA256）和 `X-UA`（设备指纹）
+- **TLS 指纹检测**：服务端检测 JA3 指纹，识别非浏览器请求
+
+**为什么使用本地定时任务而非 GitHub Actions？**
+
+- GitHub Actions 的 IP 容易被平台封禁
+- 本地真实浏览器环境更接近正常用户，不易触发反爬
+- 家用宽带 IP 更稳定，抓取成功率更高
 
 ---
 
@@ -242,7 +258,7 @@ graph TD
 **模块职责**：
 
 1. **读取配置**：从 `games_config.json` 获取监控名单和平台链接
-2. **采集数据**：多线程并发抓取各平台数据
+2. **采集数据**：使用 Playwright 渲染页面，通过 JavaScript 注入提取 DOM 数据
 3. **计算处理**：
    - 读取旧 `data.json` 中的 `trend_history`
    - 将今日数据追加到 history 数组（维持长度 <= 30）
@@ -251,23 +267,47 @@ graph TD
 4. **状态标记**：设置 `fetch_status`，区分成功/失败/未配置
 5. **降级处理**：若某平台抓取失败，复用旧数据并标记 `stale`
 
-**反爬应对策略**：
+**TapTap 抓取技术方案**：
 
-| 级别 | 策略 |
-|------|------|
-| Level 1 | User-Agent 轮换 + 随机延迟 |
-| Level 2 | 代理池（预留 `PROXY_URL` 环境变量） |
-| Level 3 | 本地运行模式（家用宽带 + 自动 Git Push） |
+| 数据类型 | 页面 URL | 提取方式 |
+|----------|----------|----------|
+| 基础数据 | `/app/{id}?os=android` | JS 注入提取 DOM 文本 |
+| 官方帖子 | `/app/{id}/topic?type=official` | JS 注入遍历帖子卡片 |
+| 热门评论 | `/app/{id}/review?os=android` | JS 注入提取评论卡片 + SVG 宽度计算评星 |
 
-### 5.2 自动化模块 (`.github/workflows/`)
+**数据提取示例（评星计算）**：
 
-**daily_crawl.yml（数据更新）**：
+```javascript
+// TapTap 评星使用 SVG 前景/背景层叠加实现
+// 通过前景层宽度 / 背景层宽度 计算实际星数
+const score = Math.round((foregroundWidth / backgroundWidth) * 5);
+```
 
-- 触发：Cron `0 0 * * *` (UTC) 或手动触发
-- 权限：`contents: write`
-- 逻辑：Checkout → 运行 Python → 检测 diff → Commit & Push
+### 5.2 自动化模块
 
-**deploy_web.yml（页面部署）**：
+**本地定时任务（Mac crontab）**：
+
+- 配置文件：`scripts/daily_crawl.sh`
+- 触发时间：每天 9:00（Mac 需处于开机/唤醒状态）
+- 执行流程：运行爬虫 → Git Commit → Git Push
+
+```bash
+# crontab 配置
+0 9 * * * /bin/bash /path/to/echo_cms/scripts/daily_crawl.sh
+```
+
+**daily_crawl.sh 脚本逻辑**：
+
+```bash
+1. 进入项目目录
+2. 运行 Python 爬虫 (python3 crawler/main.py)
+3. Git add public/data.json
+4. Git commit -m "data: 每日数据更新 YYYY-MM-DD"
+5. Git push
+6. 记录日志到 logs/crawl_YYYYMMDD.log
+```
+
+**GitHub Pages 部署（deploy_web.yml）**：
 
 - 触发：Push to `main`
 - 逻辑：Build React → 部署到 `gh-pages`
@@ -330,22 +370,24 @@ graph TD
 
 ### 阶段二：爬虫与数据处理（Day 3-5）
 
-| # | 任务 |
-|---|------|
-| 1 | 完成 `main.py` 框架及 TapTap 平台抓取 |
-| 2 | 实现 `trend_history` 追加逻辑（维持 30 天） |
-| 3 | 实现 `diffs` 计算逻辑 |
-| 4 | 实现 `is_new` 自然周计算逻辑 |
-| 5 | 实现 `fetch_status` 状态标记 |
-| 6 | 本地验证：`python main.py` 正确更新 `data.json` |
+| # | 任务 | 状态 |
+|---|------|------|
+| 1 | 完成 `main.py` 框架 | ✅ |
+| 2 | 实现 TapTap 平台抓取（Playwright + JS 注入） | ✅ |
+| 3 | 实现 `trend_history` 追加逻辑（维持 30 天） | ⚪ |
+| 4 | 实现 `diffs` 计算逻辑 | ⚪ |
+| 5 | 实现 `is_new` 自然周计算逻辑 | ⚪ |
+| 6 | 实现 `fetch_status` 状态标记 | ✅ |
+| 7 | 本地验证：`python main.py` 正确更新 `data.json` | ✅ |
 
-### 阶段三：自动化与 CI/CD（Day 6）
+### 阶段三：自动化与部署（Day 6）
 
-| # | 任务 |
-|---|------|
-| 1 | 配置 `daily_crawl.yml` workflow |
-| 2 | 配置 `deploy_web.yml` workflow |
-| 3 | 全链路测试：手动触发 → 抓取 → 页面更新 |
+| # | 任务 | 状态 |
+|---|------|------|
+| 1 | 配置本地定时任务（Mac crontab） | ✅ |
+| 2 | 创建 `daily_crawl.sh` 执行脚本 | ✅ |
+| 3 | 配置 `deploy_web.yml` workflow（GitHub Pages） | ⚪ |
+| 4 | 全链路测试：定时触发 → 抓取 → Push → 页面更新 | ⚪ |
 
 ### 阶段四：扩展与优化（后续迭代）
 
@@ -361,18 +403,21 @@ graph TD
 ```text
 echo_cms/
 ├── .github/workflows/       # CI/CD 配置
-│   ├── daily_crawl.yml
-│   └── deploy_web.yml
+│   └── deploy_web.yml       # GitHub Pages 部署
 ├── crawler/                 # Python 爬虫
 │   ├── fetchers/            # 各平台抓取脚本
-│   │   ├── taptap.py
-│   │   ├── bilibili.py
-│   │   ├── weibo.py
-│   │   └── xiaohongshu.py
+│   │   ├── taptap.py        # ✅ TapTap (Playwright)
+│   │   ├── bilibili.py      # ⚪ B站
+│   │   ├── weibo.py         # ⚪ 微博
+│   │   └── xiaohongshu.py   # ⚪ 小红书
 │   ├── utils/               # 工具函数
 │   │   ├── diff_calculator.py
 │   │   └── week_helper.py
 │   └── main.py              # 入口
+├── scripts/                 # 自动化脚本
+│   └── daily_crawl.sh       # 定时任务执行脚本
+├── logs/                    # 运行日志
+│   └── crawl_YYYYMMDD.log
 ├── public/
 │   ├── data.json            # 核心数据（爬虫生成）
 │   └── games_config.json    # 监控配置（手动上传）
@@ -390,7 +435,8 @@ echo_cms/
 │       └── exportConfig.js
 ├── package.json
 ├── vite.config.js           # 需配置 base: '/repo-name/'
-└── Dev_Plan.md              # 本文档
+├── Dev_Plan.md              # 本文档
+└── PROGRESS.md              # 开发进度跟踪
 ```
 
 ---
@@ -411,5 +457,6 @@ echo_cms/
 | 版本 | 日期 | 变更内容 |
 |------|------|----------|
 | v1.0 | - | 初始版本 |
-| v2.0 | 2025-01-17 | 新增配置管理模块；完善 `fetch_status` 状态机制；明确 NEW 标签自然周规则；更新数据 Schema |
-| v2.1 | 2025-01-17 | 对齐 App.jsx 与 Schema：`title` → `name`；补充阶段一 App.jsx 修改清单 |
+| v2.0 | 2025-12-17 | 新增配置管理模块；完善 `fetch_status` 状态机制；明确 NEW 标签自然周规则；更新数据 Schema |
+| v2.1 | 2025-12-17 | 对齐 App.jsx 与 Schema：`title` → `name`；补充阶段一 App.jsx 修改清单 |
+| v2.2 | 2025-12-18 | **重大架构调整**：爬虫从 GitHub Actions 改为本地 Mac 定时任务；新增 Playwright 技术方案说明；新增 TapTap 反爬分析结论；更新目录结构（scripts/、logs/） |
