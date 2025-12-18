@@ -1,0 +1,71 @@
+{
+  "month": "2025-12",
+  "last_updated": "2025-12-18 20:42",
+  "games": {
+    "wuxiangu": {
+      "name": "无限谷",
+      "daily": [
+        {
+          "date": "12-18",
+          "reservations": "2.7万",
+          "rating": "8.8",
+          "followers": "2.7万",
+          "review_count": "72",
+          "status": "预约中"
+        }
+      ]
+    },
+    "lianren": {
+      "name": "代号：恋人",
+      "daily": [
+        {
+          "date": "12-18",
+          "reservations": "6.8万",
+          "rating": "7.3",
+          "followers": "6.8万",
+          "review_count": "231",
+          "status": "预约中"
+        }
+      ]
+    },
+    "eve": {
+      "name": "EVE",
+      "daily": [
+        {
+          "date": "12-18",
+          "reservations": "4.2万",
+          "rating": "6.8",
+          "followers": "4.2万",
+          "review_count": "251",
+          "status": "预约中"
+        }
+      ]
+    },
+    "sol": {
+      "name": "代号：Sol",
+      "daily": [
+        {
+          "date": "12-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    },
+    "xingmian": {
+      "name": "星眠",
+      "daily": [
+        {
+          "date": "12-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    }
+  }
+}

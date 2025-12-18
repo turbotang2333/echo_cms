@@ -23,6 +23,7 @@ from utils.week_helper import is_current_week
 BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_PATH = BASE_DIR / "public" / "games_config.json"
 DATA_PATH = BASE_DIR / "public" / "data.json"
+ARCHIVE_DIR = BASE_DIR / "archive"
 PLATFORMS = ["taptap", "bilibili", "weibo", "xiaohongshu"]
 
 PLATFORM_FETCHERS = {
@@ -137,8 +138,54 @@ def _to_float(value: Any) -> Optional[float]:
         return None
 
 
+def _parse_date_key(date_key: str, year: int = None) -> Optional[datetime]:
+    """解析 MM-DD 格式的日期"""
+    if not date_key:
+        return None
+    try:
+        year = year or datetime.now().year
+        month, day = date_key.split("-")
+        return datetime(year, int(month), int(day))
+    except Exception:
+        return None
+
+
+def _fill_missing_dates(dates: List[str], reservations: List[Any], rating: List[Any]) -> tuple:
+    """补全缺失的日期（填充 null）"""
+    if not dates:
+        return dates, reservations, rating
+    
+    today = datetime.now()
+    current_year = today.year
+    
+    # 解析最后一个日期
+    last_date = _parse_date_key(dates[-1], current_year)
+    if not last_date:
+        return dates, reservations, rating
+    
+    # 处理跨年情况：如果最后日期在12月且今天在1月，调整年份
+    if last_date.month == 12 and today.month == 1:
+        last_date = _parse_date_key(dates[-1], current_year - 1)
+    
+    # 计算缺失的天数
+    today_date = datetime(today.year, today.month, today.day)
+    delta_days = (today_date - last_date).days
+    
+    # 如果超过1天，补全中间的日期
+    if delta_days > 1:
+        import datetime as dt_module
+        for i in range(1, delta_days):
+            missing_date = last_date + dt_module.timedelta(days=i)
+            missing_key = missing_date.strftime("%m-%d")
+            dates.append(missing_key)
+            reservations.append(None)
+            rating.append(None)
+    
+    return dates, reservations, rating
+
+
 def append_today_trend(record: Dict[str, Any]) -> None:
-    """追加今日趋势数据，保留最近 30 天"""
+    """追加今日趋势数据，保留最近 30 天，自动补全缺失日期"""
     history = _align_trend_history(record.get("trend_history"))
     today_key = datetime.now().strftime("%m-%d")
 
@@ -150,6 +197,10 @@ def append_today_trend(record: Dict[str, Any]) -> None:
     dates = history["dates"]
     reservations = history["reservations"]
     rating = history["rating"]
+
+    # 补全缺失日期
+    if dates and today_key not in dates:
+        dates, reservations, rating = _fill_missing_dates(dates, reservations, rating)
 
     if today_key in dates:
         idx = dates.index(today_key)
@@ -251,6 +302,94 @@ def build_old_data_map(old_data: List[Dict[str, Any]]) -> Dict[str, Dict[str, An
     return result
 
 
+def append_to_monthly_archive(new_data: List[Dict[str, Any]]) -> None:
+    """将今日数据追加到月度归档文件"""
+    now = datetime.now()
+    month_key = now.strftime("%Y-%m")
+    today_key = now.strftime("%m-%d")
+    archive_path = ARCHIVE_DIR / f"{month_key}.json"
+    
+    # 确保归档目录存在
+    ARCHIVE_DIR.mkdir(parents=True, exist_ok=True)
+    
+    # 加载现有归档数据
+    archive = load_json(archive_path, default={
+        "month": month_key,
+        "last_updated": "",
+        "games": {}
+    })
+    
+    archive["last_updated"] = now.strftime("%Y-%m-%d %H:%M")
+    
+    # 追加每个游戏的今日数据
+    for record in new_data:
+        game_id = record.get("id")
+        if not game_id:
+            continue
+        
+        basic_info = record.get("basic_info", {})
+        
+        # 构建今日快照
+        daily_snapshot = {
+            "date": today_key,
+            "reservations": basic_info.get("reservations"),
+            "rating": basic_info.get("rating"),
+            "followers": basic_info.get("followers"),
+            "review_count": basic_info.get("review_count"),
+            "status": basic_info.get("status"),
+        }
+        
+        # 确保游戏记录存在
+        if game_id not in archive["games"]:
+            archive["games"][game_id] = {
+                "name": record.get("name", ""),
+                "daily": []
+            }
+        
+        game_archive = archive["games"][game_id]
+        game_archive["name"] = record.get("name", game_archive.get("name", ""))
+        
+        # 查找是否已有今日数据，有则更新，无则追加
+        daily_list = game_archive.get("daily", [])
+        
+        # 补全缺失日期
+        if daily_list and today_key not in [item.get("date") for item in daily_list]:
+            last_item = daily_list[-1]
+            last_date = _parse_date_key(last_item.get("date"), now.year)
+            if last_date:
+                today_date = datetime(now.year, now.month, now.day)
+                delta_days = (today_date - last_date).days
+                if delta_days > 1:
+                    for i in range(1, delta_days):
+                        import datetime as dt_module
+                        missing_date = last_date + dt_module.timedelta(days=i)
+                        missing_key = missing_date.strftime("%m-%d")
+                        daily_list.append({
+                            "date": missing_key,
+                            "reservations": None,
+                            "rating": None,
+                            "followers": None,
+                            "review_count": None,
+                            "status": None,
+                        })
+        
+        found = False
+        for i, item in enumerate(daily_list):
+            if item.get("date") == today_key:
+                daily_list[i] = daily_snapshot
+                found = True
+                break
+        
+        if not found:
+            daily_list.append(daily_snapshot)
+        
+        game_archive["daily"] = daily_list
+    
+    # 保存归档
+    safe_write_json(archive_path, archive)
+    logging.info("完成月度归档写入: %s", archive_path)
+
+
 def main() -> None:
     logging.basicConfig(
         level=logging.INFO,
@@ -276,10 +415,14 @@ def main() -> None:
 
     safe_write_json(DATA_PATH, new_data)
     logging.info("完成数据写入: %s", DATA_PATH)
+    
+    # 追加到月度归档
+    append_to_monthly_archive(new_data)
 
 
 if __name__ == "__main__":
     main()
+
 
 
 
