@@ -469,9 +469,9 @@ export default function App() {
   const [comparisonPeriod, setComparisonPeriod] = useState('day');
   const [globalPlatform, setGlobalPlatform] = useState('taptap'); 
 
-  // 数据获取：GitHub Pages 模式
+  // 数据获取：GitHub Pages 模式（禁用缓存，确保获取最新数据）
   useEffect(() => {
-    fetch('./data.json')
+    fetch('./data.json', { cache: 'no-store' })
       .then(res => {
         if (!res.ok) throw new Error('Not found');
         return res.json();
@@ -487,9 +487,9 @@ export default function App() {
       });
   }, []);
 
-  // 加载游戏配置
+  // 加载游戏配置（禁用缓存）
   useEffect(() => {
-    fetch('./games_config.json')
+    fetch('./games_config.json', { cache: 'no-store' })
       .then(res => {
         if (!res.ok) throw new Error('Not found');
         return res.json();
