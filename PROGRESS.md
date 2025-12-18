@@ -1,7 +1,7 @@
 # 竞品监控系统 - 开发进度跟踪
 
 > 最后更新: 2025-12-18
-> 当前阶段: **阶段二（进行中）**
+> 当前阶段: **阶段三（基本完成）**
 
 ---
 
@@ -10,9 +10,9 @@
 | 阶段 | 名称 | 状态 | 负责人 |
 |------|------|------|--------|
 | 阶段一 | 前端工程化 + 配置管理 | ✅ 已完成 | 前端 |
-| 阶段二 | 爬虫与数据处理 | 🟡 进行中 | 后端 |
-| 阶段三 | 自动化与 CI/CD | 🟡 进行中 | 后端 |
-| 阶段四 | 测试与优化 | ⚪ 待开始 | QA |
+| 阶段二 | 爬虫与数据处理 | ✅ 基本完成 | 后端 |
+| 阶段三 | 自动化与 CI/CD | ✅ 已完成 | 后端 |
+| 阶段四 | 测试与优化 | 🟡 进行中 | QA |
 
 **状态说明**: ✅ 已完成 | 🟡 进行中 | ⚪ 待开始 | ❌ 阻塞
 
@@ -127,14 +127,14 @@
 | # | 任务 | 负责人 | 状态 | 完成日期 |
 |---|------|--------|------|----------|
 | 3.1 | 配置本地定时任务 (crontab) | PM | ✅ | 2025-12-18 |
-| 3.2 | 配置 deploy_web.yml (GitHub Pages) | 后端 | ⚪ | - |
-| 3.3 | 全链路测试 | 后端 + QA | ⚪ | - |
+| 3.2 | 配置 deploy_web.yml (GitHub Pages) | 后端 | ✅ | 2025-12-18 |
+| 3.3 | 全链路测试 | 后端 + QA | ✅ | 2025-12-18 |
 
 ### 验收标准
 - [x] 本地定时任务配置完成 (crontab 每天 9:00)
 - [x] 爬虫更新 data.json 并自动 commit + push
-- [ ] Push 后自动部署到 GitHub Pages
-- [ ] 页面可通过 https://xxx.github.io/echo_cms 访问
+- [x] Push 后自动部署到 GitHub Pages
+- [x] 页面可通过 https://turbotang2333.github.io/echo_cms/ 访问
 
 ---
 
@@ -180,6 +180,13 @@
 | 2025-12-18 | 完成本地验证流程（任务 2.7），爬虫可正常抓取数据 | PM |
 | 2025-12-18 | 配置本地定时任务（任务 3.1），使用 crontab 每天 9:00 自动执行 | PM |
 | 2025-12-18 | 完成 trend_history 追加、diffs/day-week-month、自然周 is_new；TapTap 本地自测通过，B站/小红书抓取待实现（标记 stale） | 后端 |
+| 2025-12-18 | 完成 GitHub Pages 部署，页面已上线：https://turbotang2333.github.io/echo_cms/ | 后端 |
+| 2025-12-18 | B站/微博/小红书返回占位数据（not_configured），全链路跑通 | 后端 |
+| 2025-12-18 | 优化官方帖子提取逻辑（修复 EVE 帖子无法提取问题），改用 DOM 结构提取 | PM |
+| 2025-12-18 | 前端禁用数据缓存，普通刷新即可获取最新数据 | PM |
+| 2025-12-18 | 创建配置更新脚本（桌面快捷方式：更新竞品配置.command） | PM |
+| 2025-12-18 | 添加月度数据归档功能（archive/YYYY-MM.json） | PM |
+| 2025-12-18 | 添加缺失日期自动补全功能（断档日期填充 null） | PM |
 
 ---
 
@@ -199,3 +206,6 @@
 - [技术蓝图 Dev_Plan.md](./Dev_Plan.md)
 - [数据格式示例 data.json](./public/data.json)
 - [配置文件示例 games_config.json](./public/games_config.json)
+- [月度归档 archive/](./archive/)
+- [爬虫脚本 scripts/daily_crawl.sh](./scripts/daily_crawl.sh)
+- [配置更新脚本 scripts/update_config.command](./scripts/update_config.command)
