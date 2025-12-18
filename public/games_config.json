@@ -1,28 +1,107 @@
 [
   {
-    "id": "code_lover",
+    "id": "wuxiangu",
+    "name": "无限谷",
+    "icon_url": "",
+    "enabled": true,
+    "platforms": {
+      "taptap": {
+        "url": "https://turbotang2333.github.io"
+      },
+      "bilibili": {
+        "url": "https://space.bilibili.com/3632311851551378"
+      },
+      "weibo": {
+        "url": "https://weibo.com/8402828247"
+      },
+      "xiaohongshu": {
+        "url": "https://www.xiaohongshu.com/user/profile/66f42acb000000001d023a45"
+      }
+    },
+    "created_at": "2025-12-18"
+  },
+  {
+    "id": "lianren",
     "name": "代号：恋人",
     "icon_url": "",
     "enabled": true,
     "platforms": {
-      "taptap": { "url": "https://www.taptap.cn/app/786394?os=android" },
-      "bilibili": { "url": "https://www.bilibili.com/game/xxx" },
-      "weibo": null,
-      "xiaohongshu": { "url": "https://www.xiaohongshu.com/user/profile/xxx" }
+      "taptap": {
+        "url": "https://www.taptap.cn/app/786394"
+      },
+      "bilibili": {
+        "url": ""
+      },
+      "weibo": {
+        "url": ""
+      },
+      "xiaohongshu": {
+        "url": ""
+      }
     },
-    "created_at": "2025-12-17"
+    "created_at": "2025-12-18"
   },
   {
-    "id": "game_genshin",
-    "name": "原神",
+    "id": "eve",
+    "name": "EVE",
     "icon_url": "",
     "enabled": true,
     "platforms": {
-      "taptap": { "url": "https://www.taptap.cn/app/168332" },
-      "bilibili": { "url": "https://www.bilibili.com/game/xxx" },
-      "weibo": null,
-      "xiaohongshu": null
+      "taptap": {
+        "url": "https://www.taptap.cn/app/788667"
+      },
+      "bilibili": {
+        "url": "https://space.bilibili.com/430385923"
+      },
+      "weibo": {
+        "url": "https://weibo.com/8224105688"
+      },
+      "xiaohongshu": {
+        "url": "https://www.xiaohongshu.com/user/profile/67fcddea000000000a03d293"
+      }
     },
-    "created_at": "2025-12-17"
+    "created_at": "2025-12-18"
+  },
+  {
+    "id": "sol",
+    "name": "代号：Sol",
+    "icon_url": "",
+    "enabled": true,
+    "platforms": {
+      "taptap": {
+        "url": ""
+      },
+      "bilibili": {
+        "url": "https://space.bilibili.com/253377278"
+      },
+      "weibo": {
+        "url": "https://weibo.com/u/8373052732"
+      },
+      "xiaohongshu": {
+        "url": "https://www.xiaohongshu.com/user/profile/6815d55d000000000d0093e7"
+      }
+    },
+    "created_at": "2025-12-18"
+  },
+  {
+    "id": "xingmian",
+    "name": "星眠",
+    "icon_url": "",
+    "enabled": true,
+    "platforms": {
+      "taptap": {
+        "url": ""
+      },
+      "bilibili": {
+        "url": ""
+      },
+      "weibo": {
+        "url": "https://weibo.com/9187371506"
+      },
+      "xiaohongshu": {
+        "url": "https://www.xiaohongshu.com/user/profile/63e46918000000002703643d"
+      }
+    },
+    "created_at": "2025-12-18"
   }
 ]
