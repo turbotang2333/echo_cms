@@ -3,9 +3,9 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2025-12-18 20:41",
+    "last_updated": "2025-12-19 00:03",
     "fetch_status": {
-      "taptap": "success",
+      "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
       "xiaohongshu": "not_configured"
@@ -50,12 +50,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-18"
+        "12-18",
+        "12-19"
       ],
       "reservations": [
+        "2.7万",
         "2.7万"
       ],
       "rating": [
+        8.8,
         8.8
       ]
     },
@@ -117,9 +120,9 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-18 20:41",
+    "last_updated": "2025-12-19 00:03",
     "fetch_status": {
-      "taptap": "success",
+      "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
       "xiaohongshu": "not_configured"
@@ -164,12 +167,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-18"
+        "12-18",
+        "12-19"
       ],
       "reservations": [
+        "6.8万",
         "6.8万"
       ],
       "rating": [
+        7.3,
         7.3
       ]
     },
@@ -267,9 +273,9 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2025-12-18 20:41",
+    "last_updated": "2025-12-19 00:03",
     "fetch_status": {
-      "taptap": "success",
+      "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
       "xiaohongshu": "not_configured"
@@ -314,12 +320,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-18"
+        "12-18",
+        "12-19"
       ],
       "reservations": [
+        "4.2万",
         "4.2万"
       ],
       "rating": [
+        6.8,
         6.8
       ]
     },
@@ -389,7 +398,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2025-12-18 20:42",
+    "last_updated": "2025-12-19 00:03",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -428,12 +437,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-18"
+        "12-18",
+        "12-19"
       ],
       "reservations": [
+        null,
         null
       ],
       "rating": [
+        null,
         null
       ]
     },
@@ -449,7 +461,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2025-12-18 20:42",
+    "last_updated": "2025-12-19 00:03",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -488,12 +500,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-18"
+        "12-18",
+        "12-19"
       ],
       "reservations": [
+        null,
         null
       ],
       "rating": [
+        null,
         null
       ]
     },
