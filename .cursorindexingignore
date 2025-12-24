@@ -1,3 +1,27 @@
 
 # Don't index SpecStory auto-save files, but allow explicit context inclusion via @ references
 .specstory/**
+
+# 1. 依赖包 (必填，否则索引会死机)
+node_modules/
+
+# 2. 构建产物 (必填，这是编译后的代码，AI 读了没用)
+dist/
+.vite/
+.vite-temp/
+
+# 3. 巨大的日志文件 (必填，避免 AI 分析报错时读到旧日志)
+logs/
+*.log
+
+# 4. 爬虫的调试 HTML (强烈建议！我看你 crawler 下面有很多这种文件)
+# 这些文件通常巨大且全是混乱的 HTML 标签，会严重干扰 AI 理解代码逻辑
+crawler/*.html
+taptap_debug.html
+*.html  # 如果你只想保留 index.html，可以把具体的 debug 文件名列出来
+
+# 5. 归档数据 (如果是历史数据，不参与当前逻辑，建议忽略)
+archive/
+
+# 6. 锁文件 (通常不需要 AI 去读具体的版本锁定信息)
+package-lock.json

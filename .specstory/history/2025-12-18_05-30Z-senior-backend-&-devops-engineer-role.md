@@ -117,3 +117,168 @@ _**Agent (model claude-4.5-sonnet-thinking, mode Agent)**_
 
 ---
 
+_**User**_
+
+后端下一步任务
+⚠️ 重要：技术蓝图已更新至 v2.2
+先阅读 Dev_Plan.md，架构已从 GitHub Actions 改为本地 Mac 定时任务 + Playwright 爬虫。
+任务：实现 trend_history 和 diffs 计算
+参考文件：
+Dev_Plan.md - 技术蓝图（v2.2，已更新）
+crawler/main.py - 主入口，在这里添加逻辑
+PROGRESS.md - 查看当前进度和待办任务
+具体做什么：
+trend_history 追加
+每次爬取后，把当天的 reservations、rating 追加到 trend_history 数组
+数组长度超过 30 时，删除最早的数据
+diffs 计算
+day: 今天 vs 昨天
+week: 今天 vs 7天前
+month: 今天 vs 30天前
+格式："+5.2k" / "-0.2" / "0"
+is_new 判断
+帖子日期在本周一 00:00 ~ 周日 23:59 之间 → is_new = true
+验证方式：
+python3 crawler/main.py
+检查 public/data.json 中 trend_history 和 diffs 字段是否正确生成。
+
+---
+
+_**Agent (model claude-4.5-sonnet-thinking, mode Agent)**_
+
+<think><details><summary>Thought Process</summary>
+用户现在要求我执行后端的下一步任务：
+1. 实现 trend_history 追加逻辑
+2. 实现 diffs 计算
+3. 实现 is_new 判断
+
+用户要求我先阅读 Dev_Plan.md 了解技术蓝图（v2.2版本，架构已改为本地Mac定时任务 + Playwright爬虫）。
+
+根据我的角色定位和用户规则，我需要：
+1. 先阅读相关文件了解当前状态
+2. 用简洁的自然语言描述实现方案
+3. 经用户确认后再进行代码修改
+
+让我先读取相关文件。</details></think>
+
+---
+
+好的，我先阅读相关技术文档，了解当前架构和具体需求。
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/Dev_Plan.md</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/crawler/main.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/public/data.json</summary>
+
+</details>
+</tool-use>
+
+---
+
+<think><details><summary>Thought Process</summary>
+好的，我现在了解了情况：
+
+1. **技术蓝图 v2.2**：架构使用本地Mac定时任务 + Playwright爬虫
+2. **当前状态**：`main.py` 框架和 TapTap 抓取已完成，但第161行标注了 TODO：trend_history 追加、diffs 计算、is_new 标记还未实现
+3. **当前 data.json**：
+   - `trend_history` 字段存在但是空的 `{}`
+   - `diffs` 字段存在但也是空的 `{}`
+   - 帖子的 `is_new` 字段已经有了（部分为 true，部分为 false），说明在 TapTap 抓取时已经实现了
+
+**任务要求**：
+1. **trend_history 追加**：每次爬取后追加当天的 reservations、rating，数组长度超过30时删除最早的数据
+2. **diffs 计算**：day (今天 vs 昨天)、week (今天 vs 7天前)、month (今天 vs 30天前)，格式如 "+5.2k" / "-0.2" / "0"
+3. **is_new 判断**：帖子日期在本周一 00:00 ~ 周日 23:59 之间
+
+从 data.json 看，帖子的 `is_new` 已经有值了，说明可能在 taptap.py 里已经实现了。让我确认一下。
+
+我需要：
+1. 查看 crawler/utils/ 目录下是否已有 diff_calculator.py 和 week_helper.py
+
+
+2. 检查这些工具模块是否已经存在</details></think>
+
+---
+
+好的，我已经理解任务需求。让我先检查一下工具模块的现状：
+
+---
+
+<tool-use data-tool-type="unknown" data-tool-name="list_dir_v2">
+<details>
+<summary>Tool use: **list_dir_v2**</summary>
+
+
+Parameters:
+
+```json
+{
+  "targetDirectory": "/Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/crawler/utils"
+}
+```
+Result:
+
+```json
+{
+  "directoryTreeRoot": {
+    "absPath": "/Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/crawler/utils",
+    "childrenFiles": [
+      {
+        "name": "diff_calculator.py"
+      },
+      {
+        "name": "week_helper.py"
+      }
+    ],
+    "childrenWereProcessed": true
+  }
+}
+```
+Status: **completed**
+
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/crawler/utils/diff_calculator.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/crawler/utils/week_helper.py</summary>
+
+</details>
+</tool-use>
+
+---
+
+<tool-use data-tool-type="read" data-tool-name="read_file_v2">
+<details><summary>Tool use: **read_file_v2** • Read file: /Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/crawler/fetchers/taptap.py</summary>
+
+</details>
+</tool-use>
+
+---
+

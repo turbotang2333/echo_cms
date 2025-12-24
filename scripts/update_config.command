@@ -89,3 +89,10 @@ echo "📋 部署完成后访问：$WEBSITE_URL"
 echo ""
 read -p "按回车键打开网站并退出..."
 open "$WEBSITE_URL"
+
+
+
+
+
+
+

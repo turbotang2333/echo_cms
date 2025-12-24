@@ -53,3 +53,11 @@ def get_week_range() -> tuple:
     sunday = monday + timedelta(days=6)
     return monday.date(), sunday.date()
 
+
+
+
+
+
+
+
+

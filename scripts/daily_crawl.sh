@@ -28,17 +28,33 @@ if [ $? -eq 0 ]; then
     # Git 提交
     echo "Git 提交..." >> "$LOG_FILE"
     cd "$PROJECT_DIR"
-    git add public/data.json >> "$LOG_FILE" 2>&1
+    git add public/data.json archive/ >> "$LOG_FILE" 2>&1
     git commit -m "data: 每日数据更新 $(date '+%Y-%m-%d')" >> "$LOG_FILE" 2>&1
     
-    # Git 推送
-    echo "Git 推送..." >> "$LOG_FILE"
-    git push >> "$LOG_FILE" 2>&1
-    
-    if [ $? -eq 0 ]; then
-        echo "推送成功" >> "$LOG_FILE"
+    if [ $? -ne 0 ]; then
+        echo "没有新的提交" >> "$LOG_FILE"
     else
-        echo "推送失败" >> "$LOG_FILE"
+        # 同步远程更新
+        echo "同步远程更新..." >> "$LOG_FILE"
+        git pull --rebase >> "$LOG_FILE" 2>&1
+        
+        if [ $? -ne 0 ]; then
+            echo "检测到冲突，自动解决..." >> "$LOG_FILE"
+            git checkout --ours public/data.json >> "$LOG_FILE" 2>&1
+            git checkout --ours archive/ >> "$LOG_FILE" 2>&1
+            git add public/data.json archive/ >> "$LOG_FILE" 2>&1
+            GIT_EDITOR=true git rebase --continue >> "$LOG_FILE" 2>&1
+        fi
+        
+        # Git 推送
+        echo "Git 推送..." >> "$LOG_FILE"
+        git push >> "$LOG_FILE" 2>&1
+        
+        if [ $? -eq 0 ]; then
+            echo "推送成功" >> "$LOG_FILE"
+        else
+            echo "推送失败" >> "$LOG_FILE"
+        fi
     fi
 else
     echo "爬虫执行失败" >> "$LOG_FILE"
@@ -46,3 +62,11 @@ fi
 
 echo "执行完成: $(date '+%Y-%m-%d %H:%M:%S')" >> "$LOG_FILE"
 echo "========================================" >> "$LOG_FILE"
+
+
+
+
+
+
+
+

@@ -156,62 +156,83 @@ def extract_basic_info(page: Page) -> Dict[str, Any]:
 
 
 def extract_official_posts(page: Page) -> List[Dict[str, Any]]:
-    """从官方帖子页提取信息"""
+    """从官方帖子页提取信息（基于DOM结构）"""
     js_code = """
     () => {
         const posts = [];
-        const text = document.body.innerText;
-        const lines = text.split('\\n').filter(l => l.trim());
         const seen = new Set();
         
-        for (let i = 0; i < lines.length && posts.length < 5; i++) {
-            const line = lines[i].trim();
+        // 方法1：查找帖子卡片（通过日期格式定位）
+        const text = document.body.innerText;
+        const lines = text.split('\\n').map(l => l.trim()).filter(l => l);
+        
+        // 找到所有日期行的索引
+        const dateIndices = [];
+        lines.forEach((line, idx) => {
+            if (line.match(/^(2025|2024)\\/\\d+\\/\\d+$/)) {
+                dateIndices.push(idx);
+            }
+        });
+        
+        // 对每个日期，向下查找标题和统计数据
+        for (const dateIdx of dateIndices) {
+            if (posts.length >= 5) break;
             
-            // 匹配帖子标题特征
-            if (line.length > 10 && line.length < 80 && 
-                (line.includes('测试') || line.includes('公告') || line.includes('维护') || 
-                 line.includes('更新') || line.includes('活动') || line.includes('补偿') || 
-                 line.includes('预约') || line.includes('上线') || line.includes('开启') ||
-                 line.includes('首曝') || line.includes('PV'))) {
-                
-                // 去重
-                const titleKey = line.substring(0, 30);
-                if (seen.has(titleKey)) continue;
-                seen.add(titleKey);
-                
-                const post = { title: line, date: '', comments: '0', likes: '0', is_new: false };
-                
-                // 查找日期
-                for (let j = i - 2; j < Math.min(i + 10, lines.length); j++) {
-                    if (j < 0) continue;
-                    const dateMatch = lines[j].match(/(2025|2024)\\/\\d+\\/\\d+/);
-                    if (dateMatch) {
-                        post.date = dateMatch[0];
-                        break;
-                    }
+            const date = lines[dateIdx];
+            
+            // 向下查找标题（日期后面的第一个较长文本）
+            let title = '';
+            for (let j = dateIdx + 1; j < Math.min(dateIdx + 5, lines.length); j++) {
+                const line = lines[j];
+                // 标题特征：长度适中，不是纯数字，不是"综合"等标签
+                if (line.length >= 8 && line.length <= 100 && 
+                    !line.match(/^\\d+$/) && 
+                    !['综合', '官方', '精华', '视频', '回复时间', '加载中'].includes(line)) {
+                    title = line;
+                    break;
                 }
-                
-                // 查找统计数据 (评论数、点赞数)
-                let foundStats = 0;
-                for (let j = i; j < Math.min(i + 20, lines.length) && foundStats < 2; j++) {
-                    const statsMatch = lines[j].match(/^(\\d+)$/);
-                    if (statsMatch) {
-                        if (foundStats === 0) post.comments = statsMatch[1];
-                        else post.likes = statsMatch[1];
+            }
+            
+            if (!title) continue;
+            
+            // 去重
+            const titleKey = title.substring(0, 30);
+            if (seen.has(titleKey)) continue;
+            seen.add(titleKey);
+            
+            // 查找统计数据（日期附近的数字）
+            let comments = '0', likes = '0';
+            let foundStats = 0;
+            
+            // 先向上查找（有些布局数字在日期上方）
+            for (let j = dateIdx - 1; j >= Math.max(0, dateIdx - 10) && foundStats < 2; j--) {
+                if (lines[j].match(/^\\d+$/)) {
+                    if (foundStats === 0) likes = lines[j];
+                    else comments = lines[j];
+                    foundStats++;
+                }
+            }
+            
+            // 如果上方没找到，向下查找
+            if (foundStats === 0) {
+                for (let j = dateIdx + 1; j < Math.min(dateIdx + 15, lines.length) && foundStats < 2; j++) {
+                    if (lines[j].match(/^\\d+$/)) {
+                        if (foundStats === 0) comments = lines[j];
+                        else likes = lines[j];
                         foundStats++;
                     }
                 }
-                
-                // 判断是否本周新帖
-                if (post.date) {
-                    const postDate = new Date(post.date.replace(/\\//g, '-'));
-                    const now = new Date();
-                    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-                    post.is_new = postDate >= weekAgo;
-                }
-                
-                if (post.date) posts.push(post);
             }
+            
+            // 判断是否本周新帖
+            const postDate = new Date(date.replace(/\\//g, '-'));
+            const now = new Date();
+            const weekStart = new Date(now);
+            weekStart.setDate(now.getDate() - now.getDay() + 1); // 本周一
+            weekStart.setHours(0, 0, 0, 0);
+            const is_new = postDate >= weekStart;
+            
+            posts.push({ title, date, comments, likes, is_new });
         }
         
         return posts;
