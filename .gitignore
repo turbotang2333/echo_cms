@@ -22,3 +22,12 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Cursor IDE
+.cursor/
+.cursorrules
+.specstory/history/
+
+# 爬虫调试文件
+crawler/*.html
+taptap_debug.html
