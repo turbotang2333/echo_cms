@@ -1,6 +1,6 @@
 {
   "month": "2025-12",
-  "last_updated": "2025-12-18 20:42",
+  "last_updated": "2025-12-24 15:02",
   "games": {
     "wuxiangu": {
       "name": "无限谷",
@@ -11,6 +11,54 @@
           "rating": "8.8",
           "followers": "2.7万",
           "review_count": "72",
+          "status": "预约中"
+        },
+        {
+          "date": "12-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-24",
+          "reservations": "3.1万",
+          "rating": "8.7",
+          "followers": "3.1万",
+          "review_count": "77",
           "status": "预约中"
         }
       ]
@@ -25,6 +73,54 @@
           "followers": "6.8万",
           "review_count": "231",
           "status": "预约中"
+        },
+        {
+          "date": "12-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-24",
+          "reservations": "7.1万",
+          "rating": "7.3",
+          "followers": "7.1万",
+          "review_count": "245",
+          "status": "预约中"
         }
       ]
     },
@@ -37,6 +133,54 @@
           "rating": "6.8",
           "followers": "4.2万",
           "review_count": "251",
+          "status": "预约中"
+        },
+        {
+          "date": "12-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-24",
+          "reservations": "4.4万",
+          "rating": "6.7",
+          "followers": "4.3万",
+          "review_count": "256",
           "status": "预约中"
         }
       ]
@@ -51,6 +195,54 @@
           "followers": null,
           "review_count": null,
           "status": ""
+        },
+        {
+          "date": "12-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-24",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
         }
       ]
     },
@@ -59,6 +251,54 @@
       "daily": [
         {
           "date": "12-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "12-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "12-24",
           "reservations": null,
           "rating": null,
           "followers": null,
