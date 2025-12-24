@@ -31,3 +31,8 @@ dist-ssr
 # 爬虫调试文件
 crawler/*.html
 taptap_debug.html
+
+# 备份文件
+*.backup
+*.bak
+*~
