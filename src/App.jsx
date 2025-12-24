@@ -42,6 +42,12 @@ const PERIOD_OPTIONS = [
   { id: 'month', label: '月' },
 ];
 
+// 板块高度统一配置（方便后续调整）
+const SECTION_HEIGHTS = {
+  officialPosts: 'h-[420px]',  // 官方动态：容纳约5条帖子
+  hotReviews: 'h-[520px]',     // 热门评论：容纳约5条评论
+};
+
 // ==========================================
 // 2. 默认/Fallback 数据
 // ==========================================
@@ -204,7 +210,7 @@ const PlatformContent = ({ game, activePlatform }) => {
   // 状态：未配置
   if (fetchStatus === 'not_configured') {
     return (
-      <div className="h-full flex flex-col items-center justify-center text-slate-400 py-6">
+      <div className="flex-1 flex flex-col items-center justify-center text-slate-400 py-6 overflow-y-auto">
         <Settings className="w-8 h-8 mb-2 opacity-20" />
         <p className="text-xs font-medium text-slate-500">暂未配置此平台</p>
         <p className="text-[10px] text-slate-400 mt-1">请在配置管理中添加链接</p>
@@ -215,7 +221,7 @@ const PlatformContent = ({ game, activePlatform }) => {
   // 状态：抓取失败
   if (fetchStatus === 'failed') {
     return (
-      <div className="h-full flex flex-col items-center justify-center py-6">
+      <div className="flex-1 flex flex-col items-center justify-center py-6 overflow-y-auto">
         <AlertCircle className="w-8 h-8 mb-2 text-red-300" />
         <p className="text-xs font-medium text-red-600">抓取失败</p>
         <p className="text-[10px] text-red-400 mt-1">请检查链接配置是否正确</p>
@@ -226,12 +232,12 @@ const PlatformContent = ({ game, activePlatform }) => {
   // 状态：数据过期 (stale) - 显示警告条 + 数据
   if (fetchStatus === 'stale') {
     return (
-      <div className="flex-1 flex flex-col">
-        <div className="bg-amber-50 border-b border-amber-100 px-3 py-1.5 flex items-center gap-2">
+      <div className="flex-1 flex flex-col overflow-hidden">
+        <div className="flex-none bg-amber-50 border-b border-amber-100 px-3 py-1.5 flex items-center gap-2">
           <AlertCircle className="w-3 h-3 text-amber-500" />
           <span className="text-[10px] text-amber-700 font-medium">数据可能已过期</span>
         </div>
-        <div className="p-4 flex-1">
+        <div className="p-4 flex-1 overflow-y-auto custom-scrollbar">
           {currentPosts.length > 0 ? (
             <div className="space-y-1">
               {currentPosts.map((post, idx) => (
@@ -251,7 +257,7 @@ const PlatformContent = ({ game, activePlatform }) => {
 
   // 状态：成功 (success) 或默认
   return (
-    <div className="p-4 flex-1">
+    <div className="p-4 flex-1 overflow-y-auto custom-scrollbar">
       {currentPosts.length > 0 ? (
         <div className="space-y-1">
           {currentPosts.map((post, idx) => (
@@ -274,7 +280,7 @@ const PlatformContent = ({ game, activePlatform }) => {
 
 const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform }) => {
   return (
-    <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200 overflow-hidden h-full">
+    <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200 overflow-hidden">
       {/* 4.1 产品信息头部 */}
       <div className="flex-none p-4 border-b border-slate-100 bg-white z-10">
         <div className="flex justify-between items-start mb-3">
@@ -313,8 +319,8 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
         </div>
       </div>
 
-      {/* 4.2 滚动内容区域 */}
-      <div className="flex-1 overflow-y-auto custom-scrollbar p-4 space-y-4">
+      {/* 4.2 内容区域（统一滚动） */}
+      <div className="flex-none p-4 space-y-4">
         
         {/* 板块 A: 基础数据监控 */}
         <SectionCard>
@@ -374,7 +380,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
         </SectionCard>
 
         {/* 板块 B: 官方运营动态 */}
-        <SectionCard className="min-h-[220px]">
+        <SectionCard className={SECTION_HEIGHTS.officialPosts}>
           <SectionHeader 
             icon={Megaphone} 
             title="官方动态" 
@@ -383,7 +389,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
           />
           
           {/* 平台 Tab 栏 */}
-          <div className="flex border-b border-slate-50 bg-slate-50/30">
+          <div className="flex-none flex border-b border-slate-50 bg-slate-50/30">
             {PLATFORM_CONFIG.map(p => {
               const Icon = p.icon;
               const isActive = activePlatform === p.id;
@@ -416,7 +422,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
         </SectionCard>
 
         {/* 板块 C: 热门舆情 */}
-        <SectionCard className="min-h-[200px]">
+        <SectionCard className={SECTION_HEIGHTS.hotReviews}>
           <SectionHeader 
              icon={MessageCircle} 
              title="热门舆情" 
@@ -428,7 +434,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
                </span>
              }
           />
-          <div className="p-3">
+          <div className="p-3 flex-1 overflow-y-auto custom-scrollbar">
             {game.hot_reviews?.length > 0 ? (
               <div>
                 {game.hot_reviews.map((review, idx) => (
@@ -436,7 +442,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
                 ))}
               </div>
             ) : (
-              <div className="py-8 text-center text-slate-400 text-[10px] border border-dashed border-slate-100 rounded-lg bg-slate-50">
+              <div className="h-full flex items-center justify-center text-slate-400 text-[10px] border border-dashed border-slate-100 rounded-lg bg-slate-50">
                 暂无评论采集
               </div>
             )}
@@ -552,9 +558,9 @@ export default function App() {
         </div>
       </header>
 
-      {/* 主内容区 */}
-      <main className="flex-1 overflow-x-auto overflow-y-hidden">
-        <div className="h-full flex p-6 gap-6 w-max">
+      {/* 主内容区（统一滚动） */}
+      <main className="flex-1 overflow-auto">
+        <div className="flex p-6 gap-6 w-max min-h-full">
           {games.map((game) => (
             <GameColumn 
               key={game.id} 

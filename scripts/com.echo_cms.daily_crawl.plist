@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!-- 任务标识符 -->
+    <key>Label</key>
+    <string>com.echo_cms.daily_crawl</string>
+    
+    <!-- 执行的程序 -->
+    <key>Program</key>
+    <string>/bin/bash</string>
+    
+    <!-- 程序参数 -->
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/scripts/daily_crawl.sh</string>
+    </array>
+    
+    <!-- 工作目录 -->
+    <key>WorkingDirectory</key>
+    <string>/Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms</string>
+    
+    <!-- 定时执行：每天 9:00 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>9</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+    
+    <!-- 标准输出日志 -->
+    <key>StandardOutPath</key>
+    <string>/Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/logs/launchd_out.log</string>
+    
+    <!-- 错误输出日志 -->
+    <key>StandardErrorPath</key>
+    <string>/Users/turbotang/Documents/工作/如临/竞品监控系统/echo_cms/logs/launchd_err.log</string>
+    
+    <!-- 失败后自动重启 -->
+    <key>KeepAlive</key>
+    <false/>
+    
+    <!-- 系统启动时不自动运行 -->
+    <key>RunAtLoad</key>
+    <false/>
+    
+    <!-- 环境变量 -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+    </dict>
+</dict>
+</plist>
+

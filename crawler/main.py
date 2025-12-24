@@ -151,35 +151,74 @@ def _parse_date_key(date_key: str, year: int = None) -> Optional[datetime]:
 
 
 def _fill_missing_dates(dates: List[str], reservations: List[Any], rating: List[Any]) -> tuple:
-    """补全缺失的日期（填充 null）"""
+    """
+    补全缺失的日期（填充 null），并清空已存在但过期的数据
+    通过读取归档数据来判断哪些日期是真实抓取的
+    """
     if not dates:
         return dates, reservations, rating
     
     today = datetime.now()
     current_year = today.year
+    month_key = today.strftime("%Y-%m")
+    archive_path = ARCHIVE_DIR / f"{month_key}.json"
     
-    # 解析最后一个日期
-    last_date = _parse_date_key(dates[-1], current_year)
-    if not last_date:
-        return dates, reservations, rating
+    # 加载归档数据，获取真实抓取的日期列表
+    real_dates = set()
+    if archive_path.exists():
+        try:
+            archive = load_json(archive_path, default={})
+            # 遍历所有游戏的归档数据，收集所有有真实数据的日期
+            for game_data in archive.get("games", {}).values():
+                for daily in game_data.get("daily", []):
+                    date_key = daily.get("date")
+                    # 如果该日期有任何非 null 的数据，说明是真实抓取的
+                    if date_key and any([
+                        daily.get("reservations") is not None,
+                        daily.get("rating") is not None,
+                        daily.get("followers") is not None,
+                        daily.get("review_count") is not None
+                    ]):
+                        real_dates.add(date_key)
+        except Exception as exc:
+            logging.warning("读取归档数据失败: %s", exc)
     
-    # 处理跨年情况：如果最后日期在12月且今天在1月，调整年份
-    if last_date.month == 12 and today.month == 1:
-        last_date = _parse_date_key(dates[-1], current_year - 1)
+    # 遍历现有的 dates，清空不在真实日期列表中的数据
+    for idx, date_key in enumerate(dates):
+        if date_key not in real_dates and date_key != today.strftime("%m-%d"):
+            # 这个日期不在真实抓取列表中，且不是今天，清空为 null
+            if reservations[idx] is not None or rating[idx] is not None:
+                reservations[idx] = None
+                rating[idx] = None
+                logging.warning("检测到日期 %s 无真实数据，已清空为 null", date_key)
     
-    # 计算缺失的天数
-    today_date = datetime(today.year, today.month, today.day)
-    delta_days = (today_date - last_date).days
-    
-    # 如果超过1天，补全中间的日期
-    if delta_days > 1:
+    # 补全从第一个日期到今天之间缺失的日期
+    if dates:
         import datetime as dt_module
-        for i in range(1, delta_days):
-            missing_date = last_date + dt_module.timedelta(days=i)
-            missing_key = missing_date.strftime("%m-%d")
-            dates.append(missing_key)
-            reservations.append(None)
-            rating.append(None)
+        today_date = datetime(today.year, today.month, today.day)
+        
+        # 解析第一个和最后一个日期
+        first_date = _parse_date_key(dates[0], current_year)
+        last_date = _parse_date_key(dates[-1], current_year)
+        
+        if first_date and last_date:
+            # 处理跨年
+            if last_date.month == 12 and today.month == 1:
+                last_date = _parse_date_key(dates[-1], current_year - 1)
+            
+            # 生成从第一个日期到今天的所有日期
+            all_dates_needed = []
+            current_date = first_date
+            while current_date <= today_date:
+                all_dates_needed.append(current_date.strftime("%m-%d"))
+                current_date += dt_module.timedelta(days=1)
+            
+            # 补全缺失的日期
+            for needed_key in all_dates_needed:
+                if needed_key not in dates:
+                    dates.append(needed_key)
+                    reservations.append(None)
+                    rating.append(None)
     
     return dates, reservations, rating
 
@@ -198,10 +237,11 @@ def append_today_trend(record: Dict[str, Any]) -> None:
     reservations = history["reservations"]
     rating = history["rating"]
 
-    # 补全缺失日期
-    if dates and today_key not in dates:
+    # 先检查并补全/清空缺失日期（无论今天是否存在都要检查）
+    if dates:
         dates, reservations, rating = _fill_missing_dates(dates, reservations, rating)
-
+    
+    # 更新或追加今天的数据
     if today_key in dates:
         idx = dates.index(today_key)
         reservations[idx] = reservations_val
@@ -352,7 +392,7 @@ def append_to_monthly_archive(new_data: List[Dict[str, Any]]) -> None:
         # 查找是否已有今日数据，有则更新，无则追加
         daily_list = game_archive.get("daily", [])
         
-        # 补全缺失日期
+        # 补全缺失日期（强制清空旧数据）
         if daily_list and today_key not in [item.get("date") for item in daily_list]:
             last_item = daily_list[-1]
             last_date = _parse_date_key(last_item.get("date"), now.year)
@@ -360,18 +400,40 @@ def append_to_monthly_archive(new_data: List[Dict[str, Any]]) -> None:
                 today_date = datetime(now.year, now.month, now.day)
                 delta_days = (today_date - last_date).days
                 if delta_days > 1:
+                    import datetime as dt_module
+                    # 生成所有缺失的日期
                     for i in range(1, delta_days):
-                        import datetime as dt_module
                         missing_date = last_date + dt_module.timedelta(days=i)
                         missing_key = missing_date.strftime("%m-%d")
-                        daily_list.append({
-                            "date": missing_key,
-                            "reservations": None,
-                            "rating": None,
-                            "followers": None,
-                            "review_count": None,
-                            "status": None,
-                        })
+                        
+                        # 检查该日期是否已存在
+                        existing_idx = None
+                        for idx, item in enumerate(daily_list):
+                            if item.get("date") == missing_key:
+                                existing_idx = idx
+                                break
+                        
+                        if existing_idx is not None:
+                            # 如果已存在，强制清空为 null（这是旧数据）
+                            daily_list[existing_idx] = {
+                                "date": missing_key,
+                                "reservations": None,
+                                "rating": None,
+                                "followers": None,
+                                "review_count": None,
+                                "status": None,
+                            }
+                            logging.warning("归档：检测到断档日期 %s 存在旧数据，已清空", missing_key)
+                        else:
+                            # 如果不存在，追加新的 null 记录
+                            daily_list.append({
+                                "date": missing_key,
+                                "reservations": None,
+                                "rating": None,
+                                "followers": None,
+                                "review_count": None,
+                                "status": None,
+                            })
         
         found = False
         for i, item in enumerate(daily_list):
