@@ -1,6 +1,6 @@
 {
   "month": "2025-12",
-  "last_updated": "2025-12-25 10:55",
+  "last_updated": "2025-12-25 22:59",
   "games": {
     "wuxiangu": {
       "name": "无限谷",
@@ -64,9 +64,9 @@
         {
           "date": "12-25",
           "reservations": "3.1万",
-          "rating": "8.7",
+          "rating": "8.6",
           "followers": "3.1万",
-          "review_count": "77",
+          "review_count": "79",
           "status": "预约中"
         }
       ]
@@ -135,7 +135,7 @@
           "reservations": "7.2万",
           "rating": "7.3",
           "followers": "7.2万",
-          "review_count": "249",
+          "review_count": "250",
           "status": "预约中"
         }
       ]
@@ -204,7 +204,7 @@
           "reservations": "4.4万",
           "rating": "6.7",
           "followers": "4.4万",
-          "review_count": "258",
+          "review_count": "259",
           "status": "预约中"
         }
       ]
@@ -355,7 +355,7 @@
           "reservations": "105万",
           "rating": "9.3",
           "followers": "110万",
-          "review_count": "3936",
+          "review_count": "3940",
           "status": "预约中"
         }
       ]

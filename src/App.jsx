@@ -137,35 +137,60 @@ const MiniStat = ({ label, value, diff, icon: Icon, colorClass }) => {
 };
 
 // 官方动态 Item
-const CompactTimelineItem = ({ post }) => (
-  <div className={`relative pl-4 border-l-2 pb-4 last:pb-0 last:border-l-0 transition-all ${
-    post.is_new ? 'border-indigo-200' : 'border-slate-100'
-  }`}>
-    <div className={`absolute -left-[5px] top-1.5 w-2 h-2 rounded-full ring-2 ring-white ${
-      post.is_new ? 'bg-indigo-500 animate-pulse' : 'bg-slate-300'
-    }`}></div>
-    
-    <div className="flex items-center gap-2 mb-1">
-      <p className="text-xs text-slate-400 font-mono">{post.date}</p>
-      {post.is_new && (
-        <span className="text-[9px] font-bold bg-indigo-100 text-indigo-600 px-1.5 rounded-sm border border-indigo-200">
-          NEW
-        </span>
-      )}
-    </div>
-    
-    <h4 className={`text-sm font-medium leading-snug hover:text-indigo-600 cursor-pointer mb-2 ${
-      post.is_new ? 'text-slate-800' : 'text-slate-500'
+const CompactTimelineItem = ({ post, platform }) => {
+  // 微博平台显示转发数，其他平台显示评论数和点赞数
+  const isWeibo = platform === 'weibo';
+  
+  return (
+    <div className={`relative pl-4 border-l-2 pb-4 last:pb-0 last:border-l-0 transition-all ${
+      post.is_new ? 'border-indigo-200' : 'border-slate-100'
     }`}>
-      {post.title}
-    </h4>
-    
-    <div className="flex items-center gap-3 text-xs text-slate-400">
-      <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100"><MessageSquare className="w-3 h-3" /> {post.comments}</span>
-      <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100"><ThumbsUp className="w-3 h-3" /> {post.likes}</span>
+      <div className={`absolute -left-[5px] top-1.5 w-2 h-2 rounded-full ring-2 ring-white ${
+        post.is_new ? 'bg-indigo-500 animate-pulse' : 'bg-slate-300'
+      }`}></div>
+      
+      <div className="flex items-center gap-2 mb-1">
+        <p className="text-xs text-slate-400 font-mono">{post.date}</p>
+        {post.is_new && (
+          <span className="text-[9px] font-bold bg-indigo-100 text-indigo-600 px-1.5 rounded-sm border border-indigo-200">
+            NEW
+          </span>
+        )}
+      </div>
+      
+      <h4 className={`text-sm font-medium leading-snug hover:text-indigo-600 cursor-pointer mb-2 ${
+        post.is_new ? 'text-slate-800' : 'text-slate-500'
+      }`}>
+        {post.title}
+      </h4>
+      
+      <div className="flex items-center gap-3 text-xs text-slate-400">
+        {isWeibo ? (
+          <>
+            <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">
+              <TrendingUp className="w-3 h-3" /> {post.reposts || '0'}
+            </span>
+            <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">
+              <MessageSquare className="w-3 h-3" /> {post.comments || '0'}
+            </span>
+            <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">
+              <ThumbsUp className="w-3 h-3" /> {post.likes || '0'}
+            </span>
+          </>
+        ) : (
+          <>
+            <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">
+              <MessageSquare className="w-3 h-3" /> {post.comments || '0'}
+            </span>
+            <span className="flex items-center gap-1 bg-slate-50 px-1.5 py-0.5 rounded border border-slate-100">
+              <ThumbsUp className="w-3 h-3" /> {post.likes || '0'}
+            </span>
+          </>
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // 评论 Item
 const CompactReviewItem = ({ review }) => (
@@ -241,7 +266,7 @@ const PlatformContent = ({ game, activePlatform }) => {
           {currentPosts.length > 0 ? (
             <div className="space-y-1">
               {currentPosts.map((post, idx) => (
-                <CompactTimelineItem key={idx} post={post} />
+                <CompactTimelineItem key={idx} post={post} platform={activePlatform} />
               ))}
             </div>
           ) : (
@@ -261,7 +286,7 @@ const PlatformContent = ({ game, activePlatform }) => {
       {currentPosts.length > 0 ? (
         <div className="space-y-1">
           {currentPosts.map((post, idx) => (
-            <CompactTimelineItem key={idx} post={post} />
+            <CompactTimelineItem key={idx} post={post} platform={activePlatform} />
           ))}
         </div>
       ) : (
@@ -409,7 +434,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
               </div>
             </div>
             
-            {/* 小红书数据 - 始终显示 */}
+            {/* 小红书数据 */}
             <div className="border-t border-slate-100 pt-3">
               <div className="flex items-center gap-1.5 mb-2">
                 <Heart className="w-3 h-3 text-rose-500" />
@@ -443,6 +468,74 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
                 
                 {/* 未配置覆盖层 */}
                 {game.fetch_status?.xiaohongshu === 'not_configured' && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 rounded-lg border border-slate-200">
+                    <div className="flex flex-col items-center text-slate-400">
+                      <Settings className="w-6 h-6 mb-1.5 opacity-30" />
+                      <p className="text-[11px] font-medium text-slate-500">暂未配置此平台</p>
+                      <p className="text-[9px] text-slate-400 mt-0.5">请在配置管理中添加链接</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* 微博数据 */}
+            <div className="border-t border-slate-100 pt-3">
+              <div className="flex items-center gap-1.5 mb-2">
+                <Hash className="w-3 h-3 text-red-500" />
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">微博</span>
+              </div>
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-2">
+                  <MiniStat 
+                    label="粉丝数" 
+                    value={game.basic_info.wb_followers || '-'}
+                    icon={Users} 
+                    colorClass="text-red-500" 
+                  />
+                  <div className="bg-slate-50 p-3 rounded-lg border border-slate-100 opacity-30">
+                    <p className="text-[10px] text-slate-400 uppercase tracking-wider font-bold mb-0.5">占位</p>
+                    <p className="text-sm font-bold text-slate-400">-</p>
+                  </div>
+                </div>
+                
+                {/* 未配置覆盖层 */}
+                {game.fetch_status?.weibo === 'not_configured' && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 rounded-lg border border-slate-200">
+                    <div className="flex flex-col items-center text-slate-400">
+                      <Settings className="w-6 h-6 mb-1.5 opacity-30" />
+                      <p className="text-[11px] font-medium text-slate-500">暂未配置此平台</p>
+                      <p className="text-[9px] text-slate-400 mt-0.5">请在配置管理中添加链接</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* B站数据 */}
+            <div className="border-t border-slate-100 pt-3">
+              <div className="flex items-center gap-1.5 mb-2">
+                <MonitorPlay className="w-3 h-3 text-pink-400" />
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">B站</span>
+              </div>
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-2">
+                  <MiniStat 
+                    label="粉丝数" 
+                    value={game.basic_info.bili_followers || '-'}
+                    icon={Users} 
+                    colorClass="text-pink-400" 
+                  />
+                  <MiniStat 
+                    label="获赞数" 
+                    value={game.basic_info.bili_likes || '-'}
+                    icon={ThumbsUp} 
+                    colorClass="text-pink-400" 
+                  />
+                </div>
+                
+                {/* 未配置覆盖层 */}
+                {game.fetch_status?.bilibili === 'not_configured' && (
                   <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 rounded-lg border border-slate-200">
                     <div className="flex flex-col items-center text-slate-400">
                       <Settings className="w-6 h-6 mb-1.5 opacity-30" />
