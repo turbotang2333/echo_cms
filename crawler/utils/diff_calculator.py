@@ -141,3 +141,4 @@ def calculate_diffs(current_basic: Dict[str, Any], trend_history: Dict[str, Any]
 
 
 
+

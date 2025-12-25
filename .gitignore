@@ -36,3 +36,7 @@ taptap_debug.html
 *.backup
 *.bak
 *~
+
+# 环境变量（包含敏感信息）
+.env
+.env.local

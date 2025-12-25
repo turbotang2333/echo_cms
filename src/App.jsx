@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { 
   Users, 
   Star, 
@@ -44,8 +44,8 @@ const PERIOD_OPTIONS = [
 
 // 板块高度统一配置（方便后续调整）
 const SECTION_HEIGHTS = {
-  officialPosts: 'h-[420px]',  // 官方动态：容纳约5条帖子
-  hotReviews: 'h-[520px]',     // 热门评论：容纳约5条评论
+  officialPosts: 'min-h-[420px]',       // 官方动态：最小高度，自适应内容（最多5条）
+  hotReviews: 'min-h-[520px]',          // 热门评论：最小高度，自适应内容（最多5条）
 };
 
 // ==========================================
@@ -82,11 +82,11 @@ const FALLBACK_DATA = [
 // 3. 通用 UI 组件 (UI Components)
 // ==========================================
 
-const SectionCard = ({ children, className = "" }) => (
-  <div className={`bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col ${className}`}>
+const SectionCard = React.forwardRef(({ children, className = "", style }, ref) => (
+  <div ref={ref} className={`bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden flex flex-col ${className}`} style={style}>
     {children}
   </div>
-);
+));
 
 const SectionHeader = ({ icon: Icon, title, rightElement, iconColor = "text-slate-500", iconBg = "bg-slate-100" }) => (
   <div className="flex-none flex items-center justify-between p-4 pb-3 border-b border-slate-50 bg-white">
@@ -210,7 +210,7 @@ const PlatformContent = ({ game, activePlatform }) => {
   // 状态：未配置
   if (fetchStatus === 'not_configured') {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center text-slate-400 py-6 overflow-y-auto">
+      <div className="flex-1 flex flex-col items-center justify-center text-slate-400 py-6">
         <Settings className="w-8 h-8 mb-2 opacity-20" />
         <p className="text-xs font-medium text-slate-500">暂未配置此平台</p>
         <p className="text-[10px] text-slate-400 mt-1">请在配置管理中添加链接</p>
@@ -221,7 +221,7 @@ const PlatformContent = ({ game, activePlatform }) => {
   // 状态：抓取失败
   if (fetchStatus === 'failed') {
     return (
-      <div className="flex-1 flex flex-col items-center justify-center py-6 overflow-y-auto">
+      <div className="flex-1 flex flex-col items-center justify-center py-6">
         <AlertCircle className="w-8 h-8 mb-2 text-red-300" />
         <p className="text-xs font-medium text-red-600">抓取失败</p>
         <p className="text-[10px] text-red-400 mt-1">请检查链接配置是否正确</p>
@@ -237,7 +237,7 @@ const PlatformContent = ({ game, activePlatform }) => {
           <AlertCircle className="w-3 h-3 text-amber-500" />
           <span className="text-[10px] text-amber-700 font-medium">数据可能已过期</span>
         </div>
-        <div className="p-4 flex-1 overflow-y-auto custom-scrollbar">
+        <div className="p-4 flex-1">
           {currentPosts.length > 0 ? (
             <div className="space-y-1">
               {currentPosts.map((post, idx) => (
@@ -256,8 +256,8 @@ const PlatformContent = ({ game, activePlatform }) => {
   }
 
   // 状态：成功 (success) 或默认
-  return (
-    <div className="p-4 flex-1 overflow-y-auto custom-scrollbar">
+    return (
+      <div className="p-4 flex-1">
       {currentPosts.length > 0 ? (
         <div className="space-y-1">
           {currentPosts.map((post, idx) => (
@@ -278,44 +278,24 @@ const PlatformContent = ({ game, activePlatform }) => {
 // 4. 核心业务组件: GameColumn
 // ==========================================
 
-const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform }) => {
+const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform, unifiedHeights, officialPostsRef, hotReviewsRef }) => {
   return (
     <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200 overflow-hidden">
-      {/* 4.1 产品信息头部 */}
+      {/* 4.1 产品信息头部 - 精简版 */}
       <div className="flex-none p-4 border-b border-slate-100 bg-white z-10">
-        <div className="flex justify-between items-start mb-3">
+        <div className="flex justify-between items-start">
           <div className="flex gap-3">
             <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-xl font-bold text-slate-600 shadow-inner">
               {game.icon_char || game.name[0]}
             </div>
             <div>
               <h3 className="font-bold text-lg text-slate-900 leading-tight">{game.name}</h3>
-              <div className="flex items-center gap-2 mt-1">
-                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border ${
-                  game.basic_info.status === '预约中' 
-                    ? 'bg-emerald-50 text-emerald-600 border-emerald-100' 
-                    : 'bg-indigo-50 text-indigo-600 border-indigo-100'
-                }`}>
-                  {game.basic_info.status}
-                </span>
-                <div className="flex items-center text-yellow-500 gap-0.5">
-                    <Star className="w-3 h-3 fill-current" />
-                    <span className="text-xs font-bold">{game.basic_info.rating}</span>
-                </div>
-              </div>
+              <p className="text-xs text-slate-400 mt-1">最后更新: {game.last_updated}</p>
             </div>
           </div>
           <button className="text-slate-300 hover:text-slate-500">
             <MoreHorizontal className="w-5 h-5" />
           </button>
-        </div>
-        
-        <div className="flex flex-wrap gap-1.5 mb-1">
-          {game.basic_info.tags?.slice(0, 3).map(tag => (
-            <span key={tag} className="text-[10px] px-1.5 py-0.5 bg-slate-50 text-slate-500 rounded border border-slate-100">
-              {tag}
-            </span>
-          ))}
         </div>
       </div>
 
@@ -347,40 +327,137 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
               </div>
             }
           />
-          <div className="p-3 grid grid-cols-2 gap-2">
-            <MiniStat 
-              label="预约总数" 
-              value={game.basic_info.reservations} 
-              diff={game.basic_info.diffs?.reservations?.[comparisonPeriod]}
-              icon={TrendingUp} 
-              colorClass="text-emerald-500" 
-            />
-            <MiniStat 
-              label="关注人数" 
-              value={game.basic_info.followers} 
-              diff={game.basic_info.diffs?.followers?.[comparisonPeriod]}
-              icon={Users} 
-              colorClass="text-blue-500" 
-            />
-            <MiniStat 
-              label="累计评价" 
-              value={game.basic_info.review_count} 
-              diff={game.basic_info.diffs?.review_count?.[comparisonPeriod]}
-              icon={MessageSquare} 
-              colorClass="text-purple-500" 
-            />
-            <MiniStat 
-              label="评分趋势" 
-              value={game.basic_info.rating} 
-              diff={game.basic_info.diffs?.rating?.[comparisonPeriod]}
-              icon={Star} 
-              colorClass="text-yellow-500" 
-            />
+          <div className="p-3 space-y-3">
+            {/* TapTap 数据 */}
+            <div>
+              <div className="flex items-center gap-1.5 mb-2">
+                <LayoutList className="w-3 h-3 text-emerald-500" />
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">TapTap</span>
+              </div>
+              
+              <div className="relative">
+                {/* 状态和标签 - 固定高度占位 */}
+                <div className="flex items-center gap-2 mb-2.5 h-[20px]">
+                  {game.basic_info.status ? (
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded border ${
+                      game.basic_info.status === '预约中' 
+                        ? 'bg-emerald-50 text-emerald-600 border-emerald-100' 
+                        : 'bg-indigo-50 text-indigo-600 border-indigo-100'
+                    }`}>
+                      {game.basic_info.status}
+                    </span>
+                  ) : (
+                    <span className="text-[10px] px-1.5 py-0.5 text-slate-300 italic">
+                      暂无状态
+                    </span>
+                  )}
+                  {game.basic_info.tags && game.basic_info.tags.length > 0 ? (
+                    game.basic_info.tags.slice(0, 3).map(tag => (
+                      <span key={tag} className="text-[10px] px-1.5 py-0.5 bg-slate-50 text-slate-500 rounded border border-slate-100">
+                        {tag}
+                      </span>
+                    ))
+                  ) : (
+                    <span className="text-[10px] px-1.5 py-0.5 text-slate-300 italic">
+                      暂无标签
+                    </span>
+                  )}
+                </div>
+                
+                {/* 数据指标 */}
+                <div className="grid grid-cols-2 gap-2">
+                  <MiniStat 
+                    label="预约总数" 
+                    value={game.basic_info.reservations} 
+                    diff={game.basic_info.diffs?.reservations?.[comparisonPeriod]}
+                    icon={TrendingUp} 
+                    colorClass="text-emerald-500" 
+                  />
+                  <MiniStat 
+                    label="关注人数" 
+                    value={game.basic_info.followers} 
+                    diff={game.basic_info.diffs?.followers?.[comparisonPeriod]}
+                    icon={Users} 
+                    colorClass="text-blue-500" 
+                  />
+                  <MiniStat 
+                    label="累计评价" 
+                    value={game.basic_info.review_count} 
+                    diff={game.basic_info.diffs?.review_count?.[comparisonPeriod]}
+                    icon={MessageSquare} 
+                    colorClass="text-purple-500" 
+                  />
+                  <MiniStat 
+                    label="评分趋势" 
+                    value={game.basic_info.rating} 
+                    diff={game.basic_info.diffs?.rating?.[comparisonPeriod]}
+                    icon={Star} 
+                    colorClass="text-yellow-500" 
+                  />
+                </div>
+                
+                {/* 未配置覆盖层 */}
+                {game.fetch_status?.taptap === 'not_configured' && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 rounded-lg border border-slate-200">
+                    <div className="flex flex-col items-center text-slate-400">
+                      <Settings className="w-6 h-6 mb-1.5 opacity-30" />
+                      <p className="text-[11px] font-medium text-slate-500">暂未配置此平台</p>
+                      <p className="text-[9px] text-slate-400 mt-0.5">请在配置管理中添加链接</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+            
+            {/* 小红书数据 - 始终显示 */}
+            <div className="border-t border-slate-100 pt-3">
+              <div className="flex items-center gap-1.5 mb-2">
+                <Heart className="w-3 h-3 text-rose-500" />
+                <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">小红书</span>
+              </div>
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-2">
+                  <MiniStat 
+                    label="粉丝数" 
+                    value={game.basic_info.xhs_followers ? 
+                      (parseInt(game.basic_info.xhs_followers) > 10000 
+                        ? `${(parseInt(game.basic_info.xhs_followers) / 10000).toFixed(1)}万` 
+                        : game.basic_info.xhs_followers) 
+                      : '-'
+                    }
+                    icon={Users} 
+                    colorClass="text-rose-500" 
+                  />
+                  <MiniStat 
+                    label="获赞收藏" 
+                    value={game.basic_info.xhs_likes ? 
+                      (parseInt(game.basic_info.xhs_likes) > 10000 
+                        ? `${(parseInt(game.basic_info.xhs_likes) / 10000).toFixed(1)}万` 
+                        : game.basic_info.xhs_likes)
+                      : '-'
+                    }
+                    icon={ThumbsUp} 
+                    colorClass="text-rose-500" 
+                  />
+                </div>
+                
+                {/* 未配置覆盖层 */}
+                {game.fetch_status?.xiaohongshu === 'not_configured' && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-slate-50/95 rounded-lg border border-slate-200">
+                    <div className="flex flex-col items-center text-slate-400">
+                      <Settings className="w-6 h-6 mb-1.5 opacity-30" />
+                      <p className="text-[11px] font-medium text-slate-500">暂未配置此平台</p>
+                      <p className="text-[9px] text-slate-400 mt-0.5">请在配置管理中添加链接</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
           </div>
         </SectionCard>
 
         {/* 板块 B: 官方运营动态 */}
-        <SectionCard className={SECTION_HEIGHTS.officialPosts}>
+        <SectionCard ref={officialPostsRef} style={{ minHeight: unifiedHeights.officialPosts ? `${unifiedHeights.officialPosts}px` : 'auto' }}>
           <SectionHeader 
             icon={Megaphone} 
             title="官方动态" 
@@ -422,7 +499,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
         </SectionCard>
 
         {/* 板块 C: 热门舆情 */}
-        <SectionCard className={SECTION_HEIGHTS.hotReviews}>
+        <SectionCard ref={hotReviewsRef} style={{ minHeight: unifiedHeights.hotReviews ? `${unifiedHeights.hotReviews}px` : 'auto' }}>
           <SectionHeader 
              icon={MessageCircle} 
              title="热门舆情" 
@@ -434,7 +511,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
                </span>
              }
           />
-          <div className="p-3 flex-1 overflow-y-auto custom-scrollbar">
+          <div className="p-3 flex-1">
             {game.hot_reviews?.length > 0 ? (
               <div>
                 {game.hot_reviews.map((review, idx) => (
@@ -470,14 +547,27 @@ export default function App() {
   // 配置管理模态框
   const [isConfigModalOpen, setIsConfigModalOpen] = useState(false);
   const [gamesConfig, setGamesConfig] = useState([]);
+  const [configLoaded, setConfigLoaded] = useState(false);
   
   // 全局状态
   const [comparisonPeriod, setComparisonPeriod] = useState('day');
-  const [globalPlatform, setGlobalPlatform] = useState('taptap'); 
+  const [globalPlatform, setGlobalPlatform] = useState('taptap');
+  
+  // 动态计算各板块的统一高度（基于真实DOM测量）
+  const [unifiedHeights, setUnifiedHeights] = useState({
+    officialPosts: null,
+    hotReviews: null
+  });
+  
+  // 为每个游戏的板块创建 ref 数组
+  const officialPostsRefs = useRef([]);
+  const hotReviewsRefs = useRef([]); 
 
   // 数据获取：GitHub Pages 模式（禁用缓存，确保获取最新数据）
   useEffect(() => {
-    fetch('./data.json', { cache: 'no-store' })
+    // 使用绝对路径，兼容开发和生产环境
+    const dataPath = import.meta.env.BASE_URL + 'data.json';
+    fetch(dataPath, { cache: 'no-store' })
       .then(res => {
         if (!res.ok) throw new Error('Not found');
         return res.json();
@@ -493,20 +583,85 @@ export default function App() {
       });
   }, []);
 
-  // 加载游戏配置（禁用缓存）
+  // 测量真实DOM高度并统一（两阶段渲染）
   useEffect(() => {
-    fetch('./games_config.json', { cache: 'no-store' })
+    if (!games || games.length === 0 || loading) return;
+    
+    // 延迟测量，确保DOM完全渲染
+    const timer = setTimeout(() => {
+      let maxOfficialPostsHeight = 0;
+      let maxHotReviewsHeight = 0;
+
+      // 测量所有官方动态板块的实际高度
+      officialPostsRefs.current.forEach(ref => {
+        if (ref) {
+          const height = ref.offsetHeight;
+          if (height > maxOfficialPostsHeight) {
+            maxOfficialPostsHeight = height;
+          }
+        }
+      });
+
+      // 测量所有热门舆情板块的实际高度
+      hotReviewsRefs.current.forEach(ref => {
+        if (ref) {
+          const height = ref.offsetHeight;
+          if (height > maxHotReviewsHeight) {
+            maxHotReviewsHeight = height;
+          }
+        }
+      });
+
+      // 应用统一高度
+      if (maxOfficialPostsHeight > 0 || maxHotReviewsHeight > 0) {
+        setUnifiedHeights({
+          officialPosts: maxOfficialPostsHeight || null,
+          hotReviews: maxHotReviewsHeight || null
+        });
+      }
+    }, 100); // 延迟100ms确保渲染完成
+
+    return () => clearTimeout(timer);
+  }, [games, loading]);
+
+  // 加载游戏配置的函数
+  const loadGamesConfig = () => {
+    // 使用绝对路径，兼容开发和生产环境
+    const configPath = import.meta.env.BASE_URL + 'games_config.json';
+    return fetch(configPath, { cache: 'no-store' })
       .then(res => {
         if (!res.ok) throw new Error('Not found');
         return res.json();
       })
       .then(data => {
         setGamesConfig(data);
+        setConfigLoaded(true);
+        console.log("成功加载配置:", data.length, "个游戏");
+        return data;
       })
       .catch(err => {
         console.log("未找到 games_config.json，使用空配置:", err);
+        setGamesConfig([]);
+        setConfigLoaded(true);
+        return [];
       });
+  };
+
+  // 页面加载时预加载配置
+  useEffect(() => {
+    loadGamesConfig();
   }, []);
+
+  // 打开配置管理弹窗时，确保配置已加载
+  const handleOpenConfigModal = () => {
+    if (!configLoaded) {
+      loadGamesConfig().then(() => {
+        setIsConfigModalOpen(true);
+      });
+    } else {
+      setIsConfigModalOpen(true);
+    }
+  };
 
   // 手动导入逻辑
   const handleImport = () => {
@@ -544,7 +699,7 @@ export default function App() {
             <Clock className="w-3 h-3" /> 数据更新: {lastUpdated}
           </span>
           <button 
-            onClick={() => setIsConfigModalOpen(true)}
+            onClick={handleOpenConfigModal}
             className="flex items-center gap-2 px-3 py-1.5 border border-slate-300 hover:bg-slate-50 text-slate-700 rounded-md text-sm font-medium transition-colors"
           >
             <Settings className="w-4 h-4" /> 配置管理
@@ -561,7 +716,7 @@ export default function App() {
       {/* 主内容区（统一滚动） */}
       <main className="flex-1 overflow-auto">
         <div className="flex p-6 gap-6 w-max min-h-full">
-          {games.map((game) => (
+          {games.map((game, index) => (
             <GameColumn 
               key={game.id} 
               game={game} 
@@ -569,6 +724,9 @@ export default function App() {
               setComparisonPeriod={setComparisonPeriod}
               activePlatform={globalPlatform} 
               setActivePlatform={setGlobalPlatform}
+              unifiedHeights={unifiedHeights}
+              officialPostsRef={el => officialPostsRefs.current[index] = el}
+              hotReviewsRef={el => hotReviewsRefs.current[index] = el}
             />
           ))}
 

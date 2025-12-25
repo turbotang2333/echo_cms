@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { 
   X, 
   Plus, 
@@ -20,11 +20,22 @@ export default function ConfigModal({ isOpen, onClose, initialConfig = [] }) {
   // 配置列表状态
   const [games, setGames] = useState(initialConfig);
   
+  // 监听 initialConfig 变化，同步更新内部状态
+  useEffect(() => {
+    if (isOpen && initialConfig.length > 0) {
+      setGames(initialConfig);
+    }
+  }, [isOpen, initialConfig]);
+  
   // 当前选中的游戏索引
   const [selectedIndex, setSelectedIndex] = useState(null);
   
   // 编辑模式：'new' | 'edit' | null
   const [editMode, setEditMode] = useState(null);
+  
+  // 拖拽相关状态
+  const [draggedIndex, setDraggedIndex] = useState(null);
+  const [dragOverIndex, setDragOverIndex] = useState(null);
   
   // 表单数据
   const [formData, setFormData] = useState(getEmptyForm());
@@ -235,6 +246,65 @@ export default function ConfigModal({ isOpen, onClose, initialConfig = [] }) {
     onClose(games); // 将配置传递回父组件
   }
 
+  // 拖拽开始
+  function handleDragStart(index) {
+    setDraggedIndex(index);
+  }
+
+  // 拖拽经过
+  function handleDragOver(e, index) {
+    e.preventDefault(); // 必须阻止默认行为才能允许 drop
+    if (draggedIndex === null || draggedIndex === index) return;
+    setDragOverIndex(index);
+  }
+
+  // 拖拽离开
+  function handleDragLeave() {
+    setDragOverIndex(null);
+  }
+
+  // 放置
+  function handleDrop(e, dropIndex) {
+    e.preventDefault();
+    
+    if (draggedIndex === null || draggedIndex === dropIndex) {
+      setDraggedIndex(null);
+      setDragOverIndex(null);
+      return;
+    }
+
+    const updated = [...games];
+    const draggedItem = updated[draggedIndex];
+    
+    // 移除拖拽项
+    updated.splice(draggedIndex, 1);
+    // 插入到新位置
+    updated.splice(dropIndex, 0, draggedItem);
+    
+    setGames(updated);
+    
+    // 更新选中索引
+    if (selectedIndex === draggedIndex) {
+      setSelectedIndex(dropIndex);
+    } else if (selectedIndex !== null) {
+      if (draggedIndex < selectedIndex && dropIndex >= selectedIndex) {
+        setSelectedIndex(selectedIndex - 1);
+      } else if (draggedIndex > selectedIndex && dropIndex <= selectedIndex) {
+        setSelectedIndex(selectedIndex + 1);
+      }
+    }
+    
+    setDraggedIndex(null);
+    setDragOverIndex(null);
+    showToast('顺序已调整', 'success');
+  }
+
+  // 拖拽结束
+  function handleDragEnd() {
+    setDraggedIndex(null);
+    setDragOverIndex(null);
+  }
+
   if (!isOpen) return null;
 
   return (
@@ -290,35 +360,49 @@ export default function ConfigModal({ isOpen, onClose, initialConfig = [] }) {
                 </div>
               ) : (
                 games.map((game, idx) => (
-                  <button
+                  <div
                     key={idx}
-                    onClick={() => handleEdit(idx)}
-                    className={`w-full text-left p-3 rounded-lg border transition-all ${
-                      selectedIndex === idx
+                    draggable
+                    onDragStart={() => handleDragStart(idx)}
+                    onDragOver={(e) => handleDragOver(e, idx)}
+                    onDragLeave={handleDragLeave}
+                    onDrop={(e) => handleDrop(e, idx)}
+                    onDragEnd={handleDragEnd}
+                    className={`rounded-lg border transition-all cursor-move ${
+                      draggedIndex === idx
+                        ? 'opacity-50 scale-95'
+                        : dragOverIndex === idx
+                        ? 'border-indigo-400 bg-indigo-50 shadow-lg scale-105'
+                        : selectedIndex === idx
                         ? 'bg-indigo-50 border-indigo-200 ring-2 ring-indigo-100'
                         : 'bg-white border-slate-200 hover:border-indigo-200 hover:shadow-sm'
                     }`}
                   >
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-sm font-bold text-slate-600">
-                        {game.name[0]}
+                    <button
+                      onClick={() => handleEdit(idx)}
+                      className="w-full text-left p-3"
+                    >
+                      <div className="flex items-center gap-3 mb-2">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-sm font-bold text-slate-600">
+                          {game.name[0]}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-sm font-bold text-slate-800 truncate">{game.name}</h4>
+                          <p className="text-xs text-slate-400 truncate">ID: {game.id}</p>
+                        </div>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-bold text-slate-800 truncate">{game.name}</h4>
-                        <p className="text-xs text-slate-400 truncate">ID: {game.id}</p>
+                      <div className="flex items-center justify-between">
+                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
+                          game.enabled 
+                            ? 'bg-emerald-100 text-emerald-600' 
+                            : 'bg-slate-100 text-slate-400'
+                        }`}>
+                          {game.enabled ? '已启用' : '已禁用'}
+                        </span>
+                        <span className="text-[10px] text-slate-400">{game.created_at}</span>
                       </div>
-                    </div>
-                    <div className="flex items-center justify-between">
-                      <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${
-                        game.enabled 
-                          ? 'bg-emerald-100 text-emerald-600' 
-                          : 'bg-slate-100 text-slate-400'
-                      }`}>
-                        {game.enabled ? '已启用' : '已禁用'}
-                      </span>
-                      <span className="text-[10px] text-slate-400">{game.created_at}</span>
-                    </div>
-                  </button>
+                    </button>
+                  </div>
                 ))
               )}
             </div>

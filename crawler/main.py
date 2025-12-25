@@ -16,7 +16,8 @@ from typing import Any, Dict, List, Optional
 from fetchers.bilibili import fetch_bilibili_data
 from fetchers.taptap import fetch_taptap_data
 from fetchers.weibo import fetch_weibo_data
-from fetchers.xiaohongshu import fetch_xiaohongshu_data
+# 使用 API 方式抓取小红书（更稳定）
+from fetchers.xiaohongshu_api import fetch_xiaohongshu_data
 from utils.diff_calculator import calculate_diffs
 from utils.week_helper import is_current_week
 
@@ -458,6 +459,15 @@ def main() -> None:
         format="%(asctime)s %(levelname)s %(message)s",
         stream=sys.stdout,
     )
+    
+    # 检查小红书 Cookie 是否有效
+    try:
+        from xhs_login_helper import check_cookie_valid
+        if not check_cookie_valid():
+            logging.warning("⚠️ 小红书 Cookie 已失效，小红书数据将无法抓取")
+            logging.warning("💡 运行以下命令重新登录：cd crawler && python3 xhs_login_helper.py")
+    except Exception:
+        pass  # 忽略检查失败，继续运行
 
     config = load_json(CONFIG_PATH, default=[])
     old_data = load_json(DATA_PATH, default=[])

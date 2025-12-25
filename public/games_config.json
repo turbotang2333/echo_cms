@@ -1,5 +1,47 @@
 [
   {
+    "id": "pengpeng",
+    "name": "夜幕之下（代号：砰砰）",
+    "icon_url": "",
+    "enabled": true,
+    "platforms": {
+      "taptap": {
+        "url": "https://www.taptap.cn/app/746164"
+      },
+      "bilibili": {
+        "url": "https://space.bilibili.com/3546889188280924"
+      },
+      "weibo": {
+        "url": "https://weibo.com/u/7994214945"
+      },
+      "xiaohongshu": {
+        "url": "https://www.xiaohongshu.com/user/profile/6805bb4c000000000e011c20"
+      }
+    },
+    "created_at": "2025-12-25"
+  },
+  {
+    "id": "eve",
+    "name": "EVE",
+    "icon_url": "",
+    "enabled": true,
+    "platforms": {
+      "taptap": {
+        "url": "https://www.taptap.cn/app/788667"
+      },
+      "bilibili": {
+        "url": "https://space.bilibili.com/430385923"
+      },
+      "weibo": {
+        "url": "https://weibo.com/8224105688"
+      },
+      "xiaohongshu": {
+        "url": "https://www.xiaohongshu.com/user/profile/67fcddea000000000a03d293"
+      }
+    },
+    "created_at": "2025-12-18"
+  },
+  {
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_url": "",
@@ -37,27 +79,6 @@
       },
       "xiaohongshu": {
         "url": ""
-      }
-    },
-    "created_at": "2025-12-18"
-  },
-  {
-    "id": "eve",
-    "name": "EVE",
-    "icon_url": "",
-    "enabled": true,
-    "platforms": {
-      "taptap": {
-        "url": "https://www.taptap.cn/app/788667"
-      },
-      "bilibili": {
-        "url": "https://space.bilibili.com/430385923"
-      },
-      "weibo": {
-        "url": "https://weibo.com/8224105688"
-      },
-      "xiaohongshu": {
-        "url": "https://www.xiaohongshu.com/user/profile/67fcddea000000000a03d293"
       }
     },
     "created_at": "2025-12-18"
