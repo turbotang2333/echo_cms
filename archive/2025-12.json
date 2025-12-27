@@ -1,6 +1,6 @@
 {
   "month": "2025-12",
-  "last_updated": "2025-12-26 09:41",
+  "last_updated": "2025-12-27 22:32",
   "games": {
     "wuxiangu": {
       "name": "无限谷",
@@ -71,6 +71,14 @@
         },
         {
           "date": "12-26",
+          "reservations": "3.2万",
+          "rating": "8.6",
+          "followers": "3.2万",
+          "review_count": "79",
+          "status": "预约中"
+        },
+        {
+          "date": "12-27",
           "reservations": "3.2万",
           "rating": "8.6",
           "followers": "3.2万",
@@ -153,6 +161,14 @@
           "followers": "7.2万",
           "review_count": "250",
           "status": "预约中"
+        },
+        {
+          "date": "12-27",
+          "reservations": "7.3万",
+          "rating": "7.4",
+          "followers": "7.3万",
+          "review_count": "252",
+          "status": "预约中"
         }
       ]
     },
@@ -230,6 +246,14 @@
           "followers": "4.4万",
           "review_count": "259",
           "status": "预约中"
+        },
+        {
+          "date": "12-27",
+          "reservations": "4.4万",
+          "rating": "6.7",
+          "followers": "4.4万",
+          "review_count": "263",
+          "status": "预约中"
         }
       ]
     },
@@ -302,6 +326,14 @@
         },
         {
           "date": "12-26",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "12-27",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -384,6 +416,14 @@
           "followers": null,
           "review_count": null,
           "status": ""
+        },
+        {
+          "date": "12-27",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
         }
       ]
     },
@@ -404,6 +444,14 @@
           "rating": "9.3",
           "followers": "110万",
           "review_count": "3940",
+          "status": "预约中"
+        },
+        {
+          "date": "12-27",
+          "reservations": "106万",
+          "rating": "9.3",
+          "followers": "110万",
+          "review_count": "3946",
           "status": "预约中"
         }
       ]
