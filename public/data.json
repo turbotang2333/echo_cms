@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2025-12-28 16:10",
+    "last_updated": "2025-12-28 16:14",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -48,8 +48,8 @@
       "name": "夜幕之下",
       "developer": "",
       "xhs_following": "0",
-      "xhs_followers": "103816",
-      "xhs_likes": "309785",
+      "xhs_followers": "103820",
+      "xhs_likes": "309793",
       "user_name": "夜幕之下（代号砰砰）",
       "bili_followers": "24.1万",
       "bili_likes": "33.2万",
@@ -125,7 +125,7 @@
         {
           "title": "视频导览丨CP32pre 家族据点直击",
           "date": "12/28",
-          "likes": "1157",
+          "likes": "1158",
           "comments": "158",
           "reposts": "2",
           "is_new": true
@@ -172,7 +172,7 @@
           "url": "https://www.xiaohongshu.com/explore/6950141c0000000021030e6c",
           "date": "",
           "is_new": false,
-          "likes": "1859",
+          "likes": "1862",
           "comments": "0"
         },
         {
@@ -199,7 +199,7 @@
           "url": "https://www.xiaohongshu.com/explore/694a05bd000000001e0395f9",
           "date": "",
           "is_new": false,
-          "likes": "3181",
+          "likes": "3182",
           "comments": "0"
         }
       ]
@@ -256,7 +256,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2025-12-28 16:10",
+    "last_updated": "2025-12-28 16:15",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -502,7 +502,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2025-12-28 16:10",
+    "last_updated": "2025-12-28 16:15",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -708,15 +708,6 @@
         "time": "12/19"
       },
       {
-        "user": "哇哦哇哦",
-        "content": "看到这个就想起很早之前玩过的早安我的少年，之前想玩却发现下架了，非常期待此作😋😋",
-        "score": 5,
-        "likes": "2",
-        "replies": "20",
-        "is_new": false,
-        "time": "12/20"
-      },
-      {
         "user": "颜渊",
         "content": "己经开始期待了，虽然玩过许多乙游，但是这个从始至终只有一个也独属于每位乙游女的，期待拉满了！己经预约了！",
         "score": 5,
@@ -724,6 +715,15 @@
         "replies": "1",
         "is_new": false,
         "time": "12/17"
+      },
+      {
+        "user": "哇哦哇哦",
+        "content": "看到这个就想起很早之前玩过的早安我的少年，之前想玩却发现下架了，非常期待此作😋😋",
+        "score": 5,
+        "likes": "2",
+        "replies": "20",
+        "is_new": false,
+        "time": "12/20"
       },
       {
         "user": "林宁卟",
@@ -740,7 +740,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-28 16:11",
+    "last_updated": "2025-12-28 16:15",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -906,13 +906,13 @@
         "time": "12/27"
       },
       {
-        "user": ".._",
-        "content": "有幸参加了首测，蛮好玩的，美术也好看，就是有一些小bug比较影响游戏体验，希望到时候把bug修改掉",
+        "user": "心绪冰冷",
+        "content": "每日一问：改好了吗，可以上线了吗？等不及了，现在每天只能刷刷宣传视频和看之前留的截图过眼瘾了，然后就后悔咋没录屏",
         "score": 5,
-        "likes": "2",
-        "replies": "13",
+        "likes": "0",
+        "replies": "0",
         "is_new": false,
-        "time": "12/24"
+        "time": "12/25"
       }
     ]
   },
@@ -920,7 +920,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2025-12-28 16:11",
+    "last_updated": "2025-12-28 16:15",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1095,7 +1095,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2025-12-28 16:11",
+    "last_updated": "2025-12-28 16:15",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1133,7 +1133,7 @@
       },
       "xhs_following": "9",
       "xhs_followers": "15909",
-      "xhs_likes": "50694",
+      "xhs_likes": "50699",
       "user_name": "星眠APP",
       "wb_followers": "7673"
     },
@@ -1189,7 +1189,7 @@
           "url": "https://www.xiaohongshu.com/explore/694e68d000000000220213c0",
           "date": "",
           "is_new": false,
-          "likes": "17",
+          "likes": "21",
           "comments": "0"
         },
         {
@@ -1198,7 +1198,7 @@
           "url": "https://www.xiaohongshu.com/explore/694e301c0000000022009b4e",
           "date": "",
           "is_new": false,
-          "likes": "1025",
+          "likes": "1026",
           "comments": "0"
         },
         {
