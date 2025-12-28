@@ -305,7 +305,7 @@ const PlatformContent = ({ game, activePlatform }) => {
 
 const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform, unifiedHeights, officialPostsRef, hotReviewsRef }) => {
   return (
-    <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200">
+    <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200 snap-center">
       {/* 4.1 产品信息头部 - 精简版 (Sticky固定) */}
       <div className="flex-none p-4 border-b border-slate-100 bg-white z-10 sticky top-0 shadow-sm">
         <div className="flex justify-between items-start">
@@ -840,7 +840,7 @@ export default function App() {
       </header>
 
       {/* 主内容区（统一滚动） */}
-      <main ref={mainScrollRef} className={`flex-1 overflow-auto transition-all duration-300 ${headerVisible ? 'pt-[57px]' : 'pt-0'}`}>
+      <main ref={mainScrollRef} className={`flex-1 overflow-auto snap-x snap-mandatory transition-all duration-300 ${headerVisible ? 'pt-[57px]' : 'pt-0'}`}>
         <div className="flex p-6 gap-6 w-max min-h-full">
           {games.map((game, index) => (
             <GameColumn 
