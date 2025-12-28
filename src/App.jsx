@@ -137,7 +137,7 @@ const MiniStat = ({ label, value, diff, icon: Icon, colorClass }) => {
 };
 
 // 官方动态 Item
-const CompactTimelineItem = ({ post, platform }) => {
+const CompactTimelineItem = ({ post, platform, platformUrl }) => {
   // 微博平台显示转发数，其他平台显示评论数和点赞数
   const isWeibo = platform === 'weibo';
   
@@ -158,11 +158,24 @@ const CompactTimelineItem = ({ post, platform }) => {
         )}
       </div>
       
-      <h4 className={`text-sm font-medium leading-snug hover:text-indigo-600 cursor-pointer mb-2 ${
-        post.is_new ? 'text-slate-800' : 'text-slate-500'
-      }`}>
-        {post.title}
-      </h4>
+      {platformUrl ? (
+        <a 
+          href={platformUrl} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={`block text-sm font-medium leading-snug hover:text-indigo-600 cursor-pointer mb-2 ${
+            post.is_new ? 'text-slate-800' : 'text-slate-500'
+          }`}
+        >
+          {post.title}
+        </a>
+      ) : (
+        <h4 className={`text-sm font-medium leading-snug mb-2 ${
+          post.is_new ? 'text-slate-800' : 'text-slate-500'
+        }`}>
+          {post.title}
+        </h4>
+      )}
       
       <div className="flex items-center gap-3 text-xs text-slate-400">
         {isWeibo ? (
@@ -227,7 +240,7 @@ const CompactReviewItem = ({ review }) => (
 );
 
 // 平台状态内容组件
-const PlatformContent = ({ game, activePlatform }) => {
+const PlatformContent = ({ game, activePlatform, platformUrl }) => {
   const fetchStatus = game.fetch_status?.[activePlatform];
   const currentPosts = game.official_posts?.[activePlatform] || [];
   const platformLabel = PLATFORM_CONFIG.find(p => p.id === activePlatform)?.label;
@@ -266,7 +279,7 @@ const PlatformContent = ({ game, activePlatform }) => {
           {currentPosts.length > 0 ? (
             <div className="space-y-1">
               {currentPosts.map((post, idx) => (
-                <CompactTimelineItem key={idx} post={post} platform={activePlatform} />
+                <CompactTimelineItem key={idx} post={post} platform={activePlatform} platformUrl={platformUrl} />
               ))}
             </div>
           ) : (
@@ -286,7 +299,7 @@ const PlatformContent = ({ game, activePlatform }) => {
       {currentPosts.length > 0 ? (
         <div className="space-y-1">
           {currentPosts.map((post, idx) => (
-            <CompactTimelineItem key={idx} post={post} platform={activePlatform} />
+            <CompactTimelineItem key={idx} post={post} platform={activePlatform} platformUrl={platformUrl} />
           ))}
         </div>
       ) : (
@@ -303,7 +316,10 @@ const PlatformContent = ({ game, activePlatform }) => {
 // 4. 核心业务组件: GameColumn
 // ==========================================
 
-const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform, unifiedHeights, officialPostsRef, hotReviewsRef }) => {
+const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform, unifiedHeights, officialPostsRef, hotReviewsRef, gameConfig }) => {
+  // 获取当前平台的配置链接
+  const platformUrl = gameConfig?.platforms?.[activePlatform]?.url || '';
+  
   return (
     <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200 snap-center">
       {/* 4.1 产品信息头部 - 精简版 (Sticky固定) */}
@@ -602,7 +618,7 @@ const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatfor
             })}
           </div>
 
-          <PlatformContent game={game} activePlatform={activePlatform} />
+          <PlatformContent game={game} activePlatform={activePlatform} platformUrl={platformUrl} />
         </SectionCard>
 
         {/* 板块 C: 热门舆情 */}
@@ -856,19 +872,24 @@ export default function App() {
       {/* 主内容区（统一滚动） */}
       <main ref={mainScrollRef} className={`flex-1 overflow-auto snap-x snap-mandatory transition-all duration-300 ${headerVisible ? 'pt-[57px]' : 'pt-0'}`}>
         <div className="flex p-6 gap-6 w-max min-h-full">
-          {games.map((game, index) => (
-            <GameColumn 
-              key={game.id} 
-              game={game} 
-              comparisonPeriod={comparisonPeriod} 
-              setComparisonPeriod={setComparisonPeriod}
-              activePlatform={globalPlatform} 
-              setActivePlatform={setGlobalPlatform}
-              unifiedHeights={unifiedHeights}
-              officialPostsRef={el => officialPostsRefs.current[index] = el}
-              hotReviewsRef={el => hotReviewsRefs.current[index] = el}
-            />
-          ))}
+          {games.map((game, index) => {
+            // 从配置中查找对应游戏的配置信息
+            const gameConfig = gamesConfig.find(config => config.id === game.id);
+            return (
+              <GameColumn 
+                key={game.id} 
+                game={game} 
+                comparisonPeriod={comparisonPeriod} 
+                setComparisonPeriod={setComparisonPeriod}
+                activePlatform={globalPlatform} 
+                setActivePlatform={setGlobalPlatform}
+                unifiedHeights={unifiedHeights}
+                officialPostsRef={el => officialPostsRefs.current[index] = el}
+                hotReviewsRef={el => hotReviewsRefs.current[index] = el}
+                gameConfig={gameConfig}
+              />
+            );
+          })}
 
           {/* 占位按钮列 */}
           <div className="flex-none w-[100px] flex items-center justify-center">
