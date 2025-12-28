@@ -40,3 +40,8 @@ taptap_debug.html
 # 环境变量（包含敏感信息）
 .env
 .env.local
+
+# Python 缓存文件
+__pycache__/
+*.pyc
+*.pyo
