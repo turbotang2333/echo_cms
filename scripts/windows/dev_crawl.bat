@@ -40,58 +40,22 @@ if %errorlevel% neq 0 (
 )
 
 REM Get current branch
-for /f "tokens=*" %%i in ('git branch --show-current') do set CURRENT_BRANCH=%%i
-
-REM Trim whitespace
-set "CURRENT_BRANCH=%CURRENT_BRANCH: =%"
+for /f "tokens=*" %%i in ('git branch --show-current') do set "CURRENT_BRANCH=%%i"
 
 echo Current branch: %CURRENT_BRANCH%
 echo.
 
-if not "%CURRENT_BRANCH%"=="dev" (
-    echo [WARNING] You are not on dev branch!
+REM Warning if not on dev (but continue anyway)
+git branch --show-current | findstr /x "dev" >nul 2>&1
+if %errorlevel% neq 0 (
+    echo [WARNING] You are not on dev branch: %CURRENT_BRANCH%
+    echo This script is designed for dev branch development.
     echo.
-    echo Current: %CURRENT_BRANCH%
-    echo Expected: dev
-    echo.
-    echo Do you want to:
-    echo   1. Switch to dev branch (if exists)
-    echo   2. Create and switch to dev branch
-    echo   3. Cancel
-    echo.
-    choice /c 123 /n /m "Select option (1/2/3): "
-    
-    if errorlevel 3 (
-        echo Cancelled
-        pause
-        exit /b 0
-    )
-    
-    if errorlevel 2 (
-        echo Creating dev branch...
-        git checkout -b dev
-        if %errorlevel% neq 0 (
-            echo [ERROR] Failed to create dev branch
-            pause
-            exit /b 1
-        )
-        echo [SUCCESS] Created and switched to dev branch
-    )
-    
-    if errorlevel 1 (
-        echo Switching to dev branch...
-        git checkout dev
-        if %errorlevel% neq 0 (
-            echo [ERROR] Failed to switch to dev branch
-            echo Maybe dev branch doesn't exist? Try option 2.
-            pause
-            exit /b 1
-        )
-        echo [SUCCESS] Switched to dev branch
-    )
+    echo Press Ctrl+C to cancel, or any key to continue anyway...
+    pause >nul
     echo.
 ) else (
-    echo [SUCCESS] Already on dev branch
+    echo [SUCCESS] On dev branch
     echo.
 )
 
