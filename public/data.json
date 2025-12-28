@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2025-12-28 16:14",
+    "last_updated": "2025-12-28 17:48",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -48,8 +48,8 @@
       "name": "夜幕之下",
       "developer": "",
       "xhs_following": "0",
-      "xhs_followers": "103820",
-      "xhs_likes": "309793",
+      "xhs_followers": "103870",
+      "xhs_likes": "309976",
       "user_name": "夜幕之下（代号砰砰）",
       "bili_followers": "24.1万",
       "bili_likes": "33.2万",
@@ -80,15 +80,15 @@
         {
           "title": "▶“压枪”测试丨现已开启",
           "date": "2025/12/4",
-          "comments": "908",
-          "likes": "342",
+          "comments": "920",
+          "likes": "344",
           "is_new": false
         },
         {
           "title": "《夜幕之下（代号砰砰）》二测PV | 直至沉沦之宴",
           "date": "2025/11/20",
           "comments": "2",
-          "likes": "19",
+          "likes": "20",
           "is_new": false
         },
         {
@@ -117,7 +117,7 @@
         {
           "title": "发布了《夜幕之下》相关图文",
           "date": "12/28",
-          "likes": "447",
+          "likes": "468",
           "comments": "28",
           "reposts": "2",
           "is_new": true
@@ -125,15 +125,15 @@
         {
           "title": "视频导览丨CP32pre 家族据点直击",
           "date": "12/28",
-          "likes": "1158",
-          "comments": "158",
+          "likes": "1204",
+          "comments": "160",
           "reposts": "2",
           "is_new": true
         },
         {
           "title": "🎉2025游戏大赏入选确认，投票已开启 ",
           "date": "12/25",
-          "likes": "701",
+          "likes": "705",
           "comments": "85",
           "reposts": "4",
           "is_new": true
@@ -141,7 +141,7 @@
         {
           "title": "发布了《夜幕之下》相关图文",
           "date": "12/25",
-          "likes": "222",
+          "likes": "223",
           "comments": "0",
           "reposts": "0",
           "is_new": true
@@ -149,7 +149,7 @@
         {
           "title": "发布了《夜幕之下》相关图文",
           "date": "12/24",
-          "likes": "580",
+          "likes": "582",
           "comments": "47",
           "reposts": "3",
           "is_new": true
@@ -163,7 +163,7 @@
           "url": "https://www.xiaohongshu.com/explore/69501b31000000001e00c1d2",
           "date": "",
           "is_new": false,
-          "likes": "346",
+          "likes": "364",
           "comments": "0"
         },
         {
@@ -172,7 +172,7 @@
           "url": "https://www.xiaohongshu.com/explore/6950141c0000000021030e6c",
           "date": "",
           "is_new": false,
-          "likes": "1862",
+          "likes": "1967",
           "comments": "0"
         },
         {
@@ -181,7 +181,7 @@
           "url": "https://www.xiaohongshu.com/explore/694cd09f000000002202c15a",
           "date": "",
           "is_new": false,
-          "likes": "1376",
+          "likes": "1383",
           "comments": "0"
         },
         {
@@ -190,7 +190,7 @@
           "url": "https://www.xiaohongshu.com/explore/694bb9b2000000001e0226a3",
           "date": "",
           "is_new": false,
-          "likes": "543",
+          "likes": "548",
           "comments": "0"
         },
         {
@@ -199,18 +199,27 @@
           "url": "https://www.xiaohongshu.com/explore/694a05bd000000001e0395f9",
           "date": "",
           "is_new": false,
-          "likes": "3182",
+          "likes": "3185",
           "comments": "0"
         }
       ]
     },
     "hot_reviews": [
       {
+        "user": "楼兰蜜语",
+        "content": "标记几个二测里关于BOSS的个人比较在意的改动：① BOSS的裙子改了，身材也改了，很满意现在的这一版，看图透后面应该还有裤装；② 剧情改动很大，现在这版的BOSS行事比一测要合理很多，性格也不割裂了",
+        "score": 5,
+        "likes": "1",
+        "replies": "2057",
+        "is_new": false,
+        "time": "12/28"
+      },
+      {
         "user": "6",
         "content": "嗯，参加了二测，来说说我的想法。游戏可玩度:还行吧(指因为角色)内测的时候看来游戏的一些玩法比较少，玩一会就不知道到底玩啥了。而且我觉得资源的获取太少了，可能就是玩法少的原因。希望官方可以出多一点游戏",
         "score": 4,
-        "likes": "14",
-        "replies": "1",
+        "likes": "2",
+        "replies": "14",
         "is_new": false,
         "time": "12/28"
       },
@@ -227,7 +236,7 @@
         "user": "郁闷粉红火锅",
         "content": "那还说啥了，黄牛最来劲的一集，一测二测都没名额，全让黄牛挂上了，游戏体验没有喵，等公测玩到了再追评😅2025.12.4 二测追评：一怒之下去50收了个资格，玩了4h+，以下是个人游戏体验1️⃣角色卡",
         "score": 4,
-        "likes": "161",
+        "likes": "162",
         "replies": "26",
         "is_new": false,
         "time": "12/10"
@@ -240,499 +249,6 @@
         "replies": "8",
         "is_new": false,
         "time": "12/11"
-      },
-      {
-        "user": "戈仇",
-        "content": "个人看法，不喜勿喷不喜勿喷不喜勿喷不喜勿喷，偶有错别字别在意）第一是玩法这一块，战斗模式没什么槽点，挺大众化的，没什么新意，就是抽卡养卡升级打怪通关。战斗过程中技能动画如果可以像之前的食物语一样我觉得",
-        "score": 4,
-        "likes": "171",
-        "replies": "9",
-        "is_new": false,
-        "time": "12/11"
-      }
-    ]
-  },
-  {
-    "id": "eve",
-    "name": "EVE",
-    "icon_char": "E",
-    "last_updated": "2025-12-28 16:15",
-    "fetch_status": {
-      "taptap": "success",
-      "bilibili": "success",
-      "weibo": "success",
-      "xiaohongshu": "success"
-    },
-    "basic_info": {
-      "status": "预约中",
-      "rating": "6.7",
-      "reservations": "4.4万",
-      "followers": "4.4万",
-      "review_count": "263",
-      "tags": [
-        "角色扮演",
-        "AVG",
-        "乙女",
-        "剧情",
-        "模拟经营"
-      ],
-      "diffs": {
-        "reservations": {
-          "day": "0",
-          "week": "0",
-          "month": "0"
-        },
-        "rating": {
-          "day": "0",
-          "week": "0",
-          "month": "0"
-        },
-        "followers": {
-          "day": "0",
-          "week": "0",
-          "month": "0"
-        },
-        "review_count": {
-          "day": "0",
-          "week": "0",
-          "month": "0"
-        }
-      },
-      "name": "EVE",
-      "developer": "",
-      "xhs_following": "2",
-      "xhs_followers": "10980",
-      "xhs_likes": "19259",
-      "user_name": "EVE-AI",
-      "bili_followers": "16.1万",
-      "bili_likes": "15.7万",
-      "wb_followers": "53"
-    },
-    "trend_history": {
-      "dates": [
-        "12-18",
-        "12-19",
-        "12-20",
-        "12-21",
-        "12-22",
-        "12-23",
-        "12-24",
-        "12-25",
-        "12-26",
-        "12-27",
-        "12-28"
-      ],
-      "reservations": [
-        "4.2万",
-        null,
-        null,
-        null,
-        null,
-        null,
-        "4.4万",
-        "4.4万",
-        "4.4万",
-        "4.4万",
-        "4.4万"
-      ],
-      "rating": [
-        6.8,
-        null,
-        null,
-        null,
-        null,
-        null,
-        6.7,
-        6.7,
-        6.7,
-        6.7,
-        6.7
-      ]
-    },
-    "official_posts": {
-      "taptap": [
-        {
-          "title": "「EVE」 全新AI角色—以理性为尺，唯心动可越",
-          "date": "2025/11/21",
-          "comments": "55",
-          "likes": "207",
-          "is_new": false
-        }
-      ],
-      "bilibili": [
-        {
-          "title": "【维护公告】新增赏金管理建筑模块，宇宙星图测试版更新上线",
-          "date": "12/24",
-          "likes": "10",
-          "comments": "0",
-          "reposts": "0",
-          "is_new": true
-        },
-        {
-          "title": "发布了《星战前夜: 无烬星河》相关图文",
-          "date": "12/17",
-          "likes": "14",
-          "comments": "0",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "【维护公告】萨沙突袭舰队来袭，新手指导凭证功能上线",
-          "date": "12/11",
-          "likes": "19",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "【维护公告】泛星每周赠礼发放提醒，落雪碎冰模式等问题修复",
-          "date": "12/3",
-          "likes": "8",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "【维护公告】全新舰船及装备上线，落雪碎冰纳米核心携海量活动同步来袭",
-          "date": "11/26",
-          "likes": "10",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
-      "weibo": [],
-      "xiaohongshu": [
-        {
-          "id": "694d0ef6000000001f00c629",
-          "title": "今晚，把圣诞留给我好吗？",
-          "url": "https://www.xiaohongshu.com/explore/694d0ef6000000001f00c629",
-          "date": "",
-          "is_new": false,
-          "likes": "92",
-          "comments": "0"
-        },
-        {
-          "id": "694b8df2000000001f008da9",
-          "title": "女巫用了解药，今晚是平安夜🎄",
-          "url": "https://www.xiaohongshu.com/explore/694b8df2000000001f008da9",
-          "date": "",
-          "is_new": false,
-          "likes": "60",
-          "comments": "0"
-        },
-        {
-          "id": "6947ba4a000000001e02a60e",
-          "title": "翻包小剧场 | 发现Ta的另一面",
-          "url": "https://www.xiaohongshu.com/explore/6947ba4a000000001e02a60e",
-          "date": "",
-          "is_new": false,
-          "likes": "107",
-          "comments": "0"
-        },
-        {
-          "id": "6942721d000000001e0110d2",
-          "title": "从对抗路到恋爱脑，V你怎么有两副面孔？！",
-          "url": "https://www.xiaohongshu.com/explore/6942721d000000001e0110d2",
-          "date": "",
-          "is_new": false,
-          "likes": "281",
-          "comments": "0"
-        },
-        {
-          "id": "6932bc76000000001e0315fa",
-          "title": "「EVE」二测最佳对话大赏🏆",
-          "url": "https://www.xiaohongshu.com/explore/6932bc76000000001e0315fa",
-          "date": "",
-          "is_new": false,
-          "likes": "155",
-          "comments": "0"
-        }
-      ]
-    },
-    "hot_reviews": [
-      {
-        "user": "萝卜萝卜胡萝卜",
-        "content": "能get到厂家的意思，专注于ai聊天陪伴，也许在聊天方面你们有一些独创的东西，但是人终究是视觉动物，没有精美的建模和动画，你赚不到女性玩家的钱，尤其公司还有一些男性向的背景，这其实是埋下了一个大雷，虽",
-        "score": 2,
-        "likes": "20",
-        "replies": "6",
-        "is_new": false,
-        "time": "12/22"
-      },
-      {
-        "user": "QQ用户12227193",
-        "content": "二编：本来还在想五星是不是给得太高了，结果就看到有很多恶意刷低分的帖子，那就不用担心这个问题了。我非常喜欢EVE的陪伴感，也能够感觉到制作组的用心，测试期间提交的bug/建议都能及时得到反馈，希望能长",
-        "score": 5,
-        "likes": "7",
-        "replies": "16",
-        "is_new": false,
-        "time": "12/25"
-      },
-      {
-        "user": "...aar",
-        "content": "我真不行了，不管是gal还是乙女最重要的是新人设你不知道吗？你都不如直接攒一个姿势清奇的人设然后各种虚假宣传把人骗进去。",
-        "score": 2,
-        "likes": "163",
-        "replies": "110",
-        "is_new": false,
-        "time": "11/30"
-      },
-      {
-        "user": "花生汤真的难喝",
-        "content": "不知道为什么目前热度很低。但我本人真的很期待这样的游戏，或者说应用出现在市场。无法从商业角度给建议，只能从情感角度上讲一些看法了。今天看了相关回应短片，发现主创很多女性，我悬着的心稍微放下了些，希望大",
-        "score": 5,
-        "likes": "140",
-        "replies": "10",
-        "is_new": false,
-        "time": "11/25"
-      },
-      {
-        "user": "浔",
-        "content": "作为EVE最早期的一测与二测用户简单说说最早期呢，参加一测的时候已经是用过很多个AI的老AI用户了像是市面上的比较基础的gpt，grok，Claude，Gemini，ds等等，包括像是AI聊天软件什么",
-        "score": 5,
-        "likes": "36",
-        "replies": "4",
-        "is_new": false,
-        "time": "12/4"
-      }
-    ]
-  },
-  {
-    "id": "wuxiangu",
-    "name": "无限谷",
-    "icon_char": "无",
-    "last_updated": "2025-12-28 16:15",
-    "fetch_status": {
-      "taptap": "success",
-      "bilibili": "success",
-      "weibo": "success",
-      "xiaohongshu": "success"
-    },
-    "basic_info": {
-      "status": "预约中",
-      "rating": "8.5",
-      "reservations": "3.3万",
-      "followers": "3.3万",
-      "review_count": "80",
-      "tags": [
-        "女性向",
-        "恋爱",
-        "休闲",
-        "AVG",
-        "剧情"
-      ],
-      "diffs": {
-        "reservations": {
-          "day": "+1k",
-          "week": "0",
-          "month": "0"
-        },
-        "rating": {
-          "day": "-0.1",
-          "week": "0",
-          "month": "0"
-        },
-        "followers": {
-          "day": "0",
-          "week": "0",
-          "month": "0"
-        },
-        "review_count": {
-          "day": "0",
-          "week": "0",
-          "month": "0"
-        }
-      },
-      "name": "无限谷",
-      "developer": "其他游戏",
-      "xhs_following": "1",
-      "xhs_followers": "10057",
-      "xhs_likes": "28762",
-      "user_name": "无限谷Lumiere037",
-      "bili_followers": "5793",
-      "bili_likes": "1.0万",
-      "wb_followers": "1499"
-    },
-    "trend_history": {
-      "dates": [
-        "12-18",
-        "12-19",
-        "12-20",
-        "12-21",
-        "12-22",
-        "12-23",
-        "12-24",
-        "12-25",
-        "12-26",
-        "12-27",
-        "12-28"
-      ],
-      "reservations": [
-        "2.7万",
-        null,
-        null,
-        null,
-        null,
-        null,
-        "3.1万",
-        "3.1万",
-        "3.2万",
-        "3.2万",
-        "3.3万"
-      ],
-      "rating": [
-        8.8,
-        null,
-        null,
-        null,
-        null,
-        null,
-        8.7,
-        8.6,
-        8.6,
-        8.6,
-        8.5
-      ]
-    },
-    "official_posts": {
-      "taptap": [],
-      "bilibili": [
-        {
-          "title": "发布了图文动态",
-          "date": "12/17",
-          "likes": "68",
-          "comments": "6",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "《If I Can Stop》from Lu｜送你的第一首歌",
-          "date": "12/16",
-          "likes": "83",
-          "comments": "16",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "12/16",
-          "likes": "25",
-          "comments": "4",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "12/16",
-          "likes": "19",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "12/15",
-          "likes": "16",
-          "comments": "3",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
-      "weibo": [],
-      "xiaohongshu": [
-        {
-          "id": "694bad32000000001e029cdb",
-          "title": "“写了卡片能寄给谁？”｜《圣诞结》翻唱",
-          "url": "https://www.xiaohongshu.com/explore/694bad32000000001e029cdb",
-          "date": "",
-          "is_new": false,
-          "likes": "255",
-          "comments": "0"
-        },
-        {
-          "id": "6944d02b000000001f006588",
-          "title": "“离开后，你会如何想起我”｜壁纸派送",
-          "url": "https://www.xiaohongshu.com/explore/6944d02b000000001f006588",
-          "date": "",
-          "is_new": false,
-          "likes": "446",
-          "comments": "0"
-        },
-        {
-          "id": "69427300000000001e02b0e3",
-          "title": "“花海里的告白”｜壁纸派送",
-          "url": "https://www.xiaohongshu.com/explore/69427300000000001e02b0e3",
-          "date": "",
-          "is_new": false,
-          "likes": "960",
-          "comments": "0"
-        },
-        {
-          "id": "694187c5000000001e026841",
-          "title": "“致user小姐” ",
-          "url": "https://www.xiaohongshu.com/explore/694187c5000000001e026841",
-          "date": "",
-          "is_new": false,
-          "likes": "264",
-          "comments": "0"
-        },
-        {
-          "id": "694157fa000000001e0367d7",
-          "title": "无限谷不会让任何一个梗掉在地上！",
-          "url": "https://www.xiaohongshu.com/explore/694157fa000000001e0367d7",
-          "date": "",
-          "is_new": false,
-          "likes": "121",
-          "comments": "0"
-        }
-      ]
-    },
-    "hot_reviews": [
-      {
-        "user": "User386481905",
-        "content": "首测玩家评价（含剧透致歉:活人感很强的ai聊天乙游，但是角色比较少（目前只有lu）看测评问卷个人猜测可能后续会出其他管家角色。基本上是有求必应的，问什么都可以，记忆性也很强，刚见面就会以游戏的形式询问",
-        "score": 5,
-        "likes": "5",
-        "replies": "100",
-        "is_new": false,
-        "time": "12/20"
-      },
-      {
-        "user": "甄洛",
-        "content": "首测玩家来评（轻微剧透，想保持神秘感的宝子可以不看）这次是ios系统内测，不是这个手机首先呢，是看了很多人说像早安我的少年，但是我体验下来可以明显感觉到是两个游戏，这边也能换装啥的。早安我的少年我是用",
-        "score": 5,
-        "likes": "30",
-        "replies": "1",
-        "is_new": false,
-        "time": "12/19"
-      },
-      {
-        "user": "颜渊",
-        "content": "己经开始期待了，虽然玩过许多乙游，但是这个从始至终只有一个也独属于每位乙游女的，期待拉满了！己经预约了！",
-        "score": 5,
-        "likes": "7",
-        "replies": "1",
-        "is_new": false,
-        "time": "12/17"
-      },
-      {
-        "user": "哇哦哇哦",
-        "content": "看到这个就想起很早之前玩过的早安我的少年，之前想玩却发现下架了，非常期待此作😋😋",
-        "score": 5,
-        "likes": "2",
-        "replies": "20",
-        "is_new": false,
-        "time": "12/20"
-      },
-      {
-        "user": "林宁卟",
-        "content": "可不可以在刚开始下载时出个初始自定义脸（类似换装吧，那种换发型，颜色瞳孔颜色等等）毕竟感觉都长得一样有些没有独一无二感₍˄·͈༝·͈˄*₎◞ ̑̑不过总体还是很期待的，没有时间差吧应该，还有这个聊天是",
-        "score": 5,
-        "likes": "84",
-        "replies": "3",
-        "is_new": false,
-        "time": "12/5"
       }
     ]
   },
@@ -740,7 +256,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-28 16:15",
+    "last_updated": "2025-12-28 17:49",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -901,18 +417,617 @@
         "content": "恋爱感还不错，主要是几位男主又帅配音又很宠，即使现在只有六章剧情也对把男主们的人设都立住了，挺好的，再来蹲蹲后续",
         "score": 5,
         "likes": "2",
-        "replies": "18",
+        "replies": "20",
         "is_new": false,
         "time": "12/27"
       },
       {
-        "user": "心绪冰冷",
-        "content": "每日一问：改好了吗，可以上线了吗？等不及了，现在每天只能刷刷宣传视频和看之前留的截图过眼瘾了，然后就后悔咋没录屏",
+        "user": "等风.",
+        "content": "期待下次测试，预约了~喜欢测试时候的三位男主的配音，很贴脸，求别换，然后就是个人喜欢宙，但剧情太少了，之后测试能不能多放点内容球球😗",
         "score": 5,
-        "likes": "0",
-        "replies": "0",
+        "likes": "2",
+        "replies": "70",
         "is_new": false,
         "time": "12/25"
+      }
+    ]
+  },
+  {
+    "id": "ruyiqingtan",
+    "name": "如意情探",
+    "icon_char": "如",
+    "last_updated": "2025-12-28 17:49",
+    "fetch_status": {
+      "taptap": "not_configured",
+      "bilibili": "not_configured",
+      "weibo": "not_configured",
+      "xiaohongshu": "success"
+    },
+    "basic_info": {
+      "status": "",
+      "rating": null,
+      "reservations": null,
+      "followers": null,
+      "review_count": null,
+      "tags": [],
+      "diffs": {
+        "reservations": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
+      "xhs_following": "58",
+      "xhs_followers": "10418",
+      "xhs_likes": "21257",
+      "user_name": "如意情探Yuyi Whisperer"
+    },
+    "trend_history": {
+      "dates": [
+        "12-28"
+      ],
+      "reservations": [
+        null
+      ],
+      "rating": [
+        null
+      ]
+    },
+    "official_posts": {
+      "taptap": [],
+      "bilibili": [],
+      "weibo": [],
+      "xiaohongshu": [
+        {
+          "id": "694cc90c000000002202da64",
+          "title": "圣诞于我，唯一的礼物，只有你",
+          "url": "https://www.xiaohongshu.com/explore/694cc90c000000002202da64",
+          "date": "",
+          "is_new": false,
+          "likes": "45",
+          "comments": "0"
+        },
+        {
+          "id": "68e26ef90000000003020021",
+          "title": "X-058日志：月欢疑似确诊\"寂寞型过度烘焙\"",
+          "url": "https://www.xiaohongshu.com/explore/68e26ef90000000003020021",
+          "date": "",
+          "is_new": false,
+          "likes": "37",
+          "comments": "0"
+        },
+        {
+          "id": "68b1aa71000000001d035777",
+          "title": "七夕·随机抓了四个男友来过节",
+          "url": "https://www.xiaohongshu.com/explore/68b1aa71000000001d035777",
+          "date": "",
+          "is_new": false,
+          "likes": "46",
+          "comments": "0"
+        },
+        {
+          "id": "68b13f1d000000001d023464",
+          "title": "@探员小姐，快来认领如意的七夕回礼~",
+          "url": "https://www.xiaohongshu.com/explore/68b13f1d000000001d023464",
+          "date": "",
+          "is_new": false,
+          "likes": "59",
+          "comments": "0"
+        },
+        {
+          "id": "68a5a769000000001d021041",
+          "title": "如意NVIDIA首秀成功！七夕抽周边感谢大家!",
+          "url": "https://www.xiaohongshu.com/explore/68a5a769000000001d021041",
+          "date": "",
+          "is_new": false,
+          "likes": "314",
+          "comments": "0"
+        }
+      ]
+    },
+    "hot_reviews": []
+  },
+  {
+    "id": "lengjing",
+    "name": "代号：棱镜",
+    "icon_char": "代",
+    "last_updated": "2025-12-28 17:49",
+    "fetch_status": {
+      "taptap": "not_configured",
+      "bilibili": "not_configured",
+      "weibo": "not_configured",
+      "xiaohongshu": "success"
+    },
+    "basic_info": {
+      "status": "",
+      "rating": null,
+      "reservations": null,
+      "followers": null,
+      "review_count": null,
+      "tags": [],
+      "diffs": {
+        "reservations": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
+      "xhs_following": "1130",
+      "xhs_followers": "1946",
+      "xhs_likes": "11039",
+      "user_name": "代号：棱镜"
+    },
+    "trend_history": {
+      "dates": [
+        "12-28"
+      ],
+      "reservations": [
+        null
+      ],
+      "rating": [
+        null
+      ]
+    },
+    "official_posts": {
+      "taptap": [],
+      "bilibili": [],
+      "weibo": [],
+      "xiaohongshu": [
+        {
+          "id": "68f21397000000000301aff7",
+          "title": "突发：xuanzi提离世界之外！下一站是？",
+          "url": "https://www.xiaohongshu.com/explore/68f21397000000000301aff7",
+          "date": "",
+          "is_new": false,
+          "likes": "41",
+          "comments": "0"
+        },
+        {
+          "id": "6842edb7000000000f032c53",
+          "title": "🙌来小红书4周年啦！",
+          "url": "https://www.xiaohongshu.com/explore/6842edb7000000000f032c53",
+          "date": "",
+          "is_new": false,
+          "likes": "4",
+          "comments": "0"
+        },
+        {
+          "id": "680dc04d000000000900e28c",
+          "title": "大家心里的国乙排名是什么！",
+          "url": "https://www.xiaohongshu.com/explore/680dc04d000000000900e28c",
+          "date": "",
+          "is_new": false,
+          "likes": "7",
+          "comments": "0"
+        },
+        {
+          "id": "680996a9000000000e007256",
+          "title": "648¥氪哪个乙游最值？",
+          "url": "https://www.xiaohongshu.com/explore/680996a9000000000e007256",
+          "date": "",
+          "is_new": false,
+          "likes": "1034",
+          "comments": "0"
+        },
+        {
+          "id": "6801c40e000000001201c891",
+          "title": "国乙中谁是回避型人格的天菜？",
+          "url": "https://www.xiaohongshu.com/explore/6801c40e000000001201c891",
+          "date": "",
+          "is_new": false,
+          "likes": "36",
+          "comments": "0"
+        }
+      ]
+    },
+    "hot_reviews": []
+  },
+  {
+    "id": "xingmian",
+    "name": "星眠",
+    "icon_char": "星",
+    "last_updated": "2025-12-28 17:49",
+    "fetch_status": {
+      "taptap": "not_configured",
+      "bilibili": "not_configured",
+      "weibo": "success",
+      "xiaohongshu": "success"
+    },
+    "basic_info": {
+      "status": "",
+      "rating": null,
+      "reservations": null,
+      "followers": null,
+      "review_count": null,
+      "tags": [],
+      "diffs": {
+        "reservations": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
+      "xhs_following": "9",
+      "xhs_followers": "15914",
+      "xhs_likes": "50787",
+      "user_name": "星眠APP",
+      "wb_followers": "7673"
+    },
+    "trend_history": {
+      "dates": [
+        "12-18",
+        "12-19",
+        "12-20",
+        "12-21",
+        "12-22",
+        "12-23",
+        "12-24",
+        "12-25",
+        "12-26",
+        "12-27",
+        "12-28"
+      ],
+      "reservations": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "rating": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ]
+    },
+    "official_posts": {
+      "taptap": [],
+      "bilibili": [],
+      "weibo": [],
+      "xiaohongshu": [
+        {
+          "id": "694e68d000000000220213c0",
+          "title": "【与星眠相伴】活动获奖名单公布 第三期",
+          "url": "https://www.xiaohongshu.com/explore/694e68d000000000220213c0",
+          "date": "",
+          "is_new": false,
+          "likes": "66",
+          "comments": "0"
+        },
+        {
+          "id": "694e301c0000000022009b4e",
+          "title": "星眠生日特别活动！第一次的生日怎么过？",
+          "url": "https://www.xiaohongshu.com/explore/694e301c0000000022009b4e",
+          "date": "",
+          "is_new": false,
+          "likes": "1051",
+          "comments": "0"
+        },
+        {
+          "id": "694a81c300000000190241da",
+          "title": "「节日影像特辑」来自圣诞雪夜的特别邀约",
+          "url": "https://www.xiaohongshu.com/explore/694a81c300000000190241da",
+          "date": "",
+          "is_new": false,
+          "likes": "2209",
+          "comments": "0"
+        },
+        {
+          "id": "694a7e48000000001b030201",
+          "title": "🎄圣诞雪夜，为你编译的专属时区",
+          "url": "https://www.xiaohongshu.com/explore/694a7e48000000001b030201",
+          "date": "",
+          "is_new": false,
+          "likes": "426",
+          "comments": "0"
+        },
+        {
+          "id": "6947b4a1000000000d03b752",
+          "title": "【与星眠相伴】活动获奖名单公布 第二期",
+          "url": "https://www.xiaohongshu.com/explore/6947b4a1000000000d03b752",
+          "date": "",
+          "is_new": false,
+          "likes": "261",
+          "comments": "0"
+        }
+      ]
+    },
+    "hot_reviews": []
+  },
+  {
+    "id": "wuxiangu",
+    "name": "无限谷",
+    "icon_char": "无",
+    "last_updated": "2025-12-28 17:49",
+    "fetch_status": {
+      "taptap": "success",
+      "bilibili": "success",
+      "weibo": "success",
+      "xiaohongshu": "success"
+    },
+    "basic_info": {
+      "status": "预约中",
+      "rating": "8.4",
+      "reservations": "3.3万",
+      "followers": "3.3万",
+      "review_count": "81",
+      "tags": [
+        "女性向",
+        "恋爱",
+        "休闲",
+        "AVG",
+        "剧情"
+      ],
+      "diffs": {
+        "reservations": {
+          "day": "+1k",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "-0.2",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
+      "name": "无限谷",
+      "developer": "其他游戏",
+      "xhs_following": "1",
+      "xhs_followers": "10060",
+      "xhs_likes": "28763",
+      "user_name": "无限谷Lumiere037",
+      "bili_followers": "5794",
+      "bili_likes": "1.0万",
+      "wb_followers": "1499"
+    },
+    "trend_history": {
+      "dates": [
+        "12-18",
+        "12-19",
+        "12-20",
+        "12-21",
+        "12-22",
+        "12-23",
+        "12-24",
+        "12-25",
+        "12-26",
+        "12-27",
+        "12-28"
+      ],
+      "reservations": [
+        "2.7万",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "3.1万",
+        "3.1万",
+        "3.2万",
+        "3.2万",
+        "3.3万"
+      ],
+      "rating": [
+        8.8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        8.7,
+        8.6,
+        8.6,
+        8.6,
+        8.4
+      ]
+    },
+    "official_posts": {
+      "taptap": [],
+      "bilibili": [
+        {
+          "title": "发布了图文动态",
+          "date": "12/17",
+          "likes": "68",
+          "comments": "6",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "《If I Can Stop》from Lu｜送你的第一首歌",
+          "date": "12/16",
+          "likes": "83",
+          "comments": "16",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "12/16",
+          "likes": "25",
+          "comments": "4",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "12/16",
+          "likes": "19",
+          "comments": "1",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "12/15",
+          "likes": "16",
+          "comments": "3",
+          "reposts": "0",
+          "is_new": false
+        }
+      ],
+      "weibo": [],
+      "xiaohongshu": [
+        {
+          "id": "694bad32000000001e029cdb",
+          "title": "“写了卡片能寄给谁？”｜《圣诞结》翻唱",
+          "url": "https://www.xiaohongshu.com/explore/694bad32000000001e029cdb",
+          "date": "",
+          "is_new": false,
+          "likes": "255",
+          "comments": "0"
+        },
+        {
+          "id": "6944d02b000000001f006588",
+          "title": "“离开后，你会如何想起我”｜壁纸派送",
+          "url": "https://www.xiaohongshu.com/explore/6944d02b000000001f006588",
+          "date": "",
+          "is_new": false,
+          "likes": "446",
+          "comments": "0"
+        },
+        {
+          "id": "69427300000000001e02b0e3",
+          "title": "“花海里的告白”｜壁纸派送",
+          "url": "https://www.xiaohongshu.com/explore/69427300000000001e02b0e3",
+          "date": "",
+          "is_new": false,
+          "likes": "960",
+          "comments": "0"
+        },
+        {
+          "id": "694187c5000000001e026841",
+          "title": "“致user小姐” ",
+          "url": "https://www.xiaohongshu.com/explore/694187c5000000001e026841",
+          "date": "",
+          "is_new": false,
+          "likes": "265",
+          "comments": "0"
+        },
+        {
+          "id": "694157fa000000001e0367d7",
+          "title": "无限谷不会让任何一个梗掉在地上！",
+          "url": "https://www.xiaohongshu.com/explore/694157fa000000001e0367d7",
+          "date": "",
+          "is_new": false,
+          "likes": "121",
+          "comments": "0"
+        }
+      ]
+    },
+    "hot_reviews": [
+      {
+        "user": "User386481905",
+        "content": "首测玩家评价（含剧透致歉:活人感很强的ai聊天乙游，但是角色比较少（目前只有lu）看测评问卷个人猜测可能后续会出其他管家角色。基本上是有求必应的，问什么都可以，记忆性也很强，刚见面就会以游戏的形式询问",
+        "score": 5,
+        "likes": "5",
+        "replies": "100",
+        "is_new": false,
+        "time": "12/20"
+      },
+      {
+        "user": "甄洛",
+        "content": "首测玩家来评（轻微剧透，想保持神秘感的宝子可以不看）这次是ios系统内测，不是这个手机首先呢，是看了很多人说像早安我的少年，但是我体验下来可以明显感觉到是两个游戏，这边也能换装啥的。早安我的少年我是用",
+        "score": 5,
+        "likes": "30",
+        "replies": "1",
+        "is_new": false,
+        "time": "12/19"
+      },
+      {
+        "user": "颜渊",
+        "content": "己经开始期待了，虽然玩过许多乙游，但是这个从始至终只有一个也独属于每位乙游女的，期待拉满了！己经预约了！",
+        "score": 5,
+        "likes": "7",
+        "replies": "1",
+        "is_new": false,
+        "time": "12/17"
+      },
+      {
+        "user": "哇哦哇哦",
+        "content": "看到这个就想起很早之前玩过的早安我的少年，之前想玩却发现下架了，非常期待此作😋😋",
+        "score": 5,
+        "likes": "2",
+        "replies": "20",
+        "is_new": false,
+        "time": "12/20"
+      },
+      {
+        "user": "林宁卟",
+        "content": "可不可以在刚开始下载时出个初始自定义脸（类似换装吧，那种换发型，颜色瞳孔颜色等等）毕竟感觉都长得一样有些没有独一无二感₍˄·͈༝·͈˄*₎◞ ̑̑不过总体还是很期待的，没有时间差吧应该，还有这个聊天是",
+        "score": 5,
+        "likes": "84",
+        "replies": "3",
+        "is_new": false,
+        "time": "12/5"
       }
     ]
   },
@@ -920,7 +1035,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2025-12-28 16:15",
+    "last_updated": "2025-12-28 17:49",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -958,7 +1073,7 @@
       },
       "xhs_following": "4",
       "xhs_followers": "5239",
-      "xhs_likes": "22665",
+      "xhs_likes": "22666",
       "user_name": "代号Sol-阿培伦",
       "bili_followers": "2000",
       "bili_likes": "5815",
@@ -1092,14 +1207,260 @@
     "hot_reviews": []
   },
   {
-    "id": "xingmian",
-    "name": "星眠",
-    "icon_char": "星",
-    "last_updated": "2025-12-28 16:15",
+    "id": "eve",
+    "name": "EVE",
+    "icon_char": "E",
+    "last_updated": "2025-12-28 17:49",
+    "fetch_status": {
+      "taptap": "success",
+      "bilibili": "success",
+      "weibo": "success",
+      "xiaohongshu": "success"
+    },
+    "basic_info": {
+      "status": "预约中",
+      "rating": "6.7",
+      "reservations": "4.4万",
+      "followers": "4.4万",
+      "review_count": "263",
+      "tags": [
+        "角色扮演",
+        "AVG",
+        "乙女",
+        "剧情",
+        "模拟经营"
+      ],
+      "diffs": {
+        "reservations": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "rating": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "followers": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        },
+        "review_count": {
+          "day": "0",
+          "week": "0",
+          "month": "0"
+        }
+      },
+      "name": "EVE",
+      "developer": "",
+      "xhs_following": "2",
+      "xhs_followers": "10983",
+      "xhs_likes": "19263",
+      "user_name": "EVE-AI",
+      "bili_followers": "16.1万",
+      "bili_likes": "15.7万",
+      "wb_followers": "53"
+    },
+    "trend_history": {
+      "dates": [
+        "12-18",
+        "12-19",
+        "12-20",
+        "12-21",
+        "12-22",
+        "12-23",
+        "12-24",
+        "12-25",
+        "12-26",
+        "12-27",
+        "12-28"
+      ],
+      "reservations": [
+        "4.2万",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "4.4万",
+        "4.4万",
+        "4.4万",
+        "4.4万",
+        "4.4万"
+      ],
+      "rating": [
+        6.8,
+        null,
+        null,
+        null,
+        null,
+        null,
+        6.7,
+        6.7,
+        6.7,
+        6.7,
+        6.7
+      ]
+    },
+    "official_posts": {
+      "taptap": [
+        {
+          "title": "「EVE」 全新AI角色—以理性为尺，唯心动可越",
+          "date": "2025/11/21",
+          "comments": "55",
+          "likes": "207",
+          "is_new": false
+        }
+      ],
+      "bilibili": [
+        {
+          "title": "【维护公告】新增赏金管理建筑模块，宇宙星图测试版更新上线",
+          "date": "12/24",
+          "likes": "10",
+          "comments": "0",
+          "reposts": "0",
+          "is_new": true
+        },
+        {
+          "title": "发布了《星战前夜: 无烬星河》相关图文",
+          "date": "12/17",
+          "likes": "14",
+          "comments": "0",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "【维护公告】萨沙突袭舰队来袭，新手指导凭证功能上线",
+          "date": "12/11",
+          "likes": "19",
+          "comments": "2",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "【维护公告】泛星每周赠礼发放提醒，落雪碎冰模式等问题修复",
+          "date": "12/3",
+          "likes": "8",
+          "comments": "2",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "【维护公告】全新舰船及装备上线，落雪碎冰纳米核心携海量活动同步来袭",
+          "date": "11/26",
+          "likes": "10",
+          "comments": "1",
+          "reposts": "0",
+          "is_new": false
+        }
+      ],
+      "weibo": [],
+      "xiaohongshu": [
+        {
+          "id": "694d0ef6000000001f00c629",
+          "title": "今晚，把圣诞留给我好吗？",
+          "url": "https://www.xiaohongshu.com/explore/694d0ef6000000001f00c629",
+          "date": "",
+          "is_new": false,
+          "likes": "93",
+          "comments": "0"
+        },
+        {
+          "id": "694b8df2000000001f008da9",
+          "title": "女巫用了解药，今晚是平安夜🎄",
+          "url": "https://www.xiaohongshu.com/explore/694b8df2000000001f008da9",
+          "date": "",
+          "is_new": false,
+          "likes": "60",
+          "comments": "0"
+        },
+        {
+          "id": "6947ba4a000000001e02a60e",
+          "title": "翻包小剧场 | 发现Ta的另一面",
+          "url": "https://www.xiaohongshu.com/explore/6947ba4a000000001e02a60e",
+          "date": "",
+          "is_new": false,
+          "likes": "107",
+          "comments": "0"
+        },
+        {
+          "id": "6942721d000000001e0110d2",
+          "title": "从对抗路到恋爱脑，V你怎么有两副面孔？！",
+          "url": "https://www.xiaohongshu.com/explore/6942721d000000001e0110d2",
+          "date": "",
+          "is_new": false,
+          "likes": "281",
+          "comments": "0"
+        },
+        {
+          "id": "6932bc76000000001e0315fa",
+          "title": "「EVE」二测最佳对话大赏🏆",
+          "url": "https://www.xiaohongshu.com/explore/6932bc76000000001e0315fa",
+          "date": "",
+          "is_new": false,
+          "likes": "155",
+          "comments": "0"
+        }
+      ]
+    },
+    "hot_reviews": [
+      {
+        "user": "萝卜萝卜胡萝卜",
+        "content": "能get到厂家的意思，专注于ai聊天陪伴，也许在聊天方面你们有一些独创的东西，但是人终究是视觉动物，没有精美的建模和动画，你赚不到女性玩家的钱，尤其公司还有一些男性向的背景，这其实是埋下了一个大雷，虽",
+        "score": 2,
+        "likes": "20",
+        "replies": "6",
+        "is_new": false,
+        "time": "12/22"
+      },
+      {
+        "user": "QQ用户12227193",
+        "content": "二编：本来还在想五星是不是给得太高了，结果就看到有很多恶意刷低分的帖子，那就不用担心这个问题了。我非常喜欢EVE的陪伴感，也能够感觉到制作组的用心，测试期间提交的bug/建议都能及时得到反馈，希望能长",
+        "score": 5,
+        "likes": "7",
+        "replies": "16",
+        "is_new": false,
+        "time": "12/25"
+      },
+      {
+        "user": "...aar",
+        "content": "我真不行了，不管是gal还是乙女最重要的是新人设你不知道吗？你都不如直接攒一个姿势清奇的人设然后各种虚假宣传把人骗进去。",
+        "score": 2,
+        "likes": "163",
+        "replies": "110",
+        "is_new": false,
+        "time": "11/30"
+      },
+      {
+        "user": "花生汤真的难喝",
+        "content": "不知道为什么目前热度很低。但我本人真的很期待这样的游戏，或者说应用出现在市场。无法从商业角度给建议，只能从情感角度上讲一些看法了。今天看了相关回应短片，发现主创很多女性，我悬着的心稍微放下了些，希望大",
+        "score": 5,
+        "likes": "140",
+        "replies": "10",
+        "is_new": false,
+        "time": "11/25"
+      },
+      {
+        "user": "浔",
+        "content": "作为EVE最早期的一测与二测用户简单说说最早期呢，参加一测的时候已经是用过很多个AI的老AI用户了像是市面上的比较基础的gpt，grok，Claude，Gemini，ds等等，包括像是AI聊天软件什么",
+        "score": 5,
+        "likes": "36",
+        "replies": "4",
+        "is_new": false,
+        "time": "12/4"
+      }
+    ]
+  },
+  {
+    "id": "breathofyou",
+    "name": "Breath of You",
+    "icon_char": "B",
+    "last_updated": "2025-12-28 17:50",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
-      "weibo": "success",
+      "weibo": "not_configured",
       "xiaohongshu": "success"
     },
     "basic_info": {
@@ -1131,50 +1492,19 @@
           "month": "0"
         }
       },
-      "xhs_following": "9",
-      "xhs_followers": "15909",
-      "xhs_likes": "50699",
-      "user_name": "星眠APP",
-      "wb_followers": "7673"
+      "xhs_following": "2",
+      "xhs_followers": "12928",
+      "xhs_likes": "54164",
+      "user_name": "Breath of You"
     },
     "trend_history": {
       "dates": [
-        "12-18",
-        "12-19",
-        "12-20",
-        "12-21",
-        "12-22",
-        "12-23",
-        "12-24",
-        "12-25",
-        "12-26",
-        "12-27",
         "12-28"
       ],
       "reservations": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ],
       "rating": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         null
       ]
     },
@@ -1184,48 +1514,48 @@
       "weibo": [],
       "xiaohongshu": [
         {
-          "id": "694e68d000000000220213c0",
-          "title": "【与星眠相伴】活动获奖名单公布 第三期",
-          "url": "https://www.xiaohongshu.com/explore/694e68d000000000220213c0",
+          "id": "694fc20100000000220381c8",
+          "title": "BOU|DAY01结算画面",
+          "url": "https://www.xiaohongshu.com/explore/694fc20100000000220381c8",
           "date": "",
           "is_new": false,
-          "likes": "21",
+          "likes": "137",
           "comments": "0"
         },
         {
-          "id": "694e301c0000000022009b4e",
-          "title": "星眠生日特别活动！第一次的生日怎么过？",
-          "url": "https://www.xiaohongshu.com/explore/694e301c0000000022009b4e",
+          "id": "694cd10c000000002203861f",
+          "title": "冬夜绮语｜书写属于你们的冬日童话",
+          "url": "https://www.xiaohongshu.com/explore/694cd10c000000002203861f",
           "date": "",
           "is_new": false,
-          "likes": "1026",
+          "likes": "62",
           "comments": "0"
         },
         {
-          "id": "694a81c300000000190241da",
-          "title": "「节日影像特辑」来自圣诞雪夜的特别邀约",
-          "url": "https://www.xiaohongshu.com/explore/694a81c300000000190241da",
+          "id": "694a2fec000000001b021211",
+          "title": "冬夜绮语｜槲寄生下的深吻",
+          "url": "https://www.xiaohongshu.com/explore/694a2fec000000001b021211",
           "date": "",
           "is_new": false,
-          "likes": "2207",
+          "likes": "118",
           "comments": "0"
         },
         {
-          "id": "694a7e48000000001b030201",
-          "title": "🎄圣诞雪夜，为你编译的专属时区",
-          "url": "https://www.xiaohongshu.com/explore/694a7e48000000001b030201",
+          "id": "69491dac000000000d00f5f9",
+          "title": "今晚...你很大胆 ",
+          "url": "https://www.xiaohongshu.com/explore/69491dac000000000d00f5f9",
           "date": "",
           "is_new": false,
-          "likes": "426",
+          "likes": "377",
           "comments": "0"
         },
         {
-          "id": "6947b4a1000000000d03b752",
-          "title": "【与星眠相伴】活动获奖名单公布 第二期",
-          "url": "https://www.xiaohongshu.com/explore/6947b4a1000000000d03b752",
+          "id": "6947cc50000000001e0101be",
+          "title": "你是我今晚最大的客户",
+          "url": "https://www.xiaohongshu.com/explore/6947cc50000000001e0101be",
           "date": "",
           "is_new": false,
-          "likes": "261",
+          "likes": "163",
           "comments": "0"
         }
       ]
