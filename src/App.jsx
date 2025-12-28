@@ -305,9 +305,9 @@ const PlatformContent = ({ game, activePlatform }) => {
 
 const GameColumn = ({ game, comparisonPeriod, setComparisonPeriod, activePlatform, setActivePlatform, unifiedHeights, officialPostsRef, hotReviewsRef }) => {
   return (
-    <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200 overflow-hidden">
-      {/* 4.1 产品信息头部 - 精简版 */}
-      <div className="flex-none p-4 border-b border-slate-100 bg-white z-10">
+    <div className="flex-none w-[380px] flex flex-col bg-slate-50/50 rounded-xl shadow-md border border-slate-200">
+      {/* 4.1 产品信息头部 - 精简版 (Sticky固定) */}
+      <div className="flex-none p-4 border-b border-slate-100 bg-white z-10 sticky top-0 shadow-sm">
         <div className="flex justify-between items-start">
           <div className="flex gap-3">
             <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-xl font-bold text-slate-600 shadow-inner">
@@ -646,6 +646,11 @@ export default function App() {
   const [comparisonPeriod, setComparisonPeriod] = useState('day');
   const [globalPlatform, setGlobalPlatform] = useState('taptap');
   
+  // 顶部栏隐藏/显示状态
+  const [headerVisible, setHeaderVisible] = useState(true);
+  const lastScrollY = useRef(0);
+  const mainScrollRef = useRef(null);
+  
   // 动态计算各板块的统一高度（基于真实DOM测量）
   const [unifiedHeights, setUnifiedHeights] = useState({
     officialPosts: null,
@@ -745,6 +750,30 @@ export default function App() {
     loadGamesConfig();
   }, []);
 
+  // 滚动监听：控制顶部栏显示/隐藏
+  useEffect(() => {
+    const mainElement = mainScrollRef.current;
+    if (!mainElement) return;
+
+    const handleScroll = () => {
+      const currentScrollY = mainElement.scrollTop;
+      
+      // 向下滚动且滚动距离超过60px时隐藏header
+      if (currentScrollY > lastScrollY.current && currentScrollY > 60) {
+        setHeaderVisible(false);
+      } 
+      // 向上滚动时显示header
+      else if (currentScrollY < lastScrollY.current) {
+        setHeaderVisible(true);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    mainElement.addEventListener('scroll', handleScroll, { passive: true });
+    return () => mainElement.removeEventListener('scroll', handleScroll);
+  }, []);
+
   // 打开配置管理弹窗时，确保配置已加载
   const handleOpenConfigModal = () => {
     if (!configLoaded) {
@@ -777,7 +806,11 @@ export default function App() {
     <div className="flex flex-col h-screen bg-slate-100 font-sans text-slate-800">
       
       {/* 顶部栏 */}
-      <header className="flex-none bg-white border-b border-slate-200 px-6 py-3 flex justify-between items-center shadow-sm z-20">
+      <header 
+        className={`flex-none bg-white border-b border-slate-200 px-6 py-3 flex justify-between items-center shadow-sm z-20 transition-transform duration-300 fixed top-0 left-0 right-0 ${
+          headerVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <div className="p-2 bg-indigo-50 rounded-lg">
@@ -807,7 +840,7 @@ export default function App() {
       </header>
 
       {/* 主内容区（统一滚动） */}
-      <main className="flex-1 overflow-auto">
+      <main ref={mainScrollRef} className={`flex-1 overflow-auto transition-all duration-300 ${headerVisible ? 'pt-[57px]' : 'pt-0'}`}>
         <div className="flex p-6 gap-6 w-max min-h-full">
           {games.map((game, index) => (
             <GameColumn 
