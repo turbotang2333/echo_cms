@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2025-12-28 14:56",
+    "last_updated": "2025-12-28 15:54",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -15,7 +15,7 @@
       "rating": "9.3",
       "reservations": "106万",
       "followers": "110万",
-      "review_count": "3948",
+      "review_count": "3949",
       "tags": [
         "角色扮演",
         "女性向",
@@ -48,8 +48,8 @@
       "name": "夜幕之下",
       "developer": "",
       "xhs_following": "0",
-      "xhs_followers": "103775",
-      "xhs_likes": "309641",
+      "xhs_followers": "103807",
+      "xhs_likes": "309764",
       "user_name": "夜幕之下（代号砰砰）",
       "bili_followers": "24.1万",
       "bili_likes": "33.2万",
@@ -80,15 +80,15 @@
         {
           "title": "▶“压枪”测试丨现已开启",
           "date": "2025/12/4",
-          "comments": "895",
-          "likes": "336",
+          "comments": "906",
+          "likes": "342",
           "is_new": false
         },
         {
           "title": "《夜幕之下（代号砰砰）》二测PV | 直至沉沦之宴",
           "date": "2025/11/20",
           "comments": "2",
-          "likes": "17",
+          "likes": "19",
           "is_new": false
         },
         {
@@ -117,7 +117,7 @@
         {
           "title": "发布了《夜幕之下》相关图文",
           "date": "12/28",
-          "likes": "422",
+          "likes": "440",
           "comments": "28",
           "reposts": "1",
           "is_new": true
@@ -125,7 +125,7 @@
         {
           "title": "视频导览丨CP32pre 家族据点直击",
           "date": "12/28",
-          "likes": "1106",
+          "likes": "1152",
           "comments": "158",
           "reposts": "2",
           "is_new": true
@@ -149,7 +149,7 @@
         {
           "title": "发布了《夜幕之下》相关图文",
           "date": "12/24",
-          "likes": "578",
+          "likes": "579",
           "comments": "46",
           "reposts": "3",
           "is_new": true
@@ -163,7 +163,7 @@
           "url": "https://www.xiaohongshu.com/explore/69501b31000000001e00c1d2",
           "date": "",
           "is_new": false,
-          "likes": "336",
+          "likes": "345",
           "comments": "0"
         },
         {
@@ -172,7 +172,7 @@
           "url": "https://www.xiaohongshu.com/explore/6950141c0000000021030e6c",
           "date": "",
           "is_new": false,
-          "likes": "1773",
+          "likes": "1846",
           "comments": "0"
         },
         {
@@ -181,7 +181,7 @@
           "url": "https://www.xiaohongshu.com/explore/694cd09f000000002202c15a",
           "date": "",
           "is_new": false,
-          "likes": "1373",
+          "likes": "1376",
           "comments": "0"
         },
         {
@@ -199,7 +199,7 @@
           "url": "https://www.xiaohongshu.com/explore/694a05bd000000001e0395f9",
           "date": "",
           "is_new": false,
-          "likes": "3171",
+          "likes": "3179",
           "comments": "0"
         }
       ]
@@ -209,7 +209,7 @@
         "user": "半斤雨",
         "content": "二测结束，由于内测福利，应该是把所有六星都抽到手了，神秘要约的内容也全部体验完。角色：就三章主线来看，出场的六星人物是红手套，幽灵，暴君和野狼。每章主线内容不长，事件也比较简单，对人物的刻画不够丰满（",
         "score": 5,
-        "likes": "122",
+        "likes": "124",
         "replies": "21",
         "is_new": false,
         "time": "12/14"
@@ -256,7 +256,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2025-12-28 14:56",
+    "last_updated": "2025-12-28 15:55",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -302,7 +302,7 @@
       "developer": "",
       "xhs_following": "2",
       "xhs_followers": "10980",
-      "xhs_likes": "19258",
+      "xhs_likes": "19259",
       "user_name": "EVE-AI",
       "bili_followers": "16.1万",
       "bili_likes": "15.7万",
@@ -502,7 +502,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2025-12-28 14:57",
+    "last_updated": "2025-12-28 15:55",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -547,7 +547,7 @@
       "name": "无限谷",
       "developer": "其他游戏",
       "xhs_following": "1",
-      "xhs_followers": "10056",
+      "xhs_followers": "10057",
       "xhs_likes": "28762",
       "user_name": "无限谷Lumiere037",
       "bili_followers": "5793",
@@ -601,7 +601,7 @@
         {
           "title": "发布了图文动态",
           "date": "12/17",
-          "likes": "67",
+          "likes": "68",
           "comments": "6",
           "reposts": "0",
           "is_new": false
@@ -740,7 +740,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-28 14:57",
+    "last_updated": "2025-12-28 15:55",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -888,6 +888,15 @@
         "time": "12/27"
       },
       {
+        "user": "手机用户101872579",
+        "content": "恋爱感还不错，主要是几位男主又帅配音又很宠，即使现在只有六章剧情也对把男主们的人设都立住了，挺好的，再来蹲蹲后续",
+        "score": 5,
+        "likes": "2",
+        "replies": "18",
+        "is_new": false,
+        "time": "12/27"
+      },
+      {
         "user": "鹤鹤Sama.",
         "content": "就喜欢反差感强的男主人设，更鲜活，剧情也是出其不意，好多出人意料的反转，后续应该还要测试我就不剧透了，推荐剧情党来玩，不会让你失望的",
         "score": 5,
@@ -897,19 +906,10 @@
         "time": "12/27"
       },
       {
-        "user": "手机用户101872579",
-        "content": "恋爱感还不错，主要是几位男主又帅配音又很宠，即使现在只有六章剧情也对把男主们的人设都立住了，挺好的，再来蹲蹲后续",
+        "user": "困困包",
+        "content": "测试玩了八天，一个号玩得都不过瘾，但我看是删档测试，就没再开账号了，舍不得我的小狐狸┭┮﹏┭┮，期待正式上线啊",
         "score": 5,
-        "likes": "2",
-        "replies": "17",
-        "is_new": false,
-        "time": "12/27"
-      },
-      {
-        "user": "无双.",
-        "content": "剧情还蛮大女主的，再加上有点灵异但不恐怖，我还蛮喜欢的，喜欢看剧情和看帅哥的应该会挺喜欢这游戏的，毕竟角色是真帅啊，感觉正式上线后我能天天挂着男主页面犯花痴",
-        "score": 5,
-        "likes": "2",
+        "likes": "15",
         "replies": "4",
         "is_new": false,
         "time": "12/24"
@@ -920,7 +920,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2025-12-28 14:57",
+    "last_updated": "2025-12-28 15:55",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -957,8 +957,8 @@
         }
       },
       "xhs_following": "4",
-      "xhs_followers": "5238",
-      "xhs_likes": "22656",
+      "xhs_followers": "5239",
+      "xhs_likes": "22665",
       "user_name": "代号Sol-阿培伦",
       "bili_followers": "2000",
       "bili_likes": "5815",
@@ -1057,7 +1057,7 @@
           "url": "https://www.xiaohongshu.com/explore/694bc53f000000001f0063de",
           "date": "",
           "is_new": false,
-          "likes": "1043",
+          "likes": "1044",
           "comments": "0"
         },
         {
@@ -1095,7 +1095,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2025-12-28 14:57",
+    "last_updated": "2025-12-28 15:55",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1132,8 +1132,8 @@
         }
       },
       "xhs_following": "9",
-      "xhs_followers": "15905",
-      "xhs_likes": "50634",
+      "xhs_followers": "15907",
+      "xhs_likes": "50668",
       "user_name": "星眠APP",
       "wb_followers": "7673"
     },
@@ -1189,7 +1189,7 @@
           "url": "https://www.xiaohongshu.com/explore/694e301c0000000022009b4e",
           "date": "",
           "is_new": false,
-          "likes": "1010",
+          "likes": "1023",
           "comments": "0"
         },
         {
@@ -1198,7 +1198,7 @@
           "url": "https://www.xiaohongshu.com/explore/694a81c300000000190241da",
           "date": "",
           "is_new": false,
-          "likes": "2193",
+          "likes": "2205",
           "comments": "0"
         },
         {
@@ -1207,7 +1207,7 @@
           "url": "https://www.xiaohongshu.com/explore/694a7e48000000001b030201",
           "date": "",
           "is_new": false,
-          "likes": "425",
+          "likes": "426",
           "comments": "0"
         },
         {
@@ -1216,7 +1216,7 @@
           "url": "https://www.xiaohongshu.com/explore/6947b4a1000000000d03b752",
           "date": "",
           "is_new": false,
-          "likes": "259",
+          "likes": "260",
           "comments": "0"
         },
         {
@@ -1225,7 +1225,7 @@
           "url": "https://www.xiaohongshu.com/explore/69452d0e000000000d00f6cf",
           "date": "",
           "is_new": false,
-          "likes": "706",
+          "likes": "708",
           "comments": "0"
         }
       ]
