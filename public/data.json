@@ -3,12 +3,12 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2025-12-28 18:00",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
-      "taptap": "success",
-      "bilibili": "success",
-      "weibo": "success",
-      "xiaohongshu": "success"
+      "taptap": "not_configured",
+      "bilibili": "not_configured",
+      "weibo": "not_configured",
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "预约中",
@@ -60,15 +60,18 @@
         "12-25",
         "12-26",
         "12-27",
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
         "105万",
         "105万",
         "106万",
+        "106万",
         "106万"
       ],
       "rating": [
+        9.3,
         9.3,
         9.3,
         9.3,
@@ -120,7 +123,7 @@
           "likes": "469",
           "comments": "28",
           "reposts": "2",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "视频导览丨CP32pre 家族据点直击",
@@ -128,7 +131,7 @@
           "likes": "1214",
           "comments": "160",
           "reposts": "2",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "🎉2025游戏大赏入选确认，投票已开启 ",
@@ -136,7 +139,7 @@
           "likes": "706",
           "comments": "85",
           "reposts": "4",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "发布了《夜幕之下》相关图文",
@@ -144,7 +147,7 @@
           "likes": "223",
           "comments": "0",
           "reposts": "0",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "发布了《夜幕之下》相关图文",
@@ -152,7 +155,7 @@
           "likes": "583",
           "comments": "47",
           "reposts": "3",
-          "is_new": true
+          "is_new": false
         }
       ],
       "weibo": [
@@ -160,7 +163,7 @@
           "id": "5248643242133215",
           "title": "现场图集丨CP32pre 展台首日回顾钟摆慢行，指尖交锋。 首日展会现已经结束，奉上这份独属于西西莉",
           "date": "12/28",
-          "is_new": true,
+          "is_new": false,
           "reposts": "11",
           "comments": "53",
           "likes": "177"
@@ -169,7 +172,7 @@
           "id": "5248635996734552",
           "title": "报告BOSS！前线记者AA顺利抵达西西莉亚位于杭州CP32pre的临时据点，为BOSS全景侦察完毕！",
           "date": "12/28",
-          "is_new": true,
+          "is_new": false,
           "reposts": "7",
           "comments": "31",
           "likes": "186"
@@ -178,7 +181,7 @@
           "id": "5247438945257052",
           "title": "西西莉亚会议室丨Jingle bells~jingle bells＞＞＞截获未知加密通讯内容＜＜＜■",
           "date": "12/24",
-          "is_new": true,
+          "is_new": false,
           "reposts": "14",
           "comments": "42",
           "likes": "283"
@@ -187,7 +190,7 @@
           "id": "5246970949014212",
           "title": "🔫CP32pre丨家族据点已设立，欢迎BOSS莅临Raising Hell, Chasing Hig",
           "date": "12/23",
-          "is_new": true,
+          "is_new": false,
           "reposts": "62",
           "comments": "102",
           "likes": "481"
@@ -302,9 +305,9 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2025-12-28 18:00",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
-      "taptap": "success",
+      "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
       "xiaohongshu": "not_configured"
@@ -359,7 +362,8 @@
         "12-25",
         "12-26",
         "12-27",
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
         "6.8万",
@@ -371,6 +375,7 @@
         "7.1万",
         "7.2万",
         "7.2万",
+        "7.3万",
         "7.3万",
         "7.3万"
       ],
@@ -384,6 +389,7 @@
         7.3,
         7.3,
         7.3,
+        7.4,
         7.4,
         7.4
       ]
@@ -482,12 +488,12 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
-      "xiaohongshu": "success"
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "",
@@ -525,12 +531,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
+        null,
         null
       ],
       "rating": [
+        null,
         null
       ]
     },
@@ -592,12 +601,12 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
-      "xiaohongshu": "success"
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "",
@@ -635,12 +644,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
+        null,
         null
       ],
       "rating": [
+        null,
         null
       ]
     },
@@ -702,12 +714,12 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
-      "weibo": "success",
-      "xiaohongshu": "success"
+      "weibo": "not_configured",
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "",
@@ -756,9 +768,11 @@
         "12-25",
         "12-26",
         "12-27",
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -782,6 +796,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -793,7 +808,7 @@
           "id": "5248858311623920",
           "title": "星眠官方  【与星眠相伴】活动获奖名单公布 啾啾啾！！！感谢店长们热情参与上期的【与星眠相伴】有奖互",
           "date": "12/28",
-          "is_new": true,
+          "is_new": false,
           "reposts": "0",
           "comments": "10",
           "likes": "23"
@@ -802,7 +817,7 @@
           "id": "5248133686625508",
           "title": "星眠官方 星眠生日特别活动！第一次的生日怎么过？啾！！！特大喜事啾！！！（悄咪咪）亲爱的店长，星眠马",
           "date": "12/26",
-          "is_new": true,
+          "is_new": false,
           "reposts": "23",
           "comments": "62",
           "likes": "434"
@@ -811,7 +826,7 @@
           "id": "5247771569299048",
           "title": "星眠官方 「节日影像特辑」来自圣诞雪夜的特别邀约“轮到你闭上眼睛了”。他低声说。他的唇角掠过狡黠的弧",
           "date": "12/25",
-          "is_new": true,
+          "is_new": false,
           "reposts": "11",
           "comments": "62",
           "likes": "355"
@@ -820,7 +835,7 @@
           "id": "5247415756001621",
           "title": "星眠官方 🎄𝑪𝒉𝒓𝒊𝒔𝒕𝒎𝒂𝒔丨圣诞雪夜，为你编译的专属时区积雪在街灯下泛着细碎金光，橱窗里的圣诞树",
           "date": "12/24",
-          "is_new": true,
+          "is_new": false,
           "reposts": "11",
           "comments": "54",
           "likes": "347"
@@ -889,12 +904,12 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
-      "taptap": "success",
-      "bilibili": "success",
-      "weibo": "success",
-      "xiaohongshu": "success"
+      "taptap": "not_configured",
+      "bilibili": "not_configured",
+      "weibo": "not_configured",
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "预约中",
@@ -911,12 +926,12 @@
       ],
       "diffs": {
         "reservations": {
-          "day": "+1k",
+          "day": "0",
           "week": "0",
           "month": "0"
         },
         "rating": {
-          "day": "-0.2",
+          "day": "0",
           "week": "0",
           "month": "0"
         },
@@ -953,7 +968,8 @@
         "12-25",
         "12-26",
         "12-27",
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
         "2.7万",
@@ -966,6 +982,7 @@
         "3.1万",
         "3.2万",
         "3.2万",
+        "3.3万",
         "3.3万"
       ],
       "rating": [
@@ -979,6 +996,7 @@
         8.6,
         8.6,
         8.6,
+        8.4,
         8.4
       ]
     },
@@ -1031,7 +1049,7 @@
           "id": "5247791523694642",
           "title": "“写了卡片能寄给谁？”｜《圣诞结》翻唱“圣诞快乐🎄”虽然不在你身边，但思念从未停止。User小姐，你",
           "date": "12/25",
-          "is_new": true,
+          "is_new": false,
           "reposts": "3",
           "comments": "16",
           "likes": "54"
@@ -1173,12 +1191,12 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
       "taptap": "not_configured",
-      "bilibili": "success",
-      "weibo": "success",
-      "xiaohongshu": "success"
+      "bilibili": "not_configured",
+      "weibo": "not_configured",
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "",
@@ -1229,9 +1247,11 @@
         "12-25",
         "12-26",
         "12-27",
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -1255,6 +1275,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -1267,7 +1288,7 @@
           "likes": "51",
           "comments": "13",
           "reposts": "0",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "发布了图文动态",
@@ -1307,7 +1328,7 @@
           "id": "5247680737708478",
           "title": "#代号Sol#🫙此刻Q糖罐🎄本期口味：圣诞快乐，专属礼物派送中🎁正在接收……来自Sol的祝福信号：“",
           "date": "12/25",
-          "is_new": true,
+          "is_new": false,
           "reposts": "7",
           "comments": "42",
           "likes": "69"
@@ -1394,12 +1415,12 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
-      "taptap": "success",
-      "bilibili": "success",
-      "weibo": "success",
-      "xiaohongshu": "success"
+      "taptap": "not_configured",
+      "bilibili": "not_configured",
+      "weibo": "not_configured",
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "预约中",
@@ -1458,7 +1479,8 @@
         "12-25",
         "12-26",
         "12-27",
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
         "4.2万",
@@ -1467,6 +1489,7 @@
         null,
         null,
         null,
+        "4.4万",
         "4.4万",
         "4.4万",
         "4.4万",
@@ -1480,6 +1503,7 @@
         null,
         null,
         null,
+        6.7,
         6.7,
         6.7,
         6.7,
@@ -1504,7 +1528,7 @@
           "likes": "10",
           "comments": "0",
           "reposts": "0",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "发布了《星战前夜: 无烬星河》相关图文",
@@ -1650,12 +1674,12 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2025-12-28 18:01",
+    "last_updated": "2025-12-29 00:03",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
       "weibo": "not_configured",
-      "xiaohongshu": "success"
+      "xiaohongshu": "not_configured"
     },
     "basic_info": {
       "status": "",
@@ -1693,12 +1717,15 @@
     },
     "trend_history": {
       "dates": [
-        "12-28"
+        "12-28",
+        "12-29"
       ],
       "reservations": [
+        null,
         null
       ],
       "rating": [
+        null,
         null
       ]
     },
