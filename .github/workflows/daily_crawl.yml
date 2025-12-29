@@ -1,9 +1,9 @@
-# 每日数据抓取 workflow
+# 每日数据抓取 workflow（已禁用自动定时，仅支持手动触发）
 name: Daily Crawl
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # UTC 每天 00:00
+  # schedule:
+  #   - cron: '0 0 * * *'  # UTC 每天 00:00（已禁用，避免与本地定时任务冲突）
   workflow_dispatch:  # 支持手动触发
 
 permissions:
