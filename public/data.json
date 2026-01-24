@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -51,13 +51,12 @@
       "xhs_followers": "107896",
       "xhs_likes": "328887",
       "user_name": "夜幕之下（代号砰砰）",
-      "bili_followers": "24.6万",
-      "bili_likes": "34.9万",
+      "bili_followers": "0",
+      "bili_likes": "0",
       "wb_followers": "7.4万"
     },
     "trend_history": {
       "dates": [
-        "12-25",
         "12-26",
         "12-27",
         "12-28",
@@ -86,7 +85,8 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
         null,
@@ -95,7 +95,6 @@
         null,
         null,
         null,
-        null,
         "106万",
         "106万",
         "106万",
@@ -113,6 +112,7 @@
         "107万",
         "107万",
         "107万",
+        "108万",
         "108万",
         "108万",
         "108万",
@@ -127,7 +127,7 @@
         null,
         null,
         null,
-        null,
+        9.3,
         9.3,
         9.3,
         9.3,
@@ -154,85 +154,8 @@
       ]
     },
     "official_posts": {
-      "taptap": [
-        {
-          "title": "▶“压枪”测试丨现已开启",
-          "date": "2025/12/4",
-          "comments": "2",
-          "likes": "1433",
-          "is_new": false
-        },
-        {
-          "title": "🎄Jingle bells~jingle bells丨西西莉亚会议室",
-          "date": "2025/12/24",
-          "comments": "49",
-          "likes": "156",
-          "is_new": false
-        },
-        {
-          "title": "现场图集丨CP32pre 展会收官",
-          "date": "2025/12/28",
-          "comments": "10",
-          "likes": "32",
-          "is_new": false
-        },
-        {
-          "title": "🎉2025TapTap游戏大赏入选确认，投票已开启",
-          "date": "2025/12/25",
-          "comments": "4",
-          "likes": "48",
-          "is_new": false
-        },
-        {
-          "title": "《夜幕之下（代号砰砰）》二测PV | 直至沉沦之宴",
-          "date": "2025/11/20",
-          "comments": "2035",
-          "likes": "678",
-          "is_new": false
-        }
-      ],
-      "bilibili": [
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "1/1",
-          "likes": "1332",
-          "comments": "692",
-          "reposts": "22",
-          "is_new": false
-        },
-        {
-          "title": "📽️CP32pre据点时刻回顾\n\nBOSS，CP32pre临时据点全区域影像记录现已归档\n请跟随镜头",
-          "date": "12/29",
-          "likes": "2107",
-          "comments": "154",
-          "reposts": "5",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "12/28",
-          "likes": "569",
-          "comments": "41",
-          "reposts": "1",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "12/28",
-          "likes": "594",
-          "comments": "31",
-          "reposts": "2",
-          "is_new": false
-        },
-        {
-          "title": "视频导览丨CP32pre 家族据点直击",
-          "date": "12/28",
-          "likes": "1959",
-          "comments": "231",
-          "reposts": "3",
-          "is_new": false
-        }
-      ],
+      "taptap": [],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -288,7 +211,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -310,7 +233,7 @@
       ],
       "diffs": {
         "reservations": {
-          "day": "+1k",
+          "day": "0",
           "week": "+3k",
           "month": "0"
         },
@@ -335,7 +258,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-25",
         "12-26",
         "12-27",
         "12-28",
@@ -364,10 +286,10 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
-        null,
         null,
         null,
         null,
@@ -396,10 +318,10 @@
         "8.3万",
         "8.3万",
         "8.3万",
+        "8.4万",
         "8.4万"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -428,47 +350,12 @@
         7.0,
         6.9,
         6.9,
+        6.9,
         6.9
       ]
     },
     "official_posts": {
-      "taptap": [
-        {
-          "title": "心动测试丨12月4日《代号：恋人》首测结束",
-          "date": "2025/12/4",
-          "comments": "2",
-          "likes": "43",
-          "is_new": false
-        },
-        {
-          "title": "心动测试丨11月27日《代号：恋人》首测即将开启",
-          "date": "2025/11/21",
-          "comments": "43",
-          "likes": "75",
-          "is_new": false
-        },
-        {
-          "title": "心动测试丨11月27日《代号：恋人》首测今日开启",
-          "date": "2025/11/27",
-          "comments": "1891",
-          "likes": "706",
-          "is_new": false
-        },
-        {
-          "title": "《代号：恋人》首曝PV丨爱恋同谋之时",
-          "date": "2025/11/26",
-          "comments": "1299",
-          "likes": "680",
-          "is_new": false
-        },
-        {
-          "title": "心动测试丨《代号：恋人》首测意见及BUG反馈贴",
-          "date": "2025/11/27",
-          "comments": "830",
-          "likes": "417",
-          "is_new": false
-        }
-      ],
+      "taptap": [],
       "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
@@ -525,7 +412,7 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -594,9 +481,11 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -652,6 +541,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -667,7 +557,7 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -736,9 +626,11 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -794,6 +686,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -809,7 +702,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -853,7 +746,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-25",
         "12-26",
         "12-27",
         "12-28",
@@ -882,7 +774,8 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
         null,
@@ -961,7 +854,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -984,12 +877,12 @@
       "diffs": {
         "reservations": {
           "day": "0",
-          "week": "+2k",
+          "week": "+1k",
           "month": "0"
         },
         "rating": {
-          "day": "-0.1",
-          "week": "-0.1",
+          "day": "0",
+          "week": "0",
           "month": "0"
         },
         "followers": {
@@ -1009,13 +902,12 @@
       "xhs_followers": "10209",
       "xhs_likes": "30247",
       "user_name": "无限谷Lumiere037",
-      "bili_followers": "5885",
-      "bili_likes": "1.0万",
+      "bili_followers": "0",
+      "bili_likes": "0",
       "wb_followers": "1601"
     },
     "trend_history": {
       "dates": [
-        "12-25",
         "12-26",
         "12-27",
         "12-28",
@@ -1044,10 +936,10 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
-        null,
         null,
         null,
         null,
@@ -1076,6 +968,7 @@
         "3.9万",
         "4万",
         "4万",
+        "4万",
         "4万"
       ],
       "rating": [
@@ -1085,7 +978,6 @@
         null,
         null,
         null,
-        null,
         8.1,
         8.1,
         8.1,
@@ -1108,82 +1000,13 @@
         7.9,
         7.9,
         7.9,
+        7.8,
         7.8
       ]
     },
     "official_posts": {
-      "taptap": [
-        {
-          "title": "虚拟恋爱游戏已经卷到这种程度了？新乙游《无限谷》即将开启内测",
-          "date": "2025/11/26",
-          "comments": "3",
-          "likes": "73",
-          "is_new": false
-        },
-        {
-          "title": "朋友们，还记得大明湖畔的sei吗？",
-          "date": "2025/11/29",
-          "comments": "2",
-          "likes": "20",
-          "is_new": false
-        },
-        {
-          "title": "白月光回归？早安我的少年国产版？AI陪伴+性格可定制男友！",
-          "date": "2025/12/12",
-          "comments": "1",
-          "likes": "10",
-          "is_new": false
-        },
-        {
-          "title": "抄袭滚，宣传视频还直接拿别家的图",
-          "date": "2025/12/28",
-          "comments": "107",
-          "likes": "185",
-          "is_new": false
-        }
-      ],
-      "bilibili": [
-        {
-          "title": "萝卜！纸巾！男仆LuLu猫！",
-          "date": "1/16",
-          "likes": "91",
-          "comments": "11",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "新年快乐，我的user小姐",
-          "date": "1/1",
-          "likes": "194",
-          "comments": "30",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "12/31",
-          "likes": "41",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "12/17",
-          "likes": "73",
-          "comments": "7",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "《If I Can Stop》from Lu｜送你的第一首歌",
-          "date": "12/16",
-          "likes": "102",
-          "comments": "18",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "taptap": [],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1239,7 +1062,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2026-01-23 09:00",
+    "last_updated": "2026-01-24 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1279,13 +1102,12 @@
       "xhs_followers": "5464",
       "xhs_likes": "23836",
       "user_name": "代号Sol-阿培伦",
-      "bili_followers": "2034",
-      "bili_likes": "5980",
+      "bili_followers": "0",
+      "bili_likes": "0",
       "wb_followers": "1458"
     },
     "trend_history": {
       "dates": [
-        "12-25",
         "12-26",
         "12-27",
         "12-28",
@@ -1314,7 +1136,8 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
         null,
@@ -1383,48 +1206,7 @@
     },
     "official_posts": {
       "taptap": [],
-      "bilibili": [
-        {
-          "title": "发布了图文动态",
-          "date": "1/19",
-          "likes": "12",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": true
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "1/14",
-          "likes": "21",
-          "comments": "3",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "1/9",
-          "likes": "21",
-          "comments": "11",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "1/5",
-          "likes": "17",
-          "comments": "12",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "1/1",
-          "likes": "15",
-          "comments": "7",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1434,7 +1216,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2026-01-23 09:01",
+    "last_updated": "2026-01-24 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -1482,13 +1264,12 @@
       "xhs_followers": "11618",
       "xhs_likes": "20909",
       "user_name": "EVE-AI",
-      "bili_followers": "16.1万",
-      "bili_likes": "15.7万",
+      "bili_followers": "0",
+      "bili_likes": "0",
       "wb_followers": "55"
     },
     "trend_history": {
       "dates": [
-        "12-25",
         "12-26",
         "12-27",
         "12-28",
@@ -1517,7 +1298,8 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
         null,
@@ -1526,7 +1308,6 @@
         null,
         null,
         null,
-        null,
         "4.5万",
         "4.5万",
         "4.5万",
@@ -1545,6 +1326,7 @@
         "4.6万",
         "4.6万",
         "4.6万",
+        "4.7万",
         "4.7万",
         "4.7万",
         "4.7万",
@@ -1552,7 +1334,6 @@
         "4.7万"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -1570,6 +1351,7 @@
         6.6,
         6.6,
         6.6,
+        6.5,
         6.5,
         6.5,
         6.5,
@@ -1585,57 +1367,8 @@
       ]
     },
     "official_posts": {
-      "taptap": [
-        {
-          "title": "「EVE」 全新AI角色—以理性为尺，唯心动可越",
-          "date": "2025/11/21",
-          "comments": "65",
-          "likes": "216",
-          "is_new": false
-        }
-      ],
-      "bilibili": [
-        {
-          "title": "【维护公告】全新纳福纳米核心来袭，任务分享协议同步上线",
-          "date": "1/21",
-          "likes": "9",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": true
-        },
-        {
-          "title": "版本爆料丨全新限定纳米核心即将登场，海量福利活动开启星际狂欢",
-          "date": "1/21",
-          "likes": "8",
-          "comments": "4",
-          "reposts": "0",
-          "is_new": true
-        },
-        {
-          "title": "【维护公告】多个植入体迎来平衡性调整，军团约战活动即将开启",
-          "date": "1/7",
-          "likes": "11",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "【维护公告】新增赏金管理建筑模块，宇宙星图测试版更新上线",
-          "date": "12/24",
-          "likes": "10",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了《星战前夜: 无烬星河》相关图文",
-          "date": "12/17",
-          "likes": "14",
-          "comments": "0",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "taptap": [],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1691,7 +1424,7 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2026-01-23 09:01",
+    "last_updated": "2026-01-24 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1760,9 +1493,11 @@
         "01-20",
         "01-21",
         "01-22",
-        "01-23"
+        "01-23",
+        "01-24"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -1792,6 +1527,7 @@
         null
       ],
       "rating": [
+        null,
         null,
         null,
         null,
