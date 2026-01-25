@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2026-01-24 09:00",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -26,7 +26,7 @@
       "diffs": {
         "reservations": {
           "day": "0",
-          "week": "+10k",
+          "week": "0",
           "month": "0"
         },
         "rating": {
@@ -57,7 +57,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-26",
         "12-27",
         "12-28",
         "12-29",
@@ -86,7 +85,8 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
         null,
@@ -94,7 +94,6 @@
         null,
         null,
         null,
-        null,
         "106万",
         "106万",
         "106万",
@@ -112,6 +111,7 @@
         "107万",
         "107万",
         "107万",
+        "108万",
         "108万",
         "108万",
         "108万",
@@ -126,7 +126,7 @@
         null,
         null,
         null,
-        null,
+        9.3,
         9.3,
         9.3,
         9.3,
@@ -211,7 +211,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2026-01-24 09:00",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -234,12 +234,12 @@
       "diffs": {
         "reservations": {
           "day": "0",
-          "week": "+3k",
+          "week": "+2k",
           "month": "0"
         },
         "rating": {
           "day": "0",
-          "week": "-0.4",
+          "week": "-0.2",
           "month": "0"
         },
         "followers": {
@@ -258,7 +258,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-26",
         "12-27",
         "12-28",
         "12-29",
@@ -287,10 +286,10 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
-        null,
         null,
         null,
         null,
@@ -319,10 +318,10 @@
         "8.3万",
         "8.3万",
         "8.4万",
+        "8.4万",
         "8.4万"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -348,6 +347,7 @@
         7.1,
         7.1,
         7.0,
+        6.9,
         6.9,
         6.9,
         6.9,
@@ -412,7 +412,7 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2026-01-24 09:00",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -482,9 +482,11 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -542,6 +544,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -557,7 +560,7 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2026-01-24 09:00",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -627,9 +630,11 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -687,6 +692,7 @@
         null,
         null,
         null,
+        null,
         null
       ]
     },
@@ -702,7 +708,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2026-01-24 09:00",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -746,7 +752,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-26",
         "12-27",
         "12-28",
         "12-29",
@@ -775,7 +780,8 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
         null,
@@ -854,7 +860,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2026-01-24 09:00",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -908,7 +914,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-26",
         "12-27",
         "12-28",
         "12-29",
@@ -937,10 +942,10 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
-        null,
         null,
         null,
         null,
@@ -969,6 +974,7 @@
         "4万",
         "4万",
         "4万",
+        "4万",
         "4万"
       ],
       "rating": [
@@ -977,7 +983,6 @@
         null,
         null,
         null,
-        null,
         8.1,
         8.1,
         8.1,
@@ -1000,6 +1005,7 @@
         7.9,
         7.9,
         7.9,
+        7.8,
         7.8,
         7.8
       ]
@@ -1062,7 +1068,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2026-01-24 09:01",
+    "last_updated": "2026-01-25 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1108,7 +1114,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-26",
         "12-27",
         "12-28",
         "12-29",
@@ -1137,7 +1142,8 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
         null,
@@ -1216,7 +1222,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2026-01-24 09:01",
+    "last_updated": "2026-01-25 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -1270,7 +1276,6 @@
     },
     "trend_history": {
       "dates": [
-        "12-26",
         "12-27",
         "12-28",
         "12-29",
@@ -1299,7 +1304,8 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
         null,
@@ -1307,7 +1313,6 @@
         null,
         null,
         null,
-        null,
         "4.5万",
         "4.5万",
         "4.5万",
@@ -1326,6 +1331,7 @@
         "4.6万",
         "4.6万",
         "4.6万",
+        "4.7万",
         "4.7万",
         "4.7万",
         "4.7万",
@@ -1334,7 +1340,6 @@
         "4.7万"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -1351,6 +1356,7 @@
         6.6,
         6.6,
         6.6,
+        6.5,
         6.5,
         6.5,
         6.5,
@@ -1424,7 +1430,7 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2026-01-24 09:01",
+    "last_updated": "2026-01-25 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1494,9 +1500,11 @@
         "01-21",
         "01-22",
         "01-23",
-        "01-24"
+        "01-24",
+        "01-25"
       ],
       "reservations": [
+        null,
         null,
         null,
         null,
@@ -1527,6 +1535,7 @@
         null
       ],
       "rating": [
+        null,
         null,
         null,
         null,
