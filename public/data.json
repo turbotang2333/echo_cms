@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2026-05-01 09:00",
+    "last_updated": "2026-05-02 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -13,9 +13,9 @@
     "basic_info": {
       "status": "预约中",
       "rating": "9.1",
-      "reservations": "150万",
-      "followers": "154万",
-      "review_count": "6242",
+      "reservations": "151万",
+      "followers": "155万",
+      "review_count": "6254",
       "tags": [
         "角色扮演",
         "女性向",
@@ -25,7 +25,7 @@
       ],
       "diffs": {
         "reservations": {
-          "day": "0",
+          "day": "+10k",
           "week": "0",
           "month": "0"
         },
@@ -51,13 +51,12 @@
       "xhs_followers": "107896",
       "xhs_likes": "328887",
       "user_name": "夜幕之下（代号砰砰）",
-      "bili_followers": "28.2万",
+      "bili_followers": "28.3万",
       "bili_likes": "0",
       "wb_followers": "7.4万"
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -86,7 +85,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -117,8 +117,8 @@
         null,
         null,
         null,
-        null,
-        "150万"
+        "150万",
+        "151万"
       ],
       "rating": [
         null,
@@ -149,7 +149,7 @@
         null,
         null,
         null,
-        null,
+        9.1,
         9.1
       ]
     },
@@ -158,22 +158,22 @@
         {
           "title": "🎉2025TapTap游戏大赏入选确认，投票已开启",
           "date": "2025/12/25",
-          "comments": "35",
-          "likes": "276",
+          "comments": "39",
+          "likes": "304",
           "is_new": false
         },
         {
           "title": "《代号砰砰》首曝PV全网首发丨欲望，在此绽放",
           "date": "2025/4/28",
           "comments": "69",
-          "likes": "631",
+          "likes": "633",
           "is_new": false
         },
         {
           "title": "《夜幕之下（代号砰砰）》二测PV | 直至沉沦之宴",
           "date": "2025/11/20",
           "comments": "1189",
-          "likes": "1344",
+          "likes": "1346",
           "is_new": false
         },
         {
@@ -184,48 +184,7 @@
           "is_new": false
         }
       ],
-      "bilibili": [
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "4/24",
-          "likes": "416",
-          "comments": "37",
-          "reposts": "1",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "4/17",
-          "likes": "527",
-          "comments": "55",
-          "reposts": "2",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "4/10",
-          "likes": "600",
-          "comments": "35",
-          "reposts": "4",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "3/27",
-          "likes": "656",
-          "comments": "53",
-          "reposts": "3",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "3/20",
-          "likes": "723",
-          "comments": "113",
-          "reposts": "4",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -234,8 +193,8 @@
         "user": "沥妄",
         "content": "号主是参加二测的玩家，之前现生忙碌，忘记写评价了，现在再补一下。首先声明本人是多个乙女游戏➕部分rpg游戏玩家，微氪党，中等肝度，注重美工和剧情游戏以暗黑黑帮权谋+女性向策略RPG为核心，成人向叙事。",
         "score": 3,
-        "likes": "519",
-        "replies": "68",
+        "likes": "571",
+        "replies": "77",
         "is_new": false,
         "time": "4/16"
       },
@@ -243,8 +202,8 @@
         "user": "琳",
         "content": "本人游戏杂，有些说法可能会跟米游全家桶有点混淆（滑跪）本人颜狗冲着画风和美工去的（但是也挺看重剧情的）说实话剧情很无脑很无厘头，女主类似那种意大利黑手党（？）总的来说很老套的复仇剧本，且剧情一点跌宕起",
         "score": 4,
-        "likes": "895",
-        "replies": "90",
+        "likes": "923",
+        "replies": "94",
         "is_new": false,
         "time": "3/12"
       },
@@ -252,8 +211,8 @@
         "user": "瑾年渐凉",
         "content": "以我玩过的其他游戏总结概括一下就是，原神的物价，恋与深空的氪法，阴阳师的打法，明日方舟的基建……1.先说物价吧，日常60，周常180，而一抽就是180，等于一周获取的资源是60*7+180=600，才",
         "score": 3,
-        "likes": "455",
-        "replies": "46",
+        "likes": "476",
+        "replies": "48",
         "is_new": false,
         "time": "3/12"
       },
@@ -261,8 +220,8 @@
         "user": "指路的海绵楠楠",
         "content": "三测也是告一段落，体验下来觉得公测还是会好好玩的，客观的来评价一下这款游戏。首先是剧情方面，世界观是以黑手党为背景，主控是一个很有个性很坚韧的形象，还是有些好感的，虽然说是官方说全员反派 但是个人感觉",
         "score": 3,
-        "likes": "294",
-        "replies": "33",
+        "likes": "304",
+        "replies": "35",
         "is_new": false,
         "time": "3/12"
       },
@@ -270,8 +229,8 @@
         "user": "空空帅比",
         "content": "1.开头就是长控剧情强制坐牢 体验感很差（如果看剧情的话就很长时间没有喘息机会 不能切出去抽卡或者看主界面）2.就是p1主控脸部崩坏问题 且感觉主控画风没有一开始那么精细了3.冲女强来的话 主线对主控",
         "score": 3,
-        "likes": "212",
-        "replies": "27",
+        "likes": "218",
+        "replies": "28",
         "is_new": false,
         "time": "3/12"
       }
@@ -281,7 +240,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2026-05-01 09:00",
+    "last_updated": "2026-05-02 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -290,10 +249,10 @@
     },
     "basic_info": {
       "status": "预约中",
-      "rating": "7.1",
+      "rating": "7.2",
       "reservations": "24万",
       "followers": "25万",
-      "review_count": "1160",
+      "review_count": "1171",
       "tags": [
         "换装",
         "恋爱",
@@ -308,7 +267,7 @@
           "month": "0"
         },
         "rating": {
-          "day": "0",
+          "day": "+0.1",
           "week": "0",
           "month": "0"
         },
@@ -328,7 +287,6 @@
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -357,7 +315,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -388,7 +347,7 @@
         null,
         null,
         null,
-        null,
+        "24万",
         "24万"
       ],
       "rating": [
@@ -420,12 +379,20 @@
         null,
         null,
         null,
-        null,
-        7.1
+        7.1,
+        7.2
       ]
     },
     "official_posts": {
-      "taptap": [],
+      "taptap": [
+        {
+          "title": "心动测试丨11月27日《代号：恋人》首测今日开启",
+          "date": "2025/11/27",
+          "comments": "1316",
+          "likes": "806",
+          "is_new": false
+        }
+      ],
       "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
@@ -435,8 +402,8 @@
         "user": "小懒",
         "content": "很好玩，刷抖音刷到广告下载的。玩了六天忍不住充了一百多了。。。。。。。。我自己都震惊。因为对我来说这种游戏是小游戏，之前玩这种类型的游戏都是消磨时间，不会在里面投入太多金钱，顶多充个首充，但是这游戏真",
         "score": 5,
-        "likes": "75",
-        "replies": "12",
+        "likes": "103",
+        "replies": "17",
         "is_new": false,
         "time": "4/27"
       },
@@ -444,17 +411,17 @@
         "user": "南宁清风",
         "content": "游戏等级69玩了有四天多吧剧情:也是挺新鲜的吧吸引我的一个点是主角可以用那个封神榜我去帅的嘞那个女主的剧情感觉就挺飒的，最后仔细看了一下，我不太确定是不是他有的一些小插片的话和一些活动，有点像AI制作",
         "score": 5,
-        "likes": "51",
-        "replies": "10",
+        "likes": "59",
+        "replies": "13",
         "is_new": false,
-        "time": "4/29"
+        "time": "5/1"
       },
       {
         "user": "青衫烟雨客",
         "content": "最有特色的男主就是那只粉狐狸，立绘和服装设计最有区别于其他游戏，感觉两位男主的服装设计有点保守了，当然脸还是够好看的。女主也可以来点灵异一点的服装，有创新才能吸引玩家嘛，界面好像是一个游轮和酒吧什么的",
         "score": 5,
-        "likes": "1052",
-        "replies": "148",
+        "likes": "1060",
+        "replies": "149",
         "is_new": false,
         "time": "12/30"
       },
@@ -462,19 +429,19 @@
         "user": "换装游戏真的很无聊啊",
         "content": "目前游戏等级:20级战力:254276游玩1h测评:——————————游戏模式:杜拉拉升职类型动画流速:慢恋爱元素:有单独的卡面剧情活动:一种是做任务攒积分资源如图:有氪金衣服池/50抽一件，活动肝",
         "score": 3,
-        "likes": "774",
-        "replies": "137",
+        "likes": "780",
+        "replies": "138",
         "is_new": false,
         "time": "2/12"
       },
       {
-        "user": "妃子笑",
-        "content": "早早就预约了就等上线三测全部参加过的老玩家能追这么久除了角色好看外还有剧情这个大功臣谁懂现在找到一个剧情好看的女性向游戏有多难剧情好好写花路绝 对有的",
+        "user": "lose",
+        "content": "男主人设+颜值+剧情就是最大加分项，美术稳住，玩法正常发挥，这游戏绝 对稳",
         "score": 5,
-        "likes": "2",
-        "replies": "5",
+        "likes": "4",
+        "replies": "7",
         "is_new": false,
-        "time": "4/28"
+        "time": "4/29"
       }
     ]
   },
@@ -482,7 +449,7 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2026-05-01 09:00",
+    "last_updated": "2026-05-02 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -525,7 +492,6 @@
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -554,7 +520,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -633,7 +600,7 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2026-05-01 09:00",
+    "last_updated": "2026-05-02 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -676,7 +643,6 @@
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -705,7 +671,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -784,7 +751,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2026-05-01 09:00",
+    "last_updated": "2026-05-02 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -828,7 +795,6 @@
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -857,7 +823,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -936,7 +903,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2026-05-01 09:00",
+    "last_updated": "2026-05-02 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -946,8 +913,8 @@
     "basic_info": {
       "status": "预约中",
       "rating": "6.9",
-      "reservations": "6.4万",
-      "followers": "6.4万",
+      "reservations": "6.5万",
+      "followers": "6.5万",
       "review_count": "158",
       "tags": [
         "女性向",
@@ -958,7 +925,7 @@
       ],
       "diffs": {
         "reservations": {
-          "day": "0",
+          "day": "+1k",
           "week": "0",
           "month": "0"
         },
@@ -984,13 +951,12 @@
       "xhs_followers": "10209",
       "xhs_likes": "30247",
       "user_name": "无限谷Lumiere037",
-      "bili_followers": "6096",
+      "bili_followers": "6097",
       "bili_likes": "0",
       "wb_followers": "1601"
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -1019,7 +985,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -1050,8 +1017,8 @@
         null,
         null,
         null,
-        null,
-        "6.4万"
+        "6.4万",
+        "6.5万"
       ],
       "rating": [
         null,
@@ -1082,7 +1049,7 @@
         null,
         null,
         null,
-        null,
+        6.9,
         6.9
       ]
     },
@@ -1098,53 +1065,12 @@
         {
           "title": "朋友们，还记得大明湖畔的sei吗？",
           "date": "2025/11/29",
-          "comments": "116",
-          "likes": "186",
+          "comments": "118",
+          "likes": "187",
           "is_new": false
         }
       ],
-      "bilibili": [
-        {
-          "title": "发布了图文动态",
-          "date": "3/14",
-          "likes": "56",
-          "comments": "6",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "3/8",
-          "likes": "52",
-          "comments": "4",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "元宵快乐🏮厨艺宗师Lu来手搓汤圆啦！！",
-          "date": "3/3",
-          "likes": "66",
-          "comments": "10",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "2/17",
-          "likes": "31",
-          "comments": "3",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "除夕时分，提前拜年\nuser小姐一边看春晚，一边抢好多好多红包了吗？\n☎️来听听Lu的祝福吧～",
-          "date": "2/16",
-          "likes": "138",
-          "comments": "17",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1200,7 +1126,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2026-05-01 09:01",
+    "last_updated": "2026-05-02 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1240,13 +1166,12 @@
       "xhs_followers": "5464",
       "xhs_likes": "23836",
       "user_name": "代号Sol-阿培伦",
-      "bili_followers": "3961",
+      "bili_followers": "3960",
       "bili_likes": "0",
       "wb_followers": "1458"
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -1275,7 +1200,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -1395,7 +1321,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2026-05-01 09:01",
+    "last_updated": "2026-05-02 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -1407,7 +1333,7 @@
       "rating": "5.2",
       "reservations": "-",
       "followers": "19万",
-      "review_count": "1235",
+      "review_count": "1236",
       "tags": [
         "角色扮演",
         "AVG",
@@ -1449,7 +1375,6 @@
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -1478,7 +1403,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
@@ -1509,7 +1435,7 @@
         null,
         null,
         null,
-        null,
+        "-",
         "-"
       ],
       "rating": [
@@ -1541,7 +1467,7 @@
         null,
         null,
         null,
-        null,
+        5.2,
         5.2
       ]
     },
@@ -1550,12 +1476,53 @@
         {
           "title": "「EVE」 全新AI角色—以理性为尺，唯心动可越",
           "date": "2025/11/21",
-          "comments": "433",
-          "likes": "81",
+          "comments": "434",
+          "likes": "82",
           "is_new": false
         }
       ],
-      "bilibili": [],
+      "bilibili": [
+        {
+          "title": "发布了《星战前夜: 无烬星河》相关图文",
+          "date": "4/29",
+          "likes": "8",
+          "comments": "0",
+          "reposts": "0",
+          "is_new": true
+        },
+        {
+          "title": "【维护公告】空渊恶影纳米核心全新上线，新舰船及无人机同步登场",
+          "date": "4/22",
+          "likes": "9",
+          "comments": "0",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "寰宇争锋焕新篇，第二届超级军团对抗赛邀你一战！",
+          "date": "4/22",
+          "likes": "10",
+          "comments": "2",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "【维护公告】全新“燃烧者挑战”际遇开放，武器专项平衡性更新来袭",
+          "date": "4/8",
+          "likes": "10",
+          "comments": "3",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "《星战前夜：无烬星河》第一届超级军团对抗赛名次详情",
+          "date": "4/1",
+          "likes": "6",
+          "comments": "1",
+          "reposts": "0",
+          "is_new": false
+        }
+      ],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1564,8 +1531,8 @@
         "user": "木槿牵牛",
         "content": "今天我21级了，但是发现游戏开始渐渐各种bug!不论是视频还是语音，接打电话男主们都无法回复～失聪了。明明昨天还好好的……另外，你推脱算力贵通讯费高能理解，但是接的豆包千问，很便宜啊～三四百的订阅就6",
         "score": 3,
-        "likes": "5",
-        "replies": "24",
+        "likes": "18",
+        "replies": "2",
         "is_new": false,
         "time": "4/29"
       },
@@ -1573,16 +1540,7 @@
         "user": "忆白",
         "content": "1.这个游戏由于是AI生成的缘故，男主的脸一直在变，还有一些角度非常的死板，很让人出戏，文字聊天也会感觉到一些莫名其妙的ooc，我玩这个游戏不应该是获得情绪价值吗？怎么还要给男主提供情绪价值？2.剧情",
         "score": 3,
-        "likes": "2",
-        "replies": "5",
-        "is_new": false,
-        "time": "4/30"
-      },
-      {
-        "user": "Dream leader",
-        "content": "四编，原来V原名叫Severn😯😯半个多月，显著感觉他们时刻在调整精进和你的交流模式，会主动call back一些曾经对话里的事件，四个人都有自己铁打的人设，不变的立场，不刻意讨好，但主动契合。宣",
-        "score": 3,
-        "likes": "82",
+        "likes": "3",
         "replies": "5",
         "is_new": false,
         "time": "4/30"
@@ -1597,10 +1555,19 @@
         "time": "4/21"
       },
       {
+        "user": "Dream leader",
+        "content": "四编，原来V原名叫Severn😯😯半个多月，显著感觉他们时刻在调整精进和你的交流模式，会主动call back一些曾经对话里的事件，四个人都有自己铁打的人设，不变的立场，不刻意讨好，但主动契合。宣",
+        "score": 3,
+        "likes": "83",
+        "replies": "5",
+        "is_new": false,
+        "time": "4/30"
+      },
+      {
         "user": "固特异",
         "content": "画面和人物形象的一致性都差，ai生成的影片老糊了，每个卡面都长不一样，只能说对于这类型的游戏来说是可以及格的，因为主要还是靠聊天陪伴感卖钱嘛，其他功能系统倒挺齐全的。①聊天就还行，其实和ds聊还能更活",
         "score": 3,
-        "likes": "45",
+        "likes": "46",
         "replies": "13",
         "is_new": false,
         "time": "4/13"
@@ -1611,7 +1578,7 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2026-05-01 09:01",
+    "last_updated": "2026-05-02 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1654,7 +1621,6 @@
     },
     "trend_history": {
       "dates": [
-        "04-02",
         "04-03",
         "04-04",
         "04-05",
@@ -1683,7 +1649,8 @@
         "04-28",
         "04-29",
         "04-30",
-        "05-01"
+        "05-01",
+        "05-02"
       ],
       "reservations": [
         null,
