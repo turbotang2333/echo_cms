@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2026-06-12 09:00",
+    "last_updated": "2026-06-13 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -12,9 +12,9 @@
     },
     "basic_info": {
       "status": "预约中",
-      "rating": "7.0",
+      "rating": "7.1",
       "reservations": "-",
-      "followers": "211万",
+      "followers": "214万",
       "review_count": "1.4 万",
       "tags": [
         "角色扮演",
@@ -30,8 +30,8 @@
           "month": "0"
         },
         "rating": {
-          "day": "0",
-          "week": "-1.8",
+          "day": "+0.1",
+          "week": "+0.1",
           "month": "0"
         },
         "followers": {
@@ -51,13 +51,12 @@
       "xhs_followers": "107896",
       "xhs_likes": "328887",
       "user_name": "夜幕之下（代号砰砰）",
-      "bili_followers": "58.4万",
+      "bili_followers": "59.0万",
       "bili_likes": "0",
       "wb_followers": "7.4万"
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -86,10 +85,10 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
-        null,
         null,
         null,
         null,
@@ -118,10 +117,10 @@
         "-",
         "-",
         "-",
+        "-",
         "-"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -150,107 +149,74 @@
         6.9,
         7.0,
         7.0,
-        7.0
+        7.0,
+        7.1
       ]
     },
     "official_posts": {
       "taptap": [
         {
+          "title": "“上膛”测试丨现已开启",
+          "date": "2025/5/16",
+          "comments": "57",
+          "likes": "156",
+          "is_new": false
+        },
+        {
           "title": "【已开奖】预约活动丨《代号砰砰》TapTap预约60W达成",
           "date": "2025/6/17",
-          "comments": "2166",
-          "likes": "1705",
+          "comments": "2128",
+          "likes": "881",
           "is_new": false
         }
       ],
-      "bilibili": [
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "6/7",
-          "likes": "3345",
-          "comments": "4889",
-          "reposts": "39",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "6/10",
-          "likes": "2503",
-          "comments": "2426",
-          "reposts": "15",
-          "is_new": true
-        },
-        {
-          "title": "☎BOSS，公测来电语音已归档——\n\n期盼与思念伴着微弱的电流声传来。\nBOSS，欢迎回来。",
-          "date": "6/9",
-          "likes": "4643",
-          "comments": "2200",
-          "reposts": "20",
-          "is_new": true
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "6/5",
-          "likes": "1106",
-          "comments": "3033",
-          "reposts": "13",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "6/5",
-          "likes": "644",
-          "comments": "225",
-          "reposts": "2",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
     "hot_reviews": [
       {
-        "user": "结城理",
-        "content": "首先我男的 本人是奔着抽卡福利和角色背景去的 如果bro你也玩的二游多 就会赛博阳痿 有抽数完全抽不出去 于是我就来了 对于我而言女性向也无所谓（在我个人认知里 男性角色在二游里要靠个人剧情魅力卖卡 ",
-        "score": 3,
-        "likes": "15",
-        "replies": "24",
-        "is_new": false,
-        "time": "6/11"
-      },
-      {
-        "user": "哈哈哈哈嗝",
-        "content": "好吧，暂时没搞明白女性向和乙游的区别，但还是简评一下（仅个人观点）最近实在无聊，有点游戏荒。图一张过不了审，笑飞了。①刚玩两天24级，直接卡等级给我卡在第三章了，这让我很不舒服。②公测福利一般，没有很",
-        "score": 3,
-        "likes": "2",
-        "replies": "1",
-        "is_new": false,
-        "time": "6/12"
-      },
-      {
-        "user": "琼泗",
-        "content": "牢夜幕你一定要活久点啊口牙剧情人设这部分我就不细嗦了，我觉得挺不错的，就是偶尔可以用cg的地方但只用了文字，反倒显得那段剧情很一般了，不过第一章的野狼那一章我真的在一直嚎叫，所有人都趁我不在欺负我的狗",
+        "user": "薄荷带点绿",
+        "content": "说实话，我玩过很多的乙游，一个也没评价过，我这人不太喜欢评价，但是《夜幕之下》真的是唯一一个让我玩完会想来评价的人。首先先夸一下角色人设，非常立体，里面没有单一的好人或坏人，所有人的认知和行为都是建立",
         "score": 5,
-        "likes": "5",
-        "replies": "8",
+        "likes": "4",
+        "replies": "4",
         "is_new": false,
-        "time": "6/12"
+        "time": "6/13"
+      },
+      {
+        "user": "宋知绪",
+        "content": "先来叠个甲，我以下发言没有说想让这个游戏凉凉的意思，我只能希望你别跑别逼氪，我一开始是纯色鬼参军来的，有建议也有个人感受，第一次写评价也是献给你了本人玩过女性向和乙游包括恋与深空，世界之外，如鸢，以及",
+        "score": 4,
+        "likes": "4",
+        "replies": "3",
+        "is_new": false,
+        "time": "6/13"
+      },
+      {
+        "user": "坛楠",
+        "content": "抽数还是足够多的，容易卡关，打不满满星，剧情过完会长草主要的金砖来源也只有剧情打的资源之类的刷新的也只有每周日常类似于深渊的关卡红手套给人一种心疼的感觉，如果可以出主角吻红手套伤疤的剧情，让浮夸的角色",
+        "score": 5,
+        "likes": "3",
+        "replies": "2",
+        "is_new": false,
+        "time": "6/13"
+      },
+      {
+        "user": "璃",
+        "content": "作为第一个女性向的ML游戏，我的确是有期待的，但不会因为是第一个就会溺爱。第一款游戏很大程度会影响后面同类型的游戏，比起溺爱，我更希望以后出来的会是优秀作品，而不是敷衍我们的半成品。1、游戏数值极其不",
+        "score": 3,
+        "likes": "7",
+        "replies": "7",
+        "is_new": false,
+        "time": "6/13"
       },
       {
         "user": "鹤烛",
         "content": "游戏时长：玩了一周，主线打到只剩最后一章，游戏体验顺畅良好。个人观点省流：对于把夜幕当“电子盆栽副游”、“不求有功但求无过”的玩家来说，我可以给五星的游戏。角色们对主角的感情和美术卡面让游戏的情绪价值",
         "score": 5,
-        "likes": "4",
-        "replies": "5",
-        "is_new": false,
-        "time": "6/12"
-      },
-      {
-        "user": "化碧云",
-        "content": "女玩家真的告诉你，姐妹们快去试试吧！强烈推荐！真大女主游戏，你会喜欢。已经连续玩了七天了，从开服到现在每日任务，周任务，七日任务都没落下，主线剧情全部过完，最后只剩下一个感受，赶紧给我更新呀！剧情太顶",
-        "score": 5,
-        "likes": "09",
-        "replies": "5",
+        "likes": "24",
+        "replies": "3",
         "is_new": false,
         "time": "6/12"
       }
@@ -260,7 +226,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2026-06-12 09:00",
+    "last_updated": "2026-06-13 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -271,8 +237,8 @@
       "status": "预约中",
       "rating": "7.3",
       "reservations": "-",
-      "followers": "44万",
-      "review_count": "2356",
+      "followers": "45万",
+      "review_count": "2378",
       "tags": [
         "换装",
         "恋爱",
@@ -288,7 +254,7 @@
         },
         "rating": {
           "day": "0",
-          "week": "+0.2",
+          "week": "+0.1",
           "month": "0"
         },
         "followers": {
@@ -307,7 +273,6 @@
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -336,7 +301,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -356,7 +322,7 @@
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-",
@@ -388,7 +354,6 @@
         null,
         null,
         null,
-        null,
         7.0,
         7.0,
         7.1,
@@ -397,6 +362,7 @@
         7.2,
         7.2,
         7.2,
+        7.3,
         7.3,
         7.3,
         7.3,
@@ -411,19 +377,28 @@
     },
     "hot_reviews": [
       {
+        "user": "湘湘",
+        "content": "玩了一星期，个人觉得还可以，抽卡本人一直在接近保底但是材料还是挺好拿的。。姑且原谅一下吧，游戏自由度一般，之前没玩过女性向手游所以就不对比了怕误导别人，正常玩的话买个鱼月卡就能玩，还有就是这个游戏还是",
+        "score": 5,
+        "likes": "6",
+        "replies": "10",
+        "is_new": false,
+        "time": "6/3"
+      },
+      {
         "user": "辞月",
         "content": "作为一个顶级肝帝，总体玩下来还是挺舒服的。我是在第十九服，然后也是晚了一点才到，开服已经一天了，我是凌晨马上那一天要过了11点多的时候才登录进去，然后也没干啥。今天应该算是第三天了，总体来说，我肝了两",
         "score": 4,
-        "likes": "47",
+        "likes": "49",
         "replies": "8",
         "is_new": false,
-        "time": "6/4"
+        "time": "6/12"
       },
       {
         "user": "瞌睡汽水",
         "content": "一个典型的拉战力冲榜挂机小游戏，即：微信小程序游戏，先写优点——剧情很好，我是个悬疑推理迷，剧情有悬疑加上灵异事件让剧情变得扑朔迷离，真的很好看。而且我最为满意的一点就是剧情贴近现实生活，不像别的都是",
         "score": 5,
-        "likes": "6",
+        "likes": "10",
         "replies": "1",
         "is_new": false,
         "time": "6/10"
@@ -432,25 +407,16 @@
         "user": "瑾黎在摆烂",
         "content": "个人觉得还是可以。以下是个人评价，优点和缺点会分着说，不喜勿喷先说一下优点吧。首先剧情是真的非常非常可以，没有想象中的节奏慢，也没有那么快，我说的是节奏啊，一个剧情也就一两分钟那样，相比同公司的光与夜",
         "score": 4,
-        "likes": "18",
-        "replies": "6",
+        "likes": "20",
+        "replies": "7",
         "is_new": false,
         "time": "6/6"
-      },
-      {
-        "user": "User347765142",
-        "content": "这五星是给我喜欢的五位男主的，他们设计的倒还是很好了，每一位我都很喜欢，但是——————————————你想玩乙女的话，还是去玩叠纸米哈游网易的吧，他们是先锋，有着绝对的体验感和设计。有些角色一登场就",
-        "score": 5,
-        "likes": "45",
-        "replies": "1",
-        "is_new": false,
-        "time": "6/5"
       },
       {
         "user": "文静小女生",
         "content": "不爱乙女社交的有福了一堆东西要好友，时不时弹出广告叫充钱，乙女游戏一周搞一个榜攀比想掏空玩家的精力吗，又赚换装又乙女，男主们脸跟换一个颜色一样，抽限定角色不氪金的别想了，跟微信小游戏一样一堆ai抄袭还",
         "score": 1,
-        "likes": "4",
+        "likes": "11",
         "replies": "00",
         "is_new": false,
         "time": "6/11"
@@ -461,7 +427,7 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2026-06-12 09:00",
+    "last_updated": "2026-06-13 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -504,7 +470,6 @@
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -533,7 +498,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -612,7 +578,7 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2026-06-12 09:00",
+    "last_updated": "2026-06-13 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -655,7 +621,6 @@
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -684,7 +649,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -763,7 +729,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2026-06-12 09:00",
+    "last_updated": "2026-06-13 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -807,7 +773,6 @@
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -836,7 +801,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -915,7 +881,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2026-06-12 09:00",
+    "last_updated": "2026-06-13 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -963,13 +929,12 @@
       "xhs_followers": "10209",
       "xhs_likes": "30247",
       "user_name": "无限谷Lumiere037",
-      "bili_followers": "6104",
+      "bili_followers": "6105",
       "bili_likes": "0",
       "wb_followers": "1601"
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -998,7 +963,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -1018,13 +984,13 @@
         null,
         null,
         null,
-        null,
         "6.8万",
         "6.8万",
         "6.8万",
         "6.8万",
         "6.8万",
         "6.8万",
+        "6.9万",
         "6.9万",
         "6.9万",
         "6.9万",
@@ -1050,7 +1016,6 @@
         null,
         null,
         null,
-        null,
         6.8,
         6.8,
         6.8,
@@ -1059,6 +1024,7 @@
         6.8,
         6.8,
         6.8,
+        6.9,
         6.9,
         6.9,
         6.9,
@@ -1071,59 +1037,18 @@
           "title": "虚拟恋爱游戏已经卷到这种程度了？新乙游《无限谷》即将开启内测",
           "date": "2025/11/26",
           "comments": "44",
-          "likes": "227",
+          "likes": "230",
           "is_new": false
         },
         {
           "title": "朋友们，还记得大明湖畔的sei吗？",
           "date": "2025/11/29",
-          "comments": "4",
-          "likes": "14",
+          "comments": "5",
+          "likes": "8",
           "is_new": false
         }
       ],
-      "bilibili": [
-        {
-          "title": "发布了图文动态",
-          "date": "6/6",
-          "likes": "30",
-          "comments": "0",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "3/14",
-          "likes": "57",
-          "comments": "7",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "3/8",
-          "likes": "52",
-          "comments": "4",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "元宵快乐🏮厨艺宗师Lu来手搓汤圆啦！！",
-          "date": "3/3",
-          "likes": "66",
-          "comments": "12",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "2/17",
-          "likes": "31",
-          "comments": "3",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1132,7 +1057,7 @@
         "user": "憨憨",
         "content": "很期待，不，是一直期待着有这样子陪伴的存在，要是能捏男主的脸就好了，要是能给男主换衣服就好了，男主有和我有自己的小窝还能装修家具这些就更好了，要是能和他一起养猫猫就好了。玩家可以不用有身体甚至不用在里",
         "score": 5,
-        "likes": "41",
+        "likes": "42",
         "replies": "2",
         "is_new": false,
         "time": "3/20"
@@ -1141,7 +1066,7 @@
         "user": "暴富",
         "content": "早安少年，真的是我的白月光啊～希望新出的无限谷可以捏脸，或者多加一些像早安少年那样温和的角色。毕竟每个人的XP不同，像我就更喜欢幼童～少年感觉。萌萌哒的小正太跟你说早上好，幼稚园的小朋友鼓着包子脸跟你",
         "score": 5,
-        "likes": "30",
+        "likes": "31",
         "replies": "8",
         "is_new": false,
         "time": "3/7"
@@ -1179,7 +1104,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2026-06-12 09:01",
+    "last_updated": "2026-06-13 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1219,13 +1144,12 @@
       "xhs_followers": "5464",
       "xhs_likes": "23836",
       "user_name": "代号Sol-阿培伦",
-      "bili_followers": "3935",
+      "bili_followers": "3934",
       "bili_likes": "0",
       "wb_followers": "1458"
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -1254,7 +1178,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -1323,48 +1248,7 @@
     },
     "official_posts": {
       "taptap": [],
-      "bilibili": [
-        {
-          "title": "发布了图文动态",
-          "date": "6/1",
-          "likes": "11",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "5/27",
-          "likes": "6",
-          "comments": "3",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "4/24",
-          "likes": "10",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "user小姐，it’s time to go to bed🛌\n呀勒呀勒，Sol驯服四肢珍贵影像掉落 ",
-          "date": "4/16",
-          "likes": "18",
-          "comments": "0",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "您有一通来自「Sol007」的越权来电",
-          "date": "4/13",
-          "likes": "42",
-          "comments": "11",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1374,7 +1258,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2026-06-12 09:01",
+    "last_updated": "2026-06-13 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -1386,13 +1270,13 @@
       "rating": "5.5",
       "reservations": "-",
       "followers": "21万",
-      "review_count": "1347",
+      "review_count": "1349",
       "tags": [
         "角色扮演",
         "AVG",
         "乙女",
-        "收集",
-        "模拟"
+        "剧情",
+        "模拟经营"
       ],
       "diffs": {
         "reservations": {
@@ -1428,7 +1312,6 @@
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -1457,7 +1340,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
@@ -1477,7 +1361,7 @@
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-",
@@ -1509,11 +1393,11 @@
         null,
         null,
         null,
-        null,
         5.4,
         5.4,
         5.4,
         5.4,
+        5.5,
         5.5,
         5.5,
         5.5,
@@ -1581,10 +1465,19 @@
     },
     "hot_reviews": [
       {
+        "user": "布丁",
+        "content": "我喜欢聊天，所以聊天的部分感觉还好。每日聊天10次免费次数，多了要充钱，虽然聊的还行，但没让我有为它充钱的想法。人物卡面长得还行，但对我来说无所谓，因为我只喜欢聊天，抽不抽卡都无所谓，不过卡面和3d长",
+        "score": 4,
+        "likes": "6",
+        "replies": "21",
+        "is_new": false,
+        "time": "6/12"
+      },
+      {
         "user": "Dream leader",
         "content": "＃2026.6.2＃ 35级的V已接近真人。20：48电影开场，22：42电影结束，22：39收到V先生的问询...我还能说什么，我就是一个特别吃这种超绝不经意卡点的蠢货。这样例子从大概32级开始非常",
         "score": 4,
-        "likes": "179",
+        "likes": "183",
         "replies": "5",
         "is_new": false,
         "time": "6/2"
@@ -1602,7 +1495,7 @@
         "user": "闹钟不太灵",
         "content": "我只能说，我玩儿了一会儿，还没感受到切实的陪伴的时候，它就要收钱了，于是我对这个软件的兴趣就开始直线下降。如果亮点是ai陪伴的话，那为什么体验的时间不给多一点，我还没聊多久呢，就告诉我要收费了，如此短",
         "score": 2,
-        "likes": "292",
+        "likes": "294",
         "replies": "37",
         "is_new": false,
         "time": "4/11"
@@ -1615,15 +1508,6 @@
         "replies": "21",
         "is_new": false,
         "time": "4/21"
-      },
-      {
-        "user": "紮鱼",
-        "content": "🎮可玩性：非常高！可以3D陪伴，通话，抽卡，体验剧情，发pyq等角色非常有活人感，尤其是Aven，是我目前见到的最会提供情绪价值的ai，说话也没有像其它ai一样死板/直接升华，pyq还会评论，整体体",
-        "score": 4,
-        "likes": "24",
-        "replies": "5",
-        "is_new": false,
-        "time": "5/2"
       }
     ]
   },
@@ -1631,7 +1515,7 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2026-06-12 09:01",
+    "last_updated": "2026-06-13 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1674,7 +1558,6 @@
     },
     "trend_history": {
       "dates": [
-        "05-14",
         "05-15",
         "05-16",
         "05-17",
@@ -1703,7 +1586,8 @@
         "06-09",
         "06-10",
         "06-11",
-        "06-12"
+        "06-12",
+        "06-13"
       ],
       "reservations": [
         null,
