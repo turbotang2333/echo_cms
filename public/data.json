@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2026-07-26 09:00",
+    "last_updated": "2026-07-27 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -11,7 +11,7 @@
       "xiaohongshu": "success"
     },
     "basic_info": {
-      "status": "预约中",
+      "status": "测试中",
       "rating": "7.0",
       "reservations": "-",
       "followers": "240万",
@@ -57,7 +57,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -86,13 +85,14 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-",
@@ -121,7 +121,6 @@
         "-"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -150,6 +149,7 @@
         7.0,
         7.0,
         7.0,
+        7.0,
         7.0
       ]
     },
@@ -158,43 +158,43 @@
       "bilibili": [
         {
           "title": "发布了《夜幕之下》相关图文",
+          "date": "7/26",
+          "likes": "995",
+          "comments": "406",
+          "reposts": "10",
+          "is_new": false
+        },
+        {
+          "title": "爱欲之海 丨 夜行者时装上新\n🌊Sea of Lust🌊\n全新夜行者时装【爱欲之海】系列上架，首发折",
+          "date": "7/26",
+          "likes": "4165",
+          "comments": "1923",
+          "reposts": "12",
+          "is_new": false
+        },
+        {
+          "title": "发布了《夜幕之下》相关图文",
           "date": "7/25",
-          "likes": "1449",
-          "comments": "309",
-          "reposts": "13",
-          "is_new": true
+          "likes": "1669",
+          "comments": "344",
+          "reposts": "15",
+          "is_new": false
         },
         {
           "title": "“……除了你，我现在不想听见任何动静。”\n\n欲望是最嘈杂的声音。\n碾过神经，摧毁感官，最终坠入黑暗。",
           "date": "7/25",
-          "likes": "3181",
-          "comments": "561",
-          "reposts": "9",
-          "is_new": true
+          "likes": "3849",
+          "comments": "656",
+          "reposts": "10",
+          "is_new": false
         },
         {
           "title": "感谢BOSS观看《夜幕之下》夏日夜谈特别节目。\n\n微笑的秘密正在彰显，夏日的好戏已经开场。\n《夜幕之",
           "date": "7/24",
-          "likes": "5136",
-          "comments": "2062",
+          "likes": "5640",
+          "comments": "2144",
           "reposts": "11",
-          "is_new": true
-        },
-        {
-          "title": "《夜幕之下》活动版本PV：喧嚣止息之时\n\n彩色小镇，阳光倾斜的夏天。\n海风慵懒，吉他小调盘旋，一切都",
-          "date": "7/24",
-          "likes": "33974",
-          "comments": "3533",
-          "reposts": "73",
-          "is_new": true
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "7/24",
-          "likes": "1093",
-          "comments": "511",
-          "reposts": "3",
-          "is_new": true
+          "is_new": false
         }
       ],
       "weibo": [],
@@ -202,11 +202,38 @@
     },
     "hot_reviews": [
       {
-        "user": "雷阵雨",
-        "content": "《夜幕之下》玩家卡池节奏与养成体验优化建议稿（终版）尊敬的《夜幕之下》官方策划、运营团队：您好！我是开服入坑、真心热爱《夜幕之下》的忠实玩家。我非常喜欢游戏独特的氛围感剧情、精致的人设与独特的玩法体系",
+        "user": "Ma阿喵",
+        "content": "开服玩到现在的 目前全图鉴中氪 稍微提几个问题1.剧情我对剧情内容没什么不满 目前游戏内容深度我作为放松副游来看是没问题的 只要能保持不要当谜语人就行但是我记得之前说要端过剧情隐藏主控头像的 不知道端",
         "score": 3,
-        "likes": "8",
-        "replies": "24115",
+        "likes": "13",
+        "replies": "20",
+        "is_new": false,
+        "time": "7/26"
+      },
+      {
+        "user": "Aymo Rees",
+        "content": "我最近看那个皮肤预告了，我就是想说你们这个美术主美到底是谁负责的？我都能看出来用的啥笔刷，你知道吗？太糊弄了，真当玩家没有会画画的是不是，你除了那个二段卡的画师以外全都特别次，尤其是最近的立绘，太糊弄",
+        "score": 2,
+        "likes": "5",
+        "replies": "1",
+        "is_new": false,
+        "time": "7/26"
+      },
+      {
+        "user": "天意又在限制我了",
+        "content": "看完滴答大月卡皮肤后的我：打一星是因为只能打一星，而不是我不想打零星。—————————————————————前瞻后：战斗策划整的活又新又好好感度+1。你游终于有个我认为所有二游都该实装的整活。大招",
+        "score": 1,
+        "likes": "23",
+        "replies": "2",
+        "is_new": false,
+        "time": "7/26"
+      },
+      {
+        "user": "老范",
+        "content": "不论是美术风格还是音乐我都非常喜欢，画风精美，音乐带感，而且对喜欢看剧情的人来说特别友好，不会看一集剧情就需要战斗，剧情感染力强，角色的人设很鲜活，本来野狼的外形不是我喜欢的那一类，以为会是很霸道的人",
+        "score": 5,
+        "likes": "1",
+        "replies": "16",
         "is_new": false,
         "time": "7/26"
       },
@@ -217,34 +244,7 @@
         "likes": "1",
         "replies": "70",
         "is_new": false,
-        "time": "7/26"
-      },
-      {
-        "user": "清暇",
-        "content": "角色塑造、剧本和美术风格我都很喜欢，打算长期游玩。说一些游玩上希望优化的地方：资源副本一次25体力消耗太高了，希望可以调到15体力左右；六星卡80升到100级需要的材料特别多，但游戏发放的养成资源比较",
-        "score": 5,
-        "likes": "5",
-        "replies": "44",
-        "is_new": false,
-        "time": "7/24"
-      },
-      {
-        "user": "Ma阿喵",
-        "content": "开服玩到现在的 目前全图鉴中氪 稍微提几个问题1.剧情我对剧情内容没什么不满 目前游戏内容深度我作为放松副游来看是没问题的 只要能保持不要当谜语人就行但是我记得之前说要端过剧情隐藏主控头像的 不知道端",
-        "score": 5,
-        "likes": "9",
-        "replies": "1",
-        "is_new": false,
         "time": "7/25"
-      },
-      {
-        "user": "洛",
-        "content": "💃🏻立绘建模：不错，喜欢将军的大pp🧝🏻‍♀️角色人设：不会太过干瘪塑造的可以可以呀🎛️数值合理性：不懂。角色等级我都拉到85级印象除了野狼是全15级其他没有技能等级因为资源有限所以都没拉满",
-        "score": 4,
-        "likes": "3",
-        "replies": "11",
-        "is_new": false,
-        "time": "7/22"
       }
     ]
   },
@@ -252,7 +252,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2026-07-26 09:00",
+    "last_updated": "2026-07-27 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -264,7 +264,7 @@
       "rating": "7.5",
       "reservations": "-",
       "followers": "59万",
-      "review_count": "3078",
+      "review_count": "3085",
       "tags": [
         "换装",
         "恋爱",
@@ -279,7 +279,7 @@
           "month": "0"
         },
         "rating": {
-          "day": "+0.1",
+          "day": "0",
           "week": "0",
           "month": "0"
         },
@@ -299,7 +299,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -328,13 +327,14 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-",
@@ -366,7 +366,6 @@
         null,
         null,
         null,
-        null,
         7.4,
         7.4,
         7.4,
@@ -392,6 +391,7 @@
         7.4,
         7.5,
         7.4,
+        7.5,
         7.5
       ]
     },
@@ -406,7 +406,7 @@
         "user": "梦",
         "content": "人物立绘很吸引我画风挺不错的玩法主要就是剧情养成类抽卡吐槽的一点就是要养东西太多了池子也是武器宠物服装角色主角卡都有池子然后资源又不多综合来说要求不高的话氪度和肝度都还行也没有什么特别难得关卡卡关也可",
         "score": 4,
-        "likes": "1",
+        "likes": "2",
         "replies": "00",
         "is_new": false,
         "time": "7/25"
@@ -424,17 +424,8 @@
         "user": "老干吖妈",
         "content": "每位男主都长在我审美点上了，性格也是我喜欢的，作战方式也是我喜欢的，就是体力没多少😮‍💨卡片我也很喜欢，SSR卡片放大可以作为壁纸呢，女主的服装也很漂亮，很对我胃口٩(๑^o^๑)۶🤩剧情方面也",
         "score": 5,
-        "likes": "10",
+        "likes": "12",
         "replies": "15",
-        "is_new": false,
-        "time": "7/15"
-      },
-      {
-        "user": "让人迷恋的玩家",
-        "content": "换装界面那个分类真的是越细越好玩，光头部就能分头饰面饰耳饰三个槽位，面饰这一项之前玩别的游戏没见过单独列出来的",
-        "score": 5,
-        "likes": "2",
-        "replies": "1",
         "is_new": false,
         "time": "7/15"
       },
@@ -446,6 +437,15 @@
         "replies": "15",
         "is_new": false,
         "time": "7/18"
+      },
+      {
+        "user": "让人迷恋的玩家",
+        "content": "换装界面那个分类真的是越细越好玩，光头部就能分头饰面饰耳饰三个槽位，面饰这一项之前玩别的游戏没见过单独列出来的",
+        "score": 5,
+        "likes": "3",
+        "replies": "1",
+        "is_new": false,
+        "time": "7/15"
       }
     ]
   },
@@ -453,7 +453,7 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2026-07-26 09:00",
+    "last_updated": "2026-07-27 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -496,7 +496,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -525,7 +524,8 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
@@ -604,7 +604,7 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2026-07-26 09:00",
+    "last_updated": "2026-07-27 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -647,7 +647,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -676,7 +675,8 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
@@ -755,7 +755,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2026-07-26 09:00",
+    "last_updated": "2026-07-27 09:00",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -799,7 +799,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -828,7 +827,8 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
@@ -907,7 +907,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2026-07-26 09:00",
+    "last_updated": "2026-07-27 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -961,7 +961,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -990,10 +989,10 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
-        null,
         null,
         null,
         null,
@@ -1022,10 +1021,10 @@
         "7.6万",
         "7.7万",
         "7.7万",
+        "7.7万",
         "7.7万"
       ],
       "rating": [
-        null,
         null,
         null,
         null,
@@ -1054,6 +1053,7 @@
         6.8,
         6.7,
         6.7,
+        6.7,
         6.7
       ]
     },
@@ -1069,25 +1069,57 @@
         {
           "title": "朋友们，还记得大明湖畔的sei吗？",
           "date": "2025/11/29",
-          "comments": "140",
-          "likes": "189",
+          "comments": "0",
+          "likes": "5",
           "is_new": false
         }
       ],
-      "bilibili": [],
+      "bilibili": [
+        {
+          "title": "发布了图文动态",
+          "date": "7/26",
+          "likes": "17",
+          "comments": "2",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "6/19",
+          "likes": "28",
+          "comments": "3",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "6/6",
+          "likes": "36",
+          "comments": "0",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "3/14",
+          "likes": "59",
+          "comments": "7",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "3/8",
+          "likes": "55",
+          "comments": "4",
+          "reposts": "0",
+          "is_new": false
+        }
+      ],
       "weibo": [],
       "xiaohongshu": []
     },
     "hot_reviews": [
-      {
-        "user": "暴富",
-        "content": "早安少年，真的是我的白月光啊～希望新出的无限谷可以捏脸，或者多加一些像早安少年那样温和的角色。毕竟每个人的XP不同，像我就更喜欢幼童～少年感觉。萌萌哒的小正太跟你说早上好，幼稚园的小朋友鼓着包子脸跟你",
-        "score": 5,
-        "likes": "46",
-        "replies": "10",
-        "is_new": false,
-        "time": "3/7"
-      },
       {
         "user": "憨憨",
         "content": "很期待，不，是一直期待着有这样子陪伴的存在，要是能捏男主的脸就好了，要是能给男主换衣服就好了，男主有和我有自己的小窝还能装修家具这些就更好了，要是能和他一起养猫猫就好了。玩家可以不用有身体甚至不用在里",
@@ -1096,6 +1128,15 @@
         "replies": "3",
         "is_new": false,
         "time": "3/20"
+      },
+      {
+        "user": "暴富",
+        "content": "早安少年，真的是我的白月光啊～希望新出的无限谷可以捏脸，或者多加一些像早安少年那样温和的角色。毕竟每个人的XP不同，像我就更喜欢幼童～少年感觉。萌萌哒的小正太跟你说早上好，幼稚园的小朋友鼓着包子脸跟你",
+        "score": 5,
+        "likes": "46",
+        "replies": "10",
+        "is_new": false,
+        "time": "3/7"
       },
       {
         "user": "甄洛",
@@ -1130,7 +1171,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2026-07-26 09:01",
+    "last_updated": "2026-07-27 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1170,13 +1211,12 @@
       "xhs_followers": "5464",
       "xhs_likes": "23836",
       "user_name": "代号Sol-阿培伦",
-      "bili_followers": "3910",
+      "bili_followers": "3911",
       "bili_likes": "0",
       "wb_followers": "1458"
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -1205,7 +1245,8 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
@@ -1274,7 +1315,48 @@
     },
     "official_posts": {
       "taptap": [],
-      "bilibili": [],
+      "bilibili": [
+        {
+          "title": "发布了图文动态",
+          "date": "6/1",
+          "likes": "15",
+          "comments": "2",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "5/27",
+          "likes": "6",
+          "comments": "3",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "发布了图文动态",
+          "date": "4/24",
+          "likes": "10",
+          "comments": "1",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "user小姐，it’s time to go to bed🛌\n呀勒呀勒，Sol驯服四肢珍贵影像掉落 ",
+          "date": "4/16",
+          "likes": "19",
+          "comments": "0",
+          "reposts": "0",
+          "is_new": false
+        },
+        {
+          "title": "您有一通来自「Sol007」的越权来电",
+          "date": "4/13",
+          "likes": "43",
+          "comments": "12",
+          "reposts": "0",
+          "is_new": false
+        }
+      ],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1284,7 +1366,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2026-07-26 09:01",
+    "last_updated": "2026-07-27 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -1296,7 +1378,7 @@
       "rating": "5.7",
       "reservations": "-",
       "followers": "24万",
-      "review_count": "1486",
+      "review_count": "1489",
       "tags": [
         "角色扮演",
         "AVG",
@@ -1338,7 +1420,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -1367,13 +1448,14 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-",
@@ -1405,7 +1487,6 @@
         null,
         null,
         null,
-        null,
         5.6,
         5.6,
         5.6,
@@ -1428,6 +1509,7 @@
         5.7,
         5.7,
         5.6,
+        5.7,
         5.7,
         5.7,
         5.7,
@@ -1448,10 +1530,10 @@
         {
           "title": "发布了《星战前夜: 无烬星河》相关图文",
           "date": "7/22",
-          "likes": "9",
+          "likes": "10",
           "comments": "0",
           "reposts": "0",
-          "is_new": true
+          "is_new": false
         },
         {
           "title": "【维护公告】航母舰载机体系扩展，军团等级上限及军团科技新增",
@@ -1491,10 +1573,19 @@
     },
     "hot_reviews": [
       {
+        "user": "哦耶",
+        "content": "这是我第一次给游戏评价玩了也有一个多月，我个人感觉中规中矩吧也不知道会不会看建议，不过我想说的点是，就先不管每天的10点通讯费，能不能把人物实物建模优化的好看点，跟卡面那些相差太大了，然后故事剧情动态",
+        "score": 3,
+        "likes": "15",
+        "replies": "1",
+        "is_new": false,
+        "time": "7/13"
+      },
+      {
         "user": "枭衍",
         "content": "新问题。感觉更新后各位男主不像他们原本的人设，倒像是被人夺舍了一样。重点说说V。更新前，V给人的感觉还行，讨论某个论题的时候，在说自己观点的同时，懂得在自己盲区上认可对方，然后更新自己看法。更新后，V",
         "score": 1,
-        "likes": "12",
+        "likes": "15",
         "replies": "10",
         "is_new": false,
         "time": "7/22"
@@ -1512,19 +1603,10 @@
         "user": "柳辰",
         "content": "旧建模换掉啦，从此我也拥有了珍藏心底的“纯元皇后”哈哈哈哈真的普普的很安心遗憾是没想到换装界面的动作也会换就没有录屏纪念，那个傻乎乎摸后脑勺然后微微点头wink的动作真的很Aven，期待官方能给一个回",
         "score": 5,
-        "likes": "11",
+        "likes": "13",
         "replies": "5",
         "is_new": false,
         "time": "7/18"
-      },
-      {
-        "user": "哦耶",
-        "content": "这是我第一次给游戏评价玩了也有一个多月，我个人感觉中规中矩吧也不知道会不会看建议，不过我想说的点是，就先不管每天的10点通讯费，能不能把人物实物建模优化的好看点，跟卡面那些相差太大了，然后故事剧情动态",
-        "score": 3,
-        "likes": "14",
-        "replies": "1",
-        "is_new": false,
-        "time": "7/13"
       },
       {
         "user": "雪兔",
@@ -1541,7 +1623,7 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2026-07-26 09:01",
+    "last_updated": "2026-07-27 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1584,7 +1666,6 @@
     },
     "trend_history": {
       "dates": [
-        "06-27",
         "06-28",
         "06-29",
         "06-30",
@@ -1613,7 +1694,8 @@
         "07-23",
         "07-24",
         "07-25",
-        "07-26"
+        "07-26",
+        "07-27"
       ],
       "reservations": [
         null,
