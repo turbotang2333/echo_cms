@@ -1,0 +1,123 @@
+{
+  "month": "2026-08",
+  "last_updated": "2026-08-01 09:01",
+  "games": {
+    "pengpeng": {
+      "name": "夜幕之下（代号：砰砰）",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": "-",
+          "rating": "",
+          "followers": "242万",
+          "review_count": "03",
+          "status": "预约中"
+        }
+      ]
+    },
+    "lianren": {
+      "name": "代号：恋人",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": "-",
+          "rating": "",
+          "followers": "60万",
+          "review_count": "26",
+          "status": "测试中"
+        }
+      ]
+    },
+    "ruyiqingtan": {
+      "name": "如意情探",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    },
+    "lengjing": {
+      "name": "代号：棱镜",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    },
+    "xingmian": {
+      "name": "星眠",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    },
+    "wuxiangu": {
+      "name": "无限谷",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": "7.7万",
+          "rating": "6.7",
+          "followers": "7.7万",
+          "review_count": "180",
+          "status": "预约中"
+        }
+      ]
+    },
+    "sol": {
+      "name": "代号：Sol",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    },
+    "eve": {
+      "name": "EVE",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": "-",
+          "rating": "5.7",
+          "followers": "24万",
+          "review_count": "1499",
+          "status": "预约中"
+        }
+      ]
+    },
+    "breathofyou": {
+      "name": "Breath of You",
+      "daily": [
+        {
+          "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        }
+      ]
+    }
+  }
+}
