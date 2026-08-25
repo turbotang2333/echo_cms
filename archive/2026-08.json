@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "last_updated": "2026-08-01 09:01",
+  "last_updated": "2026-08-24 09:01",
   "games": {
     "pengpeng": {
       "name": "夜幕之下（代号：砰砰）",
@@ -11,6 +11,190 @@
           "rating": "",
           "followers": "242万",
           "review_count": "03",
+          "status": "预约中"
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
+          "reservations": "-",
+          "rating": "7.2",
+          "followers": "248万",
+          "review_count": "1.8 万",
           "status": "预约中"
         }
       ]
@@ -25,6 +209,190 @@
           "followers": "60万",
           "review_count": "26",
           "status": "测试中"
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
+          "reservations": "-",
+          "rating": "",
+          "followers": "65万",
+          "review_count": "26",
+          "status": "测试中"
         }
       ]
     },
@@ -33,6 +401,190 @@
       "daily": [
         {
           "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -51,6 +603,190 @@
           "followers": null,
           "review_count": null,
           "status": ""
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
         }
       ]
     },
@@ -59,6 +795,190 @@
       "daily": [
         {
           "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -77,6 +997,190 @@
           "followers": "7.7万",
           "review_count": "180",
           "status": "预约中"
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
+          "reservations": "7.9万",
+          "rating": "6.7",
+          "followers": "7.9万",
+          "review_count": "182",
+          "status": "预约中"
         }
       ]
     },
@@ -85,6 +1189,190 @@
       "daily": [
         {
           "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -103,6 +1391,190 @@
           "followers": "24万",
           "review_count": "1499",
           "status": "预约中"
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
+          "reservations": "-",
+          "rating": "",
+          "followers": "25万",
+          "review_count": "12",
+          "status": "测试中"
         }
       ]
     },
@@ -111,6 +1583,190 @@
       "daily": [
         {
           "date": "08-01",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-02",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-03",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-04",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-05",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-06",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-07",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-08",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-09",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-10",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-11",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-12",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-13",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-14",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-15",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-16",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-17",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-18",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-19",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-20",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-21",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-22",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-23",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": null
+        },
+        {
+          "date": "08-24",
           "reservations": null,
           "rating": null,
           "followers": null,
