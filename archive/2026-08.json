@@ -1,6 +1,6 @@
 {
   "month": "2026-08",
-  "last_updated": "2026-08-28 09:01",
+  "last_updated": "2026-08-29 09:01",
   "games": {
     "pengpeng": {
       "name": "夜幕之下（代号：砰砰）",
@@ -228,6 +228,14 @@
           "followers": "248万",
           "review_count": "03",
           "status": "预约中"
+        },
+        {
+          "date": "08-29",
+          "reservations": "-",
+          "rating": "7.2",
+          "followers": "249万",
+          "review_count": "1.8 万",
+          "status": "测试中"
         }
       ]
     },
@@ -457,6 +465,14 @@
           "followers": "65万",
           "review_count": "3342",
           "status": "测试中"
+        },
+        {
+          "date": "08-29",
+          "reservations": "-",
+          "rating": "",
+          "followers": "66万",
+          "review_count": "26",
+          "status": "测试中"
         }
       ]
     },
@@ -681,6 +697,14 @@
         },
         {
           "date": "08-28",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-29",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -915,6 +939,14 @@
           "followers": null,
           "review_count": null,
           "status": ""
+        },
+        {
+          "date": "08-29",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
         }
       ]
     },
@@ -1139,6 +1171,14 @@
         },
         {
           "date": "08-28",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-29",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -1373,6 +1413,14 @@
           "followers": "8万",
           "review_count": "184",
           "status": "预约中"
+        },
+        {
+          "date": "08-29",
+          "reservations": "7.9万",
+          "rating": "",
+          "followers": "8万",
+          "review_count": "0",
+          "status": "预约中"
         }
       ]
     },
@@ -1597,6 +1645,14 @@
         },
         {
           "date": "08-28",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-29",
           "reservations": null,
           "rating": null,
           "followers": null,
@@ -1831,6 +1887,14 @@
           "followers": "25万",
           "review_count": "1530",
           "status": "测试中"
+        },
+        {
+          "date": "08-29",
+          "reservations": "-",
+          "rating": "5.7",
+          "followers": "25万",
+          "review_count": "1531",
+          "status": "测试中"
         }
       ]
     },
@@ -2055,6 +2119,14 @@
         },
         {
           "date": "08-28",
+          "reservations": null,
+          "rating": null,
+          "followers": null,
+          "review_count": null,
+          "status": ""
+        },
+        {
+          "date": "08-29",
           "reservations": null,
           "rating": null,
           "followers": null,
