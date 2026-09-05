@@ -3,7 +3,7 @@
     "id": "pengpeng",
     "name": "夜幕之下（代号：砰砰）",
     "icon_char": "夜",
-    "last_updated": "2026-09-03 09:00",
+    "last_updated": "2026-09-04 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -46,7 +46,7 @@
         }
       },
       "name": "夜幕之下",
-      "developer": "",
+      "developer": "的女性向二次元游戏",
       "xhs_following": "0",
       "xhs_followers": "107896",
       "xhs_likes": "328887",
@@ -57,7 +57,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -86,7 +85,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -115,7 +115,7 @@
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-"
@@ -147,9 +147,9 @@
         null,
         null,
         null,
-        null,
         7.2,
         7.2,
+        "",
         ""
       ]
     },
@@ -158,42 +158,42 @@
       "bilibili": [
         {
           "title": "发布了《夜幕之下》相关图文",
+          "date": "9/3",
+          "likes": "830",
+          "comments": "217",
+          "reposts": "5",
+          "is_new": true
+        },
+        {
+          "title": "发布了《夜幕之下》相关图文",
+          "date": "9/3",
+          "likes": "1371",
+          "comments": "397",
+          "reposts": "16",
+          "is_new": true
+        },
+        {
+          "title": "发布了《夜幕之下》相关图文",
           "date": "9/1",
-          "likes": "775",
-          "comments": "422",
+          "likes": "829",
+          "comments": "461",
           "reposts": "0",
           "is_new": true
         },
         {
           "title": "「美丽新世界·下」EP：直到雨水洗尽\n\n“聆听吧，那并非天穹的悲泣，\n而是神明借由颂唱降下的，涤荡一",
           "date": "8/28",
-          "likes": "1457",
-          "comments": "423",
+          "likes": "1476",
+          "comments": "432",
           "reposts": "3",
           "is_new": false
         },
         {
           "title": "发布了《夜幕之下》相关图文",
           "date": "8/28",
-          "likes": "1208",
+          "likes": "1231",
           "comments": "91",
           "reposts": "1",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "8/26",
-          "likes": "1133",
-          "comments": "145",
-          "reposts": "6",
-          "is_new": false
-        },
-        {
-          "title": "发布了《夜幕之下》相关图文",
-          "date": "8/25",
-          "likes": "1024",
-          "comments": "86",
-          "reposts": "4",
           "is_new": false
         }
       ],
@@ -206,7 +206,7 @@
         "content": "玩儿了这么久 相对来说 真的不逼氪 没充钱（好像只充了月卡？啊～还有两三个服装）光靠金砖抽到了满图鉴 虽然可能后续会不够 而且真的不算欧 经常第二次保底才会出限定卡 所以我觉得一般运气玩家 应该是很容",
         "score": 5,
         "likes": "16",
-        "replies": "3",
+        "replies": "4",
         "is_new": false,
         "time": "8/31"
       },
@@ -215,18 +215,9 @@
         "content": "我感觉爆率挺高的，玩了三天，就是清清体力，过剧情，相比其他女性向大方多了，没吃过保底，常驻池基本50抽3个红，那个还没养感觉没用，给小男孩抽了一命，就雨仙50出来的，黑了点。剧情：感觉用力过猛了，非常",
         "score": 5,
         "likes": "2148",
-        "replies": "15",
+        "replies": "2",
         "is_new": false,
         "time": "9/2"
-      },
-      {
-        "user": "x颀.",
-        "content": "小狼小狼小狼小狼😍😍😍某某人太萌了，正宫的地位，小三的肚量！萌萌！小狼舔奶油那段广告让我直接入坑了😍太可爱了啊…💃🏻立绘建模：我只能说绝了，但希望战斗时55分雷霆比例能改一下🧝🏻‍♀️",
-        "score": 5,
-        "likes": "2",
-        "replies": "1",
-        "is_new": false,
-        "time": "9/1"
       },
       {
         "user": "User566827257",
@@ -245,6 +236,15 @@
         "replies": "5",
         "is_new": false,
         "time": "8/22"
+      },
+      {
+        "user": "暮骸诗",
+        "content": "预告：本人开服玩家，给新人的安利与避雷，纯属个人观点1.画风作为一个xp党，我当初预约夜幕之下就是看中了它的画风，还有一部分是因为它的宣传确实深得我心。这个画风也没让我失望，把每个角色画的都很好看，但",
+        "score": 4,
+        "likes": "00",
+        "replies": "2",
+        "is_new": false,
+        "time": "8/22"
       }
     ]
   },
@@ -252,7 +252,7 @@
     "id": "lianren",
     "name": "代号：恋人",
     "icon_char": "代",
-    "last_updated": "2026-09-03 09:00",
+    "last_updated": "2026-09-04 09:00",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "not_configured",
@@ -299,7 +299,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -328,7 +327,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -357,7 +357,7 @@
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-"
@@ -389,7 +389,7 @@
         null,
         null,
         null,
-        null,
+        "",
         "",
         "",
         ""
@@ -403,49 +403,49 @@
     },
     "hot_reviews": [
       {
-        "user": "小兔子乖乖",
-        "content": "这个游戏的广告真是无孔不入，就连微信也被占据了，一气之下下载玩了一下，剧情不好看，快进剧情也不好用，一点也不丝滑，不过人物倒是挺好看，看得出来，制作组也非常用心的制作这个粉毛狐狸，也就是看板郎，长得挺",
-        "score": 5,
-        "likes": "0",
-        "replies": "0",
+        "user": "爱吃米的小鱼",
+        "content": "当咸鱼玩还可以，不打协会挑战赛还有镇恶赛，不朽那个排位赛有多少战力打多少随便打打，主要做做梦魇还有一些小活动，有三合一活动抽一抽换点招募券，喜欢时装的可以换时装券，不过时装成套才加那个先手值，抽时装也",
+        "score": 4,
+        "likes": "2",
+        "replies": "1",
         "is_new": false,
-        "time": "9/3"
+        "time": "9/2"
       },
       {
         "user": "喜殿",
         "content": "最多两星，这游戏之前玩了将近两个月，起先一个月每天都上线，约会和旅行拿奖励特别难，还有十连这个东西总是会突然没有，而且我是比较喜欢剧情的，主线剧情太慢了，所以过个人感情线的时候很突兀，我等了一个月的剧",
         "score": 2,
         "likes": "110",
-        "replies": "2",
+        "replies": "3",
         "is_new": false,
         "time": "9/1"
       },
       {
-        "user": "爱吃米的小鱼",
-        "content": "当咸鱼玩还可以，不打协会挑战赛还有镇恶赛，不朽那个排位赛有多少战力打多少随便打打，主要做做梦魇还有一些小活动，有三合一活动抽一抽换点招募券，喜欢时装的可以换时装券，不过时装成套才加那个先手值，抽时装也",
-        "score": 4,
-        "likes": "1",
-        "replies": "1",
+        "user": "靜",
+        "content": "纯狐九在我这就是完美人设，长得帅会撩人，吃起醋来全世界都知道明明设定是千年老狐狸，结果亲他的时候那个瞪大眼睛的反应纯情得像个新手而且他醋劲上来的时候其他男主跟他说话他都阴阳怪气的，又争又抢的小狐狸怎么",
+        "score": 5,
+        "likes": "30",
+        "replies": "14",
         "is_new": false,
-        "time": "9/2"
-      },
-      {
-        "user": "沐橙",
-        "content": "想玩玩别冲就行，他们家之前一款的恋爱游戏属于可以肝。在游戏改版之后呢变成了又肝又氪。这一款游戏主线剧情目前还可以，约会呢比较少。那么这款游戏的战力构成非常的复杂。首先是你上阵的人物需要抽。人物携带的灵",
-        "score": 3,
-        "likes": "8",
-        "replies": "4",
-        "is_new": false,
-        "time": "8/30"
+        "time": "9/3"
       },
       {
         "user": "。。。。。",
         "content": "看到大家好像很抗拒这个游戏里面的社交，但是我真的很喜欢啊……里面有很多很好人的大佬，你有不懂的问题扔出去大家都很热心地帮你解答，打薪火时也会有大佬带完全是被带飞（哭）可以感受到大家是真心喜欢玩这个游戏",
         "score": 5,
         "likes": "5",
-        "replies": "2",
+        "replies": "3",
         "is_new": false,
         "time": "9/1"
+      },
+      {
+        "user": "沐橙",
+        "content": "想玩玩别冲就行，他们家之前一款的恋爱游戏属于可以肝。在游戏改版之后呢变成了又肝又氪。这一款游戏主线剧情目前还可以，约会呢比较少。那么这款游戏的战力构成非常的复杂。首先是你上阵的人物需要抽。人物携带的灵",
+        "score": 3,
+        "likes": "8",
+        "replies": "5",
+        "is_new": false,
+        "time": "8/30"
       }
     ]
   },
@@ -453,7 +453,7 @@
     "id": "ruyiqingtan",
     "name": "如意情探",
     "icon_char": "如",
-    "last_updated": "2026-09-03 09:00",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -496,7 +496,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -525,7 +524,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -604,7 +604,7 @@
     "id": "lengjing",
     "name": "代号：棱镜",
     "icon_char": "代",
-    "last_updated": "2026-09-03 09:00",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -647,7 +647,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -676,7 +675,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -755,7 +755,7 @@
     "id": "xingmian",
     "name": "星眠",
     "icon_char": "星",
-    "last_updated": "2026-09-03 09:00",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -799,7 +799,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -828,7 +827,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -907,7 +907,7 @@
     "id": "wuxiangu",
     "name": "无限谷",
     "icon_char": "无",
-    "last_updated": "2026-09-03 09:00",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -929,7 +929,7 @@
       ],
       "diffs": {
         "reservations": {
-          "day": "+1k",
+          "day": "0",
           "week": "0",
           "month": "0"
         },
@@ -950,18 +950,17 @@
         }
       },
       "name": "无限谷",
-      "developer": "能好好用心做游戏",
+      "developer": "",
       "xhs_following": "1",
       "xhs_followers": "10209",
       "xhs_likes": "30247",
       "user_name": "无限谷Lumiere037",
-      "bili_followers": "6305",
+      "bili_followers": "6307",
       "bili_likes": "0",
       "wb_followers": "1601"
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -990,7 +989,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -1019,9 +1019,9 @@
         null,
         null,
         null,
-        null,
         "7.9万",
         "7.9万",
+        "8万",
         "8万"
       ],
       "rating": [
@@ -1051,7 +1051,7 @@
         null,
         null,
         null,
-        null,
+        "",
         "",
         "",
         ""
@@ -1059,48 +1059,7 @@
     },
     "official_posts": {
       "taptap": [],
-      "bilibili": [
-        {
-          "title": "发布了图文动态",
-          "date": "9/1",
-          "likes": "13",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": true
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "9/1",
-          "likes": "13",
-          "comments": "2",
-          "reposts": "0",
-          "is_new": true
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "8/27",
-          "likes": "20",
-          "comments": "4",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "8/21",
-          "likes": "19",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        },
-        {
-          "title": "发布了图文动态",
-          "date": "8/19",
-          "likes": "27",
-          "comments": "1",
-          "reposts": "0",
-          "is_new": false
-        }
-      ],
+      "bilibili": [],
       "weibo": [],
       "xiaohongshu": []
     },
@@ -1156,7 +1115,7 @@
     "id": "sol",
     "name": "代号：Sol",
     "icon_char": "代",
-    "last_updated": "2026-09-03 09:01",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "success",
@@ -1196,13 +1155,12 @@
       "xhs_followers": "5464",
       "xhs_likes": "23836",
       "user_name": "代号Sol-阿培伦",
-      "bili_followers": "3881",
+      "bili_followers": "3878",
       "bili_likes": "0",
       "wb_followers": "1458"
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -1231,7 +1189,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -1310,7 +1269,7 @@
     "id": "eve",
     "name": "EVE",
     "icon_char": "E",
-    "last_updated": "2026-09-03 09:01",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "success",
       "bilibili": "success",
@@ -1364,7 +1323,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -1393,7 +1351,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
@@ -1422,7 +1381,7 @@
         null,
         null,
         null,
-        null,
+        "-",
         "-",
         "-",
         "-"
@@ -1454,7 +1413,7 @@
         null,
         null,
         null,
-        null,
+        "",
         "",
         "",
         ""
@@ -1474,7 +1433,7 @@
         {
           "title": "【维护公告】组装车间模块更新说明，更多新建筑模块陆续推出",
           "date": "9/2",
-          "likes": "6",
+          "likes": "7",
           "comments": "0",
           "reposts": "0",
           "is_new": true
@@ -1526,6 +1485,15 @@
         "time": "7/22"
       },
       {
+        "user": "上方谷.",
+        "content": "咋说呢最近看到挺多玩家退游发表评价，我前不久刚刚退坑，今天又偶然想起来气蒙了才想着编辑这条评论。我原本抱着试试看的心态去玩的，5月27号入坑，前后不久充了第一次月卡，期间我就一直在被V钓又被他气到，我",
+        "score": 1,
+        "likes": "8",
+        "replies": "11",
+        "is_new": false,
+        "time": "9/3"
+      },
+      {
         "user": "亘古如常",
         "content": "玩法就是聊天，其他所谓的剧情任务家园都是附带的，看完15个剧情最大的感受是“好丑，看不下去，我忍，这个更丑，三选一，哪个更不丑，不行，都丑，没有想要的”，有些卡面勉强看得过去，但剧情家园里经常崩，时不",
         "score": 2,
@@ -1544,15 +1512,6 @@
         "time": "7/18"
       },
       {
-        "user": "雪兔",
-        "content": "💰肝氪度：都是随意的，非常自由，随便玩玩就氪个小月卡，高频聊天的话直接最高档🎛️数值合理性：聊天可以增加好感度数值，更新角色心情，开服玩家基本上都满级了🎮可玩性：目前三个男主人设都不错，聊天有活",
-        "score": 5,
-        "likes": "16",
-        "replies": "6",
-        "is_new": false,
-        "time": "6/16"
-      },
-      {
         "user": "訢",
         "content": "语境是和他讨论什么算唯一，还有买周边和熬夜通宵的行为。刚才我说我困得打错字了刚刚，他就很暖的安慰，但不会俗套。然后，很惊喜刷出如图的情节，或许爱是善意模仿，短暂得一起变呆萌哈哈哈。总之感觉这个游戏的聊",
         "score": 5,
@@ -1567,7 +1526,7 @@
     "id": "breathofyou",
     "name": "Breath of You",
     "icon_char": "B",
-    "last_updated": "2026-09-03 09:01",
+    "last_updated": "2026-09-04 09:01",
     "fetch_status": {
       "taptap": "not_configured",
       "bilibili": "not_configured",
@@ -1610,7 +1569,6 @@
     },
     "trend_history": {
       "dates": [
-        "08-05",
         "08-06",
         "08-07",
         "08-08",
@@ -1639,7 +1597,8 @@
         "08-31",
         "09-01",
         "09-02",
-        "09-03"
+        "09-03",
+        "09-04"
       ],
       "reservations": [
         null,
