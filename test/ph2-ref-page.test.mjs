@@ -50,6 +50,7 @@ test('self-hosted deployment contract targets the ph2-ref path prefix', () => {
   assert.match(workflow, /id-token:\s*write/)
   assert.match(workflow, /ACR_PASSWORD:\s*\$\{\{\s*secrets\.ACR_PASSWORD\s*\}\}/)
   assert.doesNotMatch(workflow, /secrets:\s*inherit/)
+  assert.doesNotMatch(workflow, /deploy-infra\/\.github\/workflows\/reusable-release\.yml/)
 })
 
 test('container exposes an internal health check file', () => {
