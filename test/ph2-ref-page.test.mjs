@@ -46,6 +46,7 @@ test('self-hosted deployment contract targets the ph2-ref path prefix', () => {
   assert.match(manifest, /pathPrefix:\s*\/ph2-ref\//)
   assert.match(manifest, /healthPath:\s*\/health/)
   assert.match(compose, /healthcheck:/)
+  assert.match(compose, /\/opt\/apps\/projects\/echo-ph2-ref\/data:\/usr\/share\/nginx\/html\/ph2-ref\/data:ro/)
   assert.match(workflow, /permissions:/)
   assert.match(workflow, /id-token:\s*write/)
   assert.match(workflow, /ACR_PASSWORD:\s*\$\{\{\s*secrets\.ACR_PASSWORD\s*\}\}/)

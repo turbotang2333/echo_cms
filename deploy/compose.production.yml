@@ -4,6 +4,8 @@ services:
     restart: unless-stopped
     ports:
       - "127.0.0.1:${HOST_PORT}:${CONTAINER_PORT}"
+    volumes:
+      - "/opt/apps/projects/echo-ph2-ref/data:/usr/share/nginx/html/ph2-ref/data:ro"
     healthcheck:
       test: ["CMD-SHELL", "wget -qO- http://127.0.0.1:${CONTAINER_PORT}${HEALTH_PATH} | grep -qx ok"]
       interval: 10s
