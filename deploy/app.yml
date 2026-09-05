@@ -1,0 +1,6 @@
+id: echo-ph2-ref
+kind: static
+domain: echo.turbotang.top
+pathPrefix: /ph2-ref/
+internalPort: 8080
+healthPath: /health
